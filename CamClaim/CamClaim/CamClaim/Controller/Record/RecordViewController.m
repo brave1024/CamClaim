@@ -48,11 +48,14 @@
     self.tableview.backgroundColor = [UIColor clearColor];
     self.tableview.backgroundView = nil;
     
-    UIImage *imgBtn = [UIImage imageNamed:@"btn_register"];
+    UIImage *imgBtn = [UIImage imageNamed:@"btn_submit"];
     imgBtn = [imgBtn resizableImageWithCapInsets:UIEdgeInsetsMake(18, 48, 18, 48)];
     
+    UIImage *imgBtn_ = [UIImage imageNamed:@"btn_submit_press"];
+    imgBtn_ = [imgBtn_ resizableImageWithCapInsets:UIEdgeInsetsMake(18, 48, 18, 48)];
+    
     [self.btnFill setBackgroundImage:imgBtn forState:UIControlStateNormal];
-//    [self.btnFill setBackgroundImage:imgBtn_ forState:UIControlStateHighlighted];
+    [self.btnFill setBackgroundImage:imgBtn_ forState:UIControlStateHighlighted];
     
     [self.btnFill setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.btnFill setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
@@ -62,7 +65,7 @@
     viewLine.backgroundColor = [UIColor colorWithRed:(CGFloat)217/255 green:(CGFloat)218/255 blue:(CGFloat)219/255 alpha:1];
     [self.viewFunction addSubview:viewLine];
     
-    self.viewFill.backgroundColor = [UIColor colorWithRed:(CGFloat)87/255 green:(CGFloat)129/255 blue:(CGFloat)254/255 alpha:1];
+    //self.viewFill.backgroundColor = [UIColor colorWithRed:(CGFloat)87/255 green:(CGFloat)129/255 blue:(CGFloat)254/255 alpha:1];
     
     [self initViewWithAutoLayout];
     

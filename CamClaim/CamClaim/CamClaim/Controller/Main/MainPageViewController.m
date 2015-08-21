@@ -22,17 +22,19 @@
 @interface MainPageViewController () <NavViewDelegate, UITableViewDataSource, UITableViewDelegate, IIViewDeckControllerDelegate, SimpleCamDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableview;
-@property (nonatomic, weak) IBOutlet UIView *UIViewAds;
+//@property (nonatomic, weak) IBOutlet UIView *UIViewAds;   // 不再需要广告栏
 
 @property (nonatomic, strong) IBOutlet UIView *viewTableHead;
 @property (nonatomic, strong) IBOutlet UIImageView *imgviewAvatar;
 @property (nonatomic, strong) IBOutlet UILabel *lblName;
 @property (nonatomic, strong) IBOutlet UILabel *lblCompany;
 
-@property (nonatomic, weak) IBOutlet UIView *viewTableFoot;
-@property (nonatomic, weak) IBOutlet UILabel *lblPending;
-@property (nonatomic, weak) IBOutlet UILabel *lblApproved;
-@property (nonatomic, weak) IBOutlet UILabel *lblClaim;
+@property (nonatomic, strong) IBOutlet UIView *viewSectionHead;
+@property (nonatomic, strong) IBOutlet UILabel *lblPending;
+@property (nonatomic, strong) IBOutlet UILabel *lblApproved;
+@property (nonatomic, strong) IBOutlet UILabel *lblClaim;
+
+@property (nonatomic, weak) IBOutlet UIView *viewBottom;
 @property (nonatomic, weak) IBOutlet UIButton *btnCapture;
 
 @property (nonatomic, strong) SimpleCam *simpleCam;
@@ -75,6 +77,8 @@
     self.tableview.tableHeaderView = self.viewTableHead;
     //self.tableview.tableFooterView = self.viewTableFoot;
     
+    //self.viewSectionHead.backgroundColor = [UIColor clearColor];
+    
     // 增加下拉刷新
     [self.tableview addHeaderWithTarget:self action:@selector(refeshingForMainPage) dateKey:@"tableMain"];
     // 自动刷新(一进入程序就下拉刷新)
@@ -86,14 +90,14 @@
 //    UIImage *img_ = [UIImage imageNamed:@"img_input_press"];
 //    img_ = [img_ resizableImageWithCapInsets:UIEdgeInsetsMake(18, 48, 18, 48)];
     
-    UIImage *imgBtn = [UIImage imageNamed:@"btn_register"];
+    UIImage *imgBtn = [UIImage imageNamed:@"btn_submit"];
     imgBtn = [imgBtn resizableImageWithCapInsets:UIEdgeInsetsMake(18, 48, 18, 48)];
     
-//    UIImage *imgBtn_ = [UIImage imageNamed:@"btn_register_press"];
-//    imgBtn_ = [imgBtn_ resizableImageWithCapInsets:UIEdgeInsetsMake(18, 48, 18, 48)];
+    UIImage *imgBtn_ = [UIImage imageNamed:@"btn_submit_press"];
+    imgBtn_ = [imgBtn_ resizableImageWithCapInsets:UIEdgeInsetsMake(18, 48, 18, 48)];
     
     [self.btnCapture setBackgroundImage:imgBtn forState:UIControlStateNormal];
-//    [self.btnCapture setBackgroundImage:imgBtn_ forState:UIControlStateHighlighted];
+    [self.btnCapture setBackgroundImage:imgBtn_ forState:UIControlStateHighlighted];
     
     [self.btnCapture setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.btnCapture setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
@@ -609,6 +613,8 @@
                     {
                         self.lblPending.text = @"--";
                     }
+                    
+                    [self.tableview reloadData];
                 }
                 else
                 {
@@ -644,7 +650,9 @@
 {
     //return 30;
     
-    return 10;
+    //return 10;
+    
+    return 100;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
@@ -662,9 +670,12 @@
 //    
 //    return view;
     
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 10)];
-    view.backgroundColor = [UIColor clearColor];
-    return view;
+//    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 10)];
+//    view.backgroundColor = [UIColor clearColor];
+//    return view;
+    
+    self.viewSectionHead.frame = CGRectMake(0, 0, kScreenWidth, 100);
+    return self.viewSectionHead;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
