@@ -66,36 +66,36 @@
                 self.lblTime.text = item.usetime;
             }
             
-            if (item.canmoneyvalue != nil && item.canmoneyvalue.length > 0)
+            if (item.canmoney != nil && item.canmoney.length > 0)
             {
-                self.lblCost.text = item.canmoneyvalue;
+                self.lblCost.text = item.canmoney;
             }
             
-//            if (item.statusname != nil && item.statusname.length > 0)
+            if (item.status != nil && item.status.length > 0)
+            {
+                self.lblStatus.text = item.status;
+            }
+            
+//            if (item.typeid != nil && item.typeid.length > 0)
 //            {
-//                self.lblStatus.text = item.statusname;
+//                int type = [item.typeid intValue];
+//                if (type == 0)
+//                {
+//                    self.lblStatus.text = @"Pending";
+//                }
+//                else if (type == 1)
+//                {
+//                    self.lblStatus.text = @"Cancel";
+//                }
+//                else if (type == 2)
+//                {
+//                    self.lblStatus.text = @"Approved";
+//                }
+//                else if (type == 3)
+//                {
+//                    self.lblStatus.text = @"Claim";
+//                }
 //            }
-            
-            if (item.typeid != nil && item.typeid.length > 0)
-            {
-                int type = [item.typeid intValue];
-                if (type == 0)
-                {
-                    self.lblStatus.text = @"Pending";
-                }
-                else if (type == 1)
-                {
-                    self.lblStatus.text = @"Cancel";
-                }
-                else if (type == 2)
-                {
-                    self.lblStatus.text = @"Approved";
-                }
-                else if (type == 3)
-                {
-                    self.lblStatus.text = @"Claim";
-                }
-            }
         }
     }
 }
