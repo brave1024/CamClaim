@@ -1,0 +1,33 @@
+2015-08-11 11:11:52.881 CamClaim[25784:8831139] userId:gU_DLkrric, userName:夏志勇, userIcon:https://media.licdn.com/mpr/mprx/0_PumCn_vbpLkiDPcSvs4CZ_UbpKNCDG9Tven2P9hbJA4ie-LSyj4CZ6cbUFclItX8Ke4Cg5NFKnF_m6UjV0wYYBvIznFGm6TSp0wTvn86OB-mkrsAKmjfzGmcvij-F69yvyfm-kLNssC
+2015-08-11 11:11:52.952 CamClaim[25784:8831139] [DEBUG] request:{
+    openid = "gU_DLkrric";
+    pic = "https://media.licdn.com/mpr/mprx/0_PumCn_vbpLkiDPcSvs4CZ_UbpKNCDG9Tven2P9hbJA4ie-LSyj4CZ6cbUFclItX8Ke4Cg5NFKnF_m6UjV0wYYBvIznFGm6TSp0wTvn86OB-mkrsAKmjfzGmcvij-F69yvyfm-kLNssC";
+}
+2015-08-11 11:11:52.955 CamClaim[25784:8831139] [DEBUG] ...>>>...requestUrl:http://115.29.105.23:8080/sales/user/authLogin
+2015-08-11 11:11:52.957 CamClaim[25784:8831139] [DEBUG] 
+request body start ----------------          
+{"pic":"https:\/\/media.licdn.com\/mpr\/mprx\/0_PumCn_vbpLkiDPcSvs4CZ_UbpKNCDG9Tven2P9hbJA4ie-LSyj4CZ6cbUFclItX8Ke4Cg5NFKnF_m6UjV0wYYBvIznFGm6TSp0wTvn86OB-mkrsAKmjfzGmcvij-F69yvyfm-kLNssC","openid":"gU_DLkrric"}
+          request body end ----------------
+2015-08-11 11:11:54.265 CamClaim[25784:8831139] [DEBUG] 
+-----------------------------------
+...<statusCode:200>...<responseString:> 
+{"status":1,"message":"保存成功","data":{"id":31,"name":"6zw7m","pwd":"a22f54db75c5f92110ddd9edd4799a1f","email":"","phone":"","createtime":"","realname":"","type":1,"department":null,"zhiwei":null,"bossstatus":0,"img":"https://media.licdn.com/mpr/mprx/0_PumCn_vbpLkiDPcSvs4CZ_UbpKNCDG9Tven2P9hbJA4ie-LSyj4CZ6cbUFclItX8Ke4Cg5NFKnF_m6UjV0wYYBvIznFGm6TSp0wTvn86OB-mkrsAKmjfzGmcvij-F69yvyfm-kLNssC","open_id":"gU_DLkrric"},"total":0}
+----------------------------
+2015-08-11 11:11:54.283 CamClaim[25784:8831139] [DEBUG] <success>:{"status":1,"message":"保存成功","data":{"id":31,"name":"6zw7m","pwd":"a22f54db75c5f92110ddd9edd4799a1f","email":"","phone":"","createtime":"","realname":"","type":1,"department":null,"zhiwei":null,"bossstatus":0,"img":"https://media.licdn.com/mpr/mprx/0_PumCn_vbpLkiDPcSvs4CZ_UbpKNCDG9Tven2P9hbJA4ie-LSyj4CZ6cbUFclItX8Ke4Cg5NFKnF_m6UjV0wYYBvIznFGm6TSp0wTvn86OB-mkrsAKmjfzGmcvij-F69yvyfm-kLNssC","open_id":"gU_DLkrric"},"total":0}
+2015-08-11 11:11:54.285 CamClaim[25784:8831139] response:<ResponseModel: 0x17023f840>
+2015-08-11 11:11:54.286 CamClaim[25784:8831139] 登录成功
+2015-08-11 11:11:54.288 CamClaim[25784:8831139] data:<UserInfoModel> 
+   [id]: 31
+   [zhiwei]: <nil>
+   [phone]: 
+   [createtime]: 
+   [realname]: 
+   [bossstatus]: 0
+   [open_id]: gU_DLkrric
+   [img]: https://media.licdn.com/mpr/mprx/0_PumCn_vbpLkiDPcSvs4CZ_Ub...
+   [type]: 1
+   [pwd]: a22f54db75c5f92110ddd9edd4799a1f
+   [department]: <nil>
+   [email]: 
+   [name]: 6zw7m
+</UserInfoModel>

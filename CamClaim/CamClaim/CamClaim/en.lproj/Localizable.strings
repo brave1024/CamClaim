@@ -1,0 +1,42 @@
+/* 
+  Localizable.strings
+  CamClaim
+
+  Created by Xia Zhiyong on 15/8/12.
+  Copyright (c) 2015年 kufa88. All rights reserved.
+*/
+
+
+// 全局提示语
+"loading" = "Loading...";
+"loadOver" = "Load Over";
+"noData" = "No Data";
+"networkFail" = "No Network";
+"loadSuccess" = "Load Successfully";
+"loadFail" = "Load Failed";
+
+// pin code
+"delete" = "Delete";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+
+// Login
+"account" = "ACCOUNT";
+"password" = "PASSWORD";
+"remember" = "Remember";    // 自动登录
+"newUser" = "New User";
+"login" = "LOG IN";
+
+// Register
+"email" = "MAILBOX";
+"realName" = "REAL NAME";
+"phone" = "PHONE";
+"register" = "REGISTER";
+
+//
+"" = "";
+"" = "";
+"" = "";
+"" = "";
