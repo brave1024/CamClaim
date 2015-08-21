@@ -25,12 +25,17 @@
 @property (nonatomic, copy) NSString<Optional> *usetime;            // 报销时间
 @property (nonatomic, copy) NSString<Optional> *forusername;        // 使用对象
 
-@property (nonatomic, copy) NSString<Optional> *canmoney;           //
-@property (nonatomic, copy) NSString<Optional> *gmoney;             //
+@property (nonatomic, copy) NSString<Optional> *canmoney;           // 报销金额
+@property (nonatomic, copy) NSString<Optional> *gmoney;             // 回款金额
 @property (nonatomic, copy) NSString<Optional> *jd;                 //
 @property (nonatomic, copy) NSString<Optional> *pfile;              //
-@property (nonatomic, copy) NSString<Optional> *typeid;             //
+@property (nonatomic, copy) NSString<Optional> *typeid;             // 类型
 @property (nonatomic, copy) NSString<Optional> *wd;                 //
+
+// 月报表新增
+@property (nonatomic, copy) NSString<Optional> *jiyu;               // 结余金额
+@property (nonatomic, copy) NSString<Optional> *message;            //
+
 
 @end
 
@@ -44,6 +49,7 @@
 
 
 
+// 1.首界面5项发票记录
 /*
 {
     "data": [
@@ -138,3 +144,149 @@
     "total": 0
 }
 */
+
+
+
+// 2.月报表记录
+/*
+{
+    "data": [
+             {
+                 "canmoney": "0",
+                 "forusername": "lili",
+                 "gmoney": "0",
+                 "id": 0,
+                 "jd": null,
+                 "jiyu": "0",
+                 "location": "沙田",
+                 "message": null,
+                 "pfile": null,
+                 "status": null,
+                 "typeid": "餐飲費",
+                 "useinfo": "eat",
+                 "userid": 0,
+                 "usetime": "2015/07",
+                 "wd": null
+             },
+             {
+                 "canmoney": "0",
+                 "forusername": "lili",
+                 "gmoney": "0",
+                 "id": 0,
+                 "jd": null,
+                 "jiyu": "0",
+                 "location": "沙田",
+                 "message": null,
+                 "pfile": null,
+                 "status": null,
+                 "typeid": "餐飲費",
+                 "useinfo": "using eat",
+                 "userid": 0,
+                 "usetime": "2015/07",
+                 "wd": null
+             },
+             {
+                 "canmoney": "0",
+                 "forusername": "asdasd",
+                 "gmoney": "0",
+                 "id": 0,
+                 "jd": null,
+                 "jiyu": "0",
+                 "location": "dasda",
+                 "message": null,
+                 "pfile": null,
+                 "status": null,
+                 "typeid": "交通費",
+                 "useinfo": "dasdas",
+                 "userid": 0,
+                 "usetime": "2015/07",
+                 "wd": null
+             },
+             {
+                 "canmoney": "0",
+                 "forusername": "",
+                 "gmoney": "0",
+                 "id": 0,
+                 "jd": null,
+                 "jiyu": "0",
+                 "location": "",
+                 "message": null,
+                 "pfile": null,
+                 "status": null,
+                 "typeid": "",
+                 "useinfo": "",
+                 "userid": 0,
+                 "usetime": "",
+                 "wd": null
+             }
+             ],
+    "message": "获取数据成功",
+    "status": 1,
+    "total": 0
+}
+*/
+
+
+
+// 3.发票记录
+/*
+{
+    "data": [
+             {
+                 "canmoney": "0",
+                 "forusername": "lili",
+                 "gmoney": "0",
+                 "id": 0,
+                 "jd": null,
+                 "jiyu": "0",
+                 "location": "沙田",
+                 "message": null,
+                 "pfile": null,
+                 "status": null,
+                 "typeid": "餐飲費",
+                 "useinfo": "eat",
+                 "userid": 0,
+                 "usetime": "2015/07",
+                 "wd": null
+             },
+             {
+                 "canmoney": "0",
+                 "forusername": "lili",
+                 "gmoney": "0",
+                 "id": 0,
+                 "jd": null,
+                 "jiyu": "0",
+                 "location": "沙田",
+                 "message": null,
+                 "pfile": null,
+                 "status": null,
+                 "typeid": "餐飲費",
+                 "useinfo": "using eat",
+                 "userid": 0,
+                 "usetime": "2015/07",
+                 "wd": null
+             },
+             {
+                 "canmoney": "0",
+                 "forusername": "asdasd",
+                 "gmoney": "0",
+                 "id": 0,
+                 "jd": null,
+                 "jiyu": "0",
+                 "location": "dasda",
+                 "message": null,
+                 "pfile": null,
+                 "status": null,
+                 "typeid": "交通費",
+                 "useinfo": "dasdas",
+                 "userid": 0,
+                 "usetime": "2015/07",
+                 "wd": null
+             }
+             ],
+    "message": "获取数据成功",
+    "status": 1,
+    "total": 0
+}
+*/
+

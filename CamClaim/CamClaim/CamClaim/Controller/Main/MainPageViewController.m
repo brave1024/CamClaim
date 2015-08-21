@@ -381,7 +381,6 @@
 {
     LogTrace(@"requestUserRecentFiveClaim");
     
-    
     [InterfaceManager getUserNewFiveClaimList:^(BOOL isSucceed, NSString *message, id data) {
         
         if (isSucceed == YES)
@@ -551,7 +550,6 @@
 - (void)requestUserAllClaimStatus
 {
     LogTrace(@"requestUserAllClaimStatus");
-    
     
     [InterfaceManager getUserAllClaimStatus:^(BOOL isSucceed, NSString *message, id data) {
         

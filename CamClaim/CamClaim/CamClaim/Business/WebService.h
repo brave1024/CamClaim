@@ -44,8 +44,11 @@ static NSString *const API_USER_GETALLSTATUS = @"/sales/user/GetByStatus";
 
 #pragma mark - 发票
 
-// 按年月查找
-static NSString *const API_USER_GETCONTENTBYMONTH = @"/sales/content/contentByUser";
+// 按年月查找月报表
+static NSString *const API_USER_GETREPORTBYMONTH = @"/sales/content/contentByUser";
+
+// 按年月查找发票记录
+static NSString *const API_USER_GETCLAIMBYMONTH = @"/sales/content/contentByUserId";
 
 // 获取发票类型
 static NSString *const API_USER_GETAPPTYPELIST = @"/sales/type/getAppTypeList";

@@ -7,6 +7,7 @@
 //
 
 #import "ReportCell.h"
+#import "ClaimList.h"
 
 @implementation ReportCell
 
@@ -39,16 +40,51 @@
     self.lblIncome.textColor = [UIColor colorWithRed:(CGFloat)77/255 green:(CGFloat)239/255 blue:(CGFloat)131/255 alpha:1];
     self.lblBalance.textColor = [UIColor colorWithRed:(CGFloat)42/255 green:(CGFloat)184/255 blue:(CGFloat)252/255 alpha:1];
     
-//    self.lblDate.text = @"--";
-//    self.lblTime.text = @"--";
-//    self.lblType.text = @"--";
-//    self.lblReimbursement.text = @"--";
-//    self.lblIncome.text = @"--";
-//    self.lblBalance.text = @"--";
+    self.lblDate.text = @"--";
+    self.lblTime.text = @"--";
+    self.lblType.text = @"--";
+    self.lblReimbursement.text = @"--";
+    self.lblIncome.text = @"--";
+    self.lblBalance.text = @"--";
     
     if (data != nil)
     {
-        
+        if ([data isKindOfClass:[ClaimItem class]] == YES)
+        {
+            ClaimItem *item = (ClaimItem *)data;
+            
+            if (item.usetime != nil && item.usetime.length > 0)
+            {
+                //self.lblTime.text = item.usetime;
+                
+                NSArray *arrayTime = [item.usetime componentsSeparatedByString:@"/"];
+                if (arrayTime.count == 2)
+                {
+                    self.lblDate.text = arrayTime[0];
+                    self.lblTime.text = arrayTime[1];
+                }
+            }
+            
+            if (item.typeid != nil && item.typeid.length > 0)
+            {
+                self.lblType.text = item.typeid;
+            }
+            
+            if (item.canmoney != nil && item.canmoney.length > 0)
+            {
+                self.lblReimbursement.text = item.canmoney;
+            }
+            
+            if (item.gmoney != nil && item.gmoney.length > 0)
+            {
+                self.lblIncome.text = item.gmoney;
+            }
+            
+            if (item.jiyu != nil && item.jiyu.length > 0)
+            {
+                self.lblBalance.text = item.jiyu;
+            }
+        }
     }
 }
 

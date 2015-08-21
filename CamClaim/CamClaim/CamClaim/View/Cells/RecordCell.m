@@ -28,11 +28,11 @@
     self.backgroundColor = [UIColor clearColor];
     self.contentView.backgroundColor = [UIColor whiteColor];
     
-//    self.imgview.image = [UIImage imageNamed:@"avatar_default"];
-//    self.lblTitle.text = @"--";
-//    self.lblTime.text = @"--";
-//    self.lblCost.text = @"--";
-//    self.lblStatus.text = @"--";
+    self.imgview.image = [UIImage imageNamed:@"avatar_default"];
+    self.lblTitle.text = @"--";
+    self.lblTime.text = @"--";
+    self.lblCost.text = @"--";
+    self.lblStatus.text = @"--";
     
     // 显示用户图像...
     UserManager *user = [UserManager sharedInstance];

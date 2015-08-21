@@ -89,6 +89,25 @@ typedef void (^interfaceManagerBlock)(BOOL isSucceed, NSString *message, id data
  */
 + (void)getUserAllClaimStatus:(interfaceManagerBlock)completion;
 
+/**
+ *	@brief	按年月查询报表记录
+ *
+ *	@param 	month 	年月
+ *	@param 	completion  回调block
+ */
++ (void)getUserReportByMonth:(NSString *)month
+                  completion:(interfaceManagerBlock)completion;
+
+/**
+ *	@brief	按年月查询发票记录
+ *
+ *	@param 	month 	年月
+ *	@param 	completion  回调block
+ */
++ (void)getUserClaimByMonth:(NSString *)month
+                 completion:(interfaceManagerBlock)completion;
+
+
 
 
 

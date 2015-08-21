@@ -22,6 +22,7 @@
 @property (nonatomic, weak) IBOutlet UIView *viewFill;
 
 @property (nonatomic, strong) NSMutableArray *arrayClaim;
+@property (nonatomic, strong) AllClaimStatus *allClaimStatus;
 
 - (IBAction)btnTouchAction:(id)sender;
 
@@ -70,6 +71,9 @@
     [self initViewWithAutoLayout];
     
     [self settingLanguage];
+    
+    // 请求数据
+    [self requestClaimList];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -140,6 +144,144 @@
 }
 
 
+#pragma mark - Request
+
+- (void)requestClaimList
+{
+    [MRProgressOverlayView showOverlayAddedTo:self.viewContent title:kLoading mode:MRProgressOverlayViewModeIndeterminateSmall animated:YES];
+    
+    NSString *strMonth = [NSString stringWithFormat:@"%@/%@", @"2015", @"07"];
+    
+    [InterfaceManager getUserClaimByMonth:strMonth completion:^(BOOL isSucceed, NSString *message, id data) {
+        
+        [MRProgressOverlayView dismissOverlayForView:self.viewContent animated:YES];
+        
+        if (isSucceed == YES)
+        {
+            if (data != nil)
+            {
+                NSLog(@"response:%@", data);
+                
+                /*
+                {
+                    "data": [
+                             {
+                                 "canmoney": "0",
+                                 "forusername": "lili",
+                                 "gmoney": "0",
+                                 "id": 0,
+                                 "jd": null,
+                                 "jiyu": "0",
+                                 "location": "沙田",
+                                 "message": null,
+                                 "pfile": null,
+                                 "status": null,
+                                 "typeid": "餐飲費",
+                                 "useinfo": "eat",
+                                 "userid": 0,
+                                 "usetime": "2015/07",
+                                 "wd": null
+                             },
+                             {
+                                 "canmoney": "0",
+                                 "forusername": "lili",
+                                 "gmoney": "0",
+                                 "id": 0,
+                                 "jd": null,
+                                 "jiyu": "0",
+                                 "location": "沙田",
+                                 "message": null,
+                                 "pfile": null,
+                                 "status": null,
+                                 "typeid": "餐飲費",
+                                 "useinfo": "using eat",
+                                 "userid": 0,
+                                 "usetime": "2015/07",
+                                 "wd": null
+                             },
+                             {
+                                 "canmoney": "0",
+                                 "forusername": "asdasd",
+                                 "gmoney": "0",
+                                 "id": 0,
+                                 "jd": null,
+                                 "jiyu": "0",
+                                 "location": "dasda",
+                                 "message": null,
+                                 "pfile": null,
+                                 "status": null,
+                                 "typeid": "交通費",
+                                 "useinfo": "dasdas",
+                                 "userid": 0,
+                                 "usetime": "2015/07",
+                                 "wd": null
+                             }
+                             ],
+                    "message": "获取数据成功",
+                    "status": 1,
+                    "total": 0
+                }
+                */
+                
+                ResponseModel *response = (ResponseModel *)data;
+                if (response.status == 1)
+                {
+                    NSLog(@"获取发票记录成功");
+                    
+                    if (self.arrayClaim == nil)
+                    {
+                        self.arrayClaim = [[NSMutableArray alloc] init];
+                    }
+                    else
+                    {
+                        [self.arrayClaim removeAllObjects];
+                    }
+                    
+                    NSArray *arrayData = response.data;
+                    for (NSDictionary *dic in arrayData)
+                    {
+                        NSError *error = nil;
+                        ClaimItem *item = [[ClaimItem alloc] initWithDictionary:dic error:&error];
+                        if (item != nil && error == nil)
+                        {
+                            [self.arrayClaim addObject:item];
+                        }
+                    }
+                    
+                    if (self.arrayClaim.count > 0)
+                    {
+                        // 显示
+                        [self.tableview reloadData];
+                    }
+                    else
+                    {
+                        NSLog(@"暂无发票记录数据");
+                        //[self toast:@"暂无发票记录数据"];
+                    }
+                }
+                else
+                {
+                    NSLog(@"暂无发票记录数据");
+                    //[self toast:@"暂无发票记录数据"];
+                }
+            }
+        }
+        else
+        {
+            if (message != nil && message.length > 0)
+            {
+                [self toast:message];
+            }
+            else
+            {
+                //[self toast:@"获取发票记录失败"];
+            }
+        }
+        
+    }];
+}
+
+
 #pragma mark - BtnTouchAction
 
 - (IBAction)btnTouchAction:(id)sender
@@ -206,8 +348,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    //return self.arrayClaim.count;
-    return 15;
+    return self.arrayClaim.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -224,8 +365,8 @@
         cell = [RecordCell cellFromNib];
     }
     
-    //ClaimItem *item = self.arrayClaim[indexPath.row];
-    [cell configWithData:nil];
+    ClaimItem *item = self.arrayClaim[indexPath.row];
+    [cell configWithData:item];
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
@@ -237,8 +378,6 @@
     
     //
 }
-
-
 
 
 @end

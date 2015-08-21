@@ -271,5 +271,99 @@
     }
 }
 
+/**
+ *	@brief	按年月查询报表记录
+ *
+ *	@param 	month 	年月
+ *	@param 	completion  回调block
+ */
++ (void)getUserReportByMonth:(NSString *)month
+                  completion:(interfaceManagerBlock)completion
+{
+    UserManager *user = [UserManager sharedInstance];
+    NSString *userId = user.userInfo.id;
+    
+    if (userId != nil && userId.length > 0)
+    {
+        NSDictionary *dic = @{@"userId":userId, @"datetime":month};
+        LogDebug(@"request:%@", dic);
+        
+        [WebService startPostRequest:API_USER_GETREPORTBYMONTH body:dic returnClass:[AllClaimStatus class] success:^(AFHTTPRequestOperation *operation, ResponseModel *response) {
+            
+            // 成功
+            LogDebug(@"<success>:%@", operation.responseString);
+            
+            completion(YES, @"获取数据成功", response);
+            
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error, ResponseErrorModel *responseError) {
+            
+            // 失败
+            LogDebug(@"<failed>:%@", [error description]);
+            
+            if (responseError != nil)
+            {
+                completion(NO, responseError.Message, responseError);
+            }
+            else
+            {
+                completion(NO, @"获取数据失败", nil);
+            }
+            
+        }];
+    }
+    else
+    {
+        completion(NO, @"用户未登录", nil);
+    }
+}
+
+/**
+ *	@brief	按年月查询发票记录
+ *
+ *	@param 	month 	年月
+ *	@param 	completion  回调block
+ */
++ (void)getUserClaimByMonth:(NSString *)month
+                 completion:(interfaceManagerBlock)completion
+{
+    UserManager *user = [UserManager sharedInstance];
+    NSString *userId = user.userInfo.id;
+    
+    if (userId != nil && userId.length > 0)
+    {
+        NSDictionary *dic = @{@"userId":userId, @"datetime":month};
+        LogDebug(@"request:%@", dic);
+        
+        [WebService startPostRequest:API_USER_GETCLAIMBYMONTH body:dic returnClass:[AllClaimStatus class] success:^(AFHTTPRequestOperation *operation, ResponseModel *response) {
+            
+            // 成功
+            LogDebug(@"<success>:%@", operation.responseString);
+            
+            completion(YES, @"获取数据成功", response);
+            
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error, ResponseErrorModel *responseError) {
+            
+            // 失败
+            LogDebug(@"<failed>:%@", [error description]);
+            
+            if (responseError != nil)
+            {
+                completion(NO, responseError.Message, responseError);
+            }
+            else
+            {
+                completion(NO, @"获取数据失败", nil);
+            }
+            
+        }];
+    }
+    else
+    {
+        completion(NO, @"用户未登录", nil);
+    }
+}
+
+
+
 
 @end
