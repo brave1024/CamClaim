@@ -90,10 +90,10 @@
 //    UIImage *img_ = [UIImage imageNamed:@"img_input_press"];
 //    img_ = [img_ resizableImageWithCapInsets:UIEdgeInsetsMake(18, 48, 18, 48)];
     
-    UIImage *imgBtn = [UIImage imageNamed:@"btn_submit"];
+    UIImage *imgBtn = [UIImage imageNamed:@"btn_bg_submit"];
     imgBtn = [imgBtn resizableImageWithCapInsets:UIEdgeInsetsMake(18, 48, 18, 48)];
     
-    UIImage *imgBtn_ = [UIImage imageNamed:@"btn_submit_press"];
+    UIImage *imgBtn_ = [UIImage imageNamed:@"btn_bg_submit_press"];
     imgBtn_ = [imgBtn_ resizableImageWithCapInsets:UIEdgeInsetsMake(18, 48, 18, 48)];
     
     [self.btnCapture setBackgroundImage:imgBtn forState:UIControlStateNormal];

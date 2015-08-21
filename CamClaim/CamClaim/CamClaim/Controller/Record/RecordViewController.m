@@ -48,10 +48,10 @@
     self.tableview.backgroundColor = [UIColor clearColor];
     self.tableview.backgroundView = nil;
     
-    UIImage *imgBtn = [UIImage imageNamed:@"btn_submit"];
+    UIImage *imgBtn = [UIImage imageNamed:@"btn_bg_submit"];
     imgBtn = [imgBtn resizableImageWithCapInsets:UIEdgeInsetsMake(18, 48, 18, 48)];
     
-    UIImage *imgBtn_ = [UIImage imageNamed:@"btn_submit_press"];
+    UIImage *imgBtn_ = [UIImage imageNamed:@"btn_bg_submit_press"];
     imgBtn_ = [imgBtn_ resizableImageWithCapInsets:UIEdgeInsetsMake(18, 48, 18, 48)];
     
     [self.btnFill setBackgroundImage:imgBtn forState:UIControlStateNormal];

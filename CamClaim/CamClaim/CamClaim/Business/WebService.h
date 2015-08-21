@@ -42,8 +42,19 @@ static NSString *const API_USER_GETNEWFIVELIST = @"/sales/user/GetByNewFive";
 static NSString *const API_USER_GETALLSTATUS = @"/sales/user/GetByStatus";
 
 
+#pragma mark - 发票
 
+// 按年月查找
+static NSString *const API_USER_GETCONTENTBYMONTH = @"/sales/content/contentByUser";
 
+// 获取发票类型
+static NSString *const API_USER_GETAPPTYPELIST = @"/sales/type/getAppTypeList";
+
+// 获取公司列表
+static NSString *const API_USER_GETCOMPANYINFO = @"/sales/user/getCompanyInfoUserid";
+
+// 新增公司
+static NSString *const API_USER_ADDCOMPANYINFO = @"/sales/user/addCompanyInfoByUserid";
 
 
 
