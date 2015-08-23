@@ -226,9 +226,17 @@
     {
         position = user.userInfo.zhiwei;
     }
-    if (department != nil || position != nil)
+    if (department != nil && position != nil)
     {
         self.lblCompany.text = [NSString stringWithFormat:@"%@ %@", department, position];
+    }
+    else if (department != nil && position == nil)
+    {
+        self.lblCompany.text = department;
+    }
+    else if (department == nil && position != nil)
+    {
+        self.lblCompany.text = position;
     }
     
     // 3. 显示用户图像...

@@ -37,7 +37,8 @@
 // 去掉内容中的字体标签
 + (NSString *)removeFontTagFromContent:(NSString *)content;
 
-- (BOOL)myContainsString:(NSString*)other;
+// 判断是否包含指定字符串
+- (BOOL)myContainsString:(NSString *)other;
 
 // 检查用户名
 - (BOOL)checkUserName;

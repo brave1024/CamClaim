@@ -10,7 +10,7 @@
 #import "ReportCell.h"
 #import "ClaimList.h"
 
-@interface ReportViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface ReportViewController () <UITableViewDataSource, UITableViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableview;
 @property (nonatomic, weak) IBOutlet UIView *viewTableFoot;
@@ -23,9 +23,31 @@
 @property (nonatomic, weak) IBOutlet UILabel *lblBalance;       // 结余金额
 
 @property (nonatomic, strong) IBOutlet UILabel *lblDate;
+@property (nonatomic, strong) IBOutlet UILabel *lblMonth;
+@property (nonatomic, strong) IBOutlet UILabel *lblYear;
 
 @property (nonatomic, strong) NSMutableArray *arrayClaim;
 @property (nonatomic, strong) AllClaimStatus *allClaimStatus;
+
+@property (nonatomic, strong) IBOutlet UIView *viewMonth;
+
+@property (nonatomic, copy) NSString *strDate;
+
+// 半透明遮罩
+@property (nonatomic, strong) UIView *viewTranslucence;
+
+//
+@property (nonatomic, strong) IBOutlet UIView *viewPicker;
+@property (nonatomic, strong) IBOutlet UIPickerView *datePicker;
+@property (nonatomic, strong) IBOutlet UIBarButtonItem *barbtnCancel;
+@property (nonatomic, strong) IBOutlet UIBarButtonItem *barbtnDone;
+
+@property (nonatomic, strong) NSMutableArray *arrayYear;
+@property (nonatomic, strong) NSMutableArray *arrayMonth;
+@property NSInteger currentMonth;
+
+- (IBAction)selectDateForReport:(id)sender;
+- (IBAction)dismissDatePickerView:(id)sender;
 
 @end
 
@@ -36,26 +58,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.viewContent.backgroundColor = [UIColor colorWithRed:(CGFloat)245/255 green:(CGFloat)247/255 blue:(CGFloat)249/255 alpha:1];
-    self.viewSectionHead.backgroundColor = [UIColor colorWithRed:(CGFloat)95/255 green:(CGFloat)178/255 blue:(CGFloat)255/255 alpha:1];
-    
     self.navView.lblTitle.text = @"月报表";
     self.navView.lblTitle.hidden = YES;
     self.navView.imgLogo.hidden = NO;
     [self.navView.btnBack setImage:[UIImage imageNamed:@"icon_menu"] forState:UIControlStateNormal];
     
-    self.tableview.backgroundColor = [UIColor clearColor];
-    self.tableview.backgroundView = nil;
+    self.viewContent.backgroundColor = [UIColor colorWithRed:(CGFloat)245/255 green:(CGFloat)247/255 blue:(CGFloat)249/255 alpha:1];
+    self.viewSectionHead.backgroundColor = [UIColor colorWithRed:(CGFloat)95/255 green:(CGFloat)178/255 blue:(CGFloat)255/255 alpha:1];
     
-    self.tableview.tableHeaderView = self.viewTableHead;
-    //self.tableview.tableFooterView = self.viewTableFoot;
+    [self initView];
     
-    self.viewSectionHead.backgroundColor = [UIColor colorWithRed:(CGFloat)36/255 green:(CGFloat)101/255 blue:(CGFloat)194/255 alpha:1];
-    [self.tableview reloadData];
-    
-    self.lblExpenditure.text = @"--";
-    self.lblIncome.text = @"--";
-    self.lblBalance.text = @"--";
+    [self initPopViewForMonth];
     
     [self initViewWithAutoLayout];
     
@@ -63,6 +76,86 @@
     
     // 请求数据
     [self requestReportList];
+}
+
+- (void)initView
+{
+    self.tableview.backgroundColor = [UIColor clearColor];
+    self.tableview.backgroundView = nil;
+    
+    self.viewTableHead.backgroundColor = [UIColor colorWithRed:(CGFloat)245/255 green:(CGFloat)247/255 blue:(CGFloat)249/255 alpha:1];
+    self.tableview.tableHeaderView = self.viewTableHead;
+    //self.tableview.tableFooterView = self.viewTableFoot;
+    
+    self.viewSectionHead.backgroundColor = [UIColor colorWithRed:(CGFloat)36/255 green:(CGFloat)101/255 blue:(CGFloat)194/255 alpha:1];
+    [self.tableview reloadData];
+    
+    self.lblDate.text = self.strDate;
+    self.lblMonth.text = [self getCurrentMonth];
+    self.lblYear.text = [self getCurrentYear];
+    
+    self.lblExpenditure.text = @"--";
+    self.lblIncome.text = @"--";
+    self.lblBalance.text = @"--";
+    
+    self.lblDate.textColor = [UIColor blackColor];
+    self.lblMonth.textColor = [UIColor colorWithRed:(CGFloat)42/255 green:(CGFloat)184/255 blue:(CGFloat)252/255 alpha:1];
+    self.lblYear.textColor = [UIColor colorWithRed:(CGFloat)42/255 green:(CGFloat)184/255 blue:(CGFloat)252/255 alpha:1];
+    
+//    UIImage *img = [UIImage imageNamed:@"img_input"];
+//    img = [img resizableImageWithCapInsets:UIEdgeInsetsMake(18, 48, 18, 48)];
+//    self.imgviewMonth.image = img;
+    
+    self.viewMonth.backgroundColor = [UIColor whiteColor];
+    self.viewMonth.layer.cornerRadius = 4;
+    self.viewMonth.layer.borderColor = [[UIColor lightGrayColor] CGColor];
+    self.viewMonth.layer.borderWidth = 0.5;
+}
+
+- (void)initPopViewForMonth
+{
+    UITapGestureRecognizer *tapGestureForMonth = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showPopViewForDate)];
+    [self.viewMonth addGestureRecognizer:tapGestureForMonth];
+    
+    // 初始化日期选择视图
+    self.viewTranslucence = [[UIView alloc] initWithFrame:CGRectMake(0, 64, kScreenWidth, kScreenHeight - 64)];
+    self.viewTranslucence.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
+    
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hidePopViewForDate)];
+    [self.viewTranslucence addGestureRecognizer:tapGesture];
+    
+    CGRect myRect = self.viewPicker.bounds;
+    myRect.origin.x = 0;
+    myRect.origin.y = CGRectGetHeight(self.viewTranslucence.frame) - myRect.size.height;
+    self.viewPicker.frame = CGRectMake(myRect.origin.x, myRect.origin.y, kScreenWidth, myRect.size.height);
+    [self.viewTranslucence addSubview:self.viewPicker];
+    
+    // Month Array for picker view
+    //self.arrayMonth = [[NSMutableArray alloc]initWithObjects:@"Jan", @"Feb", @"Mar", @"Apr", @"May", @"Jun", @"Jul", @"Aug", @"Sep", @"Oct", @"Nov", @"Dec", nil];
+    self.arrayMonth = [[NSMutableArray alloc]initWithObjects:@"01", @"02", @"03", @"04", @"05", @"06", @"07", @"08", @"09", @"10", @"11", @"12", nil];
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"MM"];
+    NSString *monthString = [formatter stringFromDate:[NSDate date]];
+    NSInteger month = [monthString integerValue];
+    self.currentMonth = month;
+    
+    formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy"];
+    NSString *yearString = [formatter stringFromDate:[NSDate date]];
+    NSInteger year = [yearString integerValue];
+    
+    // Year Array for picker view
+    self.arrayYear = [[NSMutableArray alloc] init];
+    for (int i=0; i<10; i++)
+    {
+        [self.arrayYear addObject:[NSString stringWithFormat:@"%ld", year-i]];
+    }
+    
+    self.datePicker.delegate = self;
+    self.datePicker.showsSelectionIndicator = YES;
+    [self.datePicker selectRow:0 inComponent:0 animated:YES];
+    [self.datePicker selectRow:month-1 inComponent:1 animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -126,15 +219,192 @@
 }
 
 
+#pragma mark - GetDate
+
+- (NSString *)strDate
+{
+    if (_strDate == nil)
+    {
+        NSDateFormatter *formatter = [[NSDateFormatter alloc ] init];
+        //[formatter setDateFormat:@"YYYY.MM.dd hh.mm.ss"];
+        //[formatter setDateFormat:@"YYYY-MM-dd hh:mm:ss:SSS"];
+        [formatter setDateFormat:@"YYYY/MM"];
+        _strDate = [formatter stringFromDate:[NSDate date]];
+    }
+    
+    return _strDate;
+}
+
+- (NSString *)getCurrentYear
+{
+    if (self.strDate != nil && self.strDate.length > 0)
+    {
+        NSArray *arrayDate = [self.strDate componentsSeparatedByString:@"/"];
+        if (arrayDate != nil && arrayDate.count == 2)
+        {
+            return arrayDate[0];
+        }
+        else
+        {
+            return nil;
+        }
+    }
+    else
+    {
+        return nil;
+    }
+}
+
+- (NSString *)getCurrentMonth
+{
+    if (self.strDate != nil && self.strDate.length > 0)
+    {
+        NSArray *arrayDate = [self.strDate componentsSeparatedByString:@"/"];
+        if (arrayDate != nil && arrayDate.count == 2)
+        {
+            return arrayDate[1];
+        }
+        else
+        {
+            return nil;
+        }
+    }
+    else
+    {
+        return nil;
+    }
+}
+
+
+#pragma mark -
+
+- (IBAction)selectDateForReport:(id)sender
+{
+    NSInteger indexYear = [self.datePicker selectedRowInComponent:0];
+    NSInteger indexMonth = [self.datePicker selectedRowInComponent:1];
+    
+    NSString *selectedMonth = [NSString stringWithFormat:@"%@/%@", self.arrayYear[indexYear], self.arrayMonth[indexMonth]];
+    
+    self.lblDate.text = selectedMonth;
+    self.lblMonth.text = [NSString stringWithFormat:@"%@", self.arrayMonth[indexMonth]];
+    self.lblYear.text = [NSString stringWithFormat:@"%@", self.arrayYear[indexYear]];
+    
+    NSLog(@"用户选择的年月:%@, 之前选择的年月:%@", selectedMonth, self.strDate);
+    
+    if ([self.strDate isEqualToString:selectedMonth] == YES)
+    {
+        // 年月未改变,不需要重复请求数据
+        NSLog(@"年月未改变,不需要重复请求数据");
+        self.strDate = [NSString stringWithString:selectedMonth];
+    }
+    else
+    {
+        // 请求数据
+        NSLog(@"请求数据");
+        self.strDate = [NSString stringWithString:selectedMonth];
+        
+        [self requestReportList];
+    }
+    
+    [self.viewTranslucence removeFromSuperview];
+}
+
+- (IBAction)dismissDatePickerView:(id)sender
+{
+    [self.viewTranslucence removeFromSuperview];
+}
+
+- (void)hidePopViewForDate
+{
+    [self.viewTranslucence removeFromSuperview];
+}
+
+- (void)showPopViewForDate
+{
+    [self.view addSubview:self.viewTranslucence];
+}
+
+
+#pragma mark - UIPickerViewDelegate
+
+// returns the number of 'columns' to display.
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 2;
+}
+
+// returns the # of rows in each component..
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    if (component == 0)
+    {
+        return self.arrayYear.count;
+    }
+    else
+    {
+        return self.arrayMonth.count;
+    }
+}
+
+// returns width of column and height of row for each component.
+- (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component
+{
+    return kScreenWidth / 2;
+}
+
+- (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component
+{
+    return 44;
+}
+
+// these methods return either a plain NSString, a NSAttributedString, or a view (e.g UILabel) to display the row for the component.
+// for the view versions, we cache any hidden and thus unused views and pass them back for reuse.
+// If you return back a different object, the old one will be released. the view will be centered in the row rect
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    if (component == 0)
+    {
+        return self.arrayYear[row];
+    }
+    else
+    {
+        return self.arrayMonth[row];
+    }
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+    if ([pickerView selectedRowInComponent:0] == 0)
+    {
+        // 用户选中今年
+        
+        NSInteger selectedMonth = [pickerView selectedRowInComponent:1];
+        if (selectedMonth > self.currentMonth-1)
+        {
+            [pickerView selectRow:self.currentMonth-1 inComponent:1 animated:YES];
+        }
+        else
+        {
+            // 小于等于当月
+        }
+    }
+}
+
+
 #pragma mark - Request
 
 - (void)requestReportList
 {
     [MRProgressOverlayView showOverlayAddedTo:self.viewContent title:kLoading mode:MRProgressOverlayViewModeIndeterminateSmall animated:YES];
     
-    NSString *strMonth = [NSString stringWithFormat:@"%@/%@", @"2015", @"07"];
+    NSString *strYear = [self getCurrentYear];
+    NSString *strMonth = [self getCurrentMonth];
+    NSString *month = [NSString stringWithFormat:@"%@/%@", strYear, strMonth];
     
-    [InterfaceManager getUserReportByMonth:strMonth completion:^(BOOL isSucceed, NSString *message, id data) {
+    // Test
+    //month = @"2015/07";
+    
+    [InterfaceManager getUserReportByMonth:month completion:^(BOOL isSucceed, NSString *message, id data) {
         
         [MRProgressOverlayView dismissOverlayForView:self.viewContent animated:YES];
         
@@ -301,15 +571,50 @@
                     }
                     else
                     {
-                        NSLog(@"暂无报销数据");
-                        //[self toast:@"暂无报销数据"];
+                        NSLog(@"暂无月报表数据");
+                        [self toast:@"暂无月报表数据"];
+                        
+                        if (self.arrayClaim == nil)
+                        {
+                            self.arrayClaim = [[NSMutableArray alloc] init];
+                        }
+                        else
+                        {
+                            [self.arrayClaim removeAllObjects];
+                        }
+                        [self.tableview reloadData];
                     }
                 }
                 else
                 {
-                    NSLog(@"暂无月报表记录数据");
-                    //[self toast:@"暂无月报表记录数据"];
+                    NSLog(@"暂无月报表数据");
+                    [self toast:@"暂无月报表数据"];
+                    
+                    if (self.arrayClaim == nil)
+                    {
+                        self.arrayClaim = [[NSMutableArray alloc] init];
+                    }
+                    else
+                    {
+                        [self.arrayClaim removeAllObjects];
+                    }
+                    [self.tableview reloadData];
                 }
+            }
+            else
+            {
+                NSLog(@"暂无月报表数据");
+                [self toast:@"暂无月报表数据"];
+                
+                if (self.arrayClaim == nil)
+                {
+                    self.arrayClaim = [[NSMutableArray alloc] init];
+                }
+                else
+                {
+                    [self.arrayClaim removeAllObjects];
+                }
+                [self.tableview reloadData];
             }
         }
         else
@@ -320,8 +625,18 @@
             }
             else
             {
-                //[self toast:@"获取月报表记录失败"];
+                [self toast:@"获取月报表数据失败"];
             }
+            
+            if (self.arrayClaim == nil)
+            {
+                self.arrayClaim = [[NSMutableArray alloc] init];
+            }
+            else
+            {
+                [self.arrayClaim removeAllObjects];
+            }
+            [self.tableview reloadData];
         }
         
     }];

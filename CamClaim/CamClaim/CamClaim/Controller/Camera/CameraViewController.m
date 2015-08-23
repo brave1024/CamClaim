@@ -10,6 +10,11 @@
 
 @interface CameraViewController () <IIViewDeckControllerDelegate>
 
+@property (nonatomic, weak) IBOutlet UIImageView *imgview;
+@property (nonatomic, weak) IBOutlet UIView *viewResult;
+
+@property (nonatomic, weak) IBOutlet UIButton *btnComfirm;
+
 @end
 
 @implementation CameraViewController
@@ -18,13 +23,31 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.navView.lblTitle.text = @"拍照";
-    self.navView.lblTitle.hidden = YES;
-    self.navView.imgLogo.hidden = NO;
-    [self.navView.btnBack setImage:[UIImage imageNamed:@"icon_menu"] forState:UIControlStateNormal];
+//    self.navView.lblTitle.text = @"拍照";
+//    self.navView.lblTitle.hidden = YES;
+//    self.navView.imgLogo.hidden = NO;
+//    [self.navView.btnBack setImage:[UIImage imageNamed:@"icon_menu"] forState:UIControlStateNormal];
     
-    self.viewDeckController.delegate = self;
-
+    self.navView.lblTitle.text = @"拍照";
+    
+    self.navView.lblTitle.hidden = NO;
+    self.navView.imgLogo.hidden = YES;
+    
+    self.viewContent.backgroundColor = [UIColor blackColor];
+    
+    UIImage *imgBtn = [UIImage imageNamed:@"btn_bg_submit"];
+    imgBtn = [imgBtn resizableImageWithCapInsets:UIEdgeInsetsMake(18, 48, 18, 48)];
+    
+    UIImage *imgBtn_ = [UIImage imageNamed:@"btn_bg_submit_press"];
+    imgBtn_ = [imgBtn_ resizableImageWithCapInsets:UIEdgeInsetsMake(18, 48, 18, 48)];
+    
+    [self.btnComfirm setBackgroundImage:imgBtn forState:UIControlStateNormal];
+    [self.btnComfirm setBackgroundImage:imgBtn_ forState:UIControlStateHighlighted];
+    
+    [self.btnComfirm setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.btnComfirm setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
+    
+    self.imgview.image = self.imgCapture;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,17 +70,10 @@
 
 - (void)backAction
 {
-    //[self.navigationController popViewControllerAnimated:YES];
-    
-    [self.viewDeckController toggleLeftViewAnimated:YES completion:^(IIViewDeckController *controller, BOOL success) {
-        // 点击按钮隐藏菜单栏后的动画
-        [self.viewDeckController previewBounceView:IIViewDeckLeftSide toDistance:20.0f duration:0.6f numberOfBounces:2 dampingFactor:0.40f callDelegate:YES completion:^(IIViewDeckController *controller, BOOL success) {
-            
-        }];
+    [self dismissViewControllerAnimated:YES completion:^{
+        //
     }];
 }
-
-
 
 
 @end

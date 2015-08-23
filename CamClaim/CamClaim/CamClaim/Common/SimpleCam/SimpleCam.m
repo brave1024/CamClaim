@@ -45,6 +45,7 @@ static CGFloat optionUnavailableAlpha = 0.2;
 
 #import "SimpleCam.h"
 #import "NavView.h"
+#import "CameraViewController.h"
 
 @interface SimpleCam () <NavViewDelegate>
 {
@@ -118,6 +119,7 @@ static CGFloat optionUnavailableAlpha = 0.2;
 //    {
 //        // Pre iOS 8 -- No camera auth required.
 //        [self setupForCapture];     // setup
+//        self.cameraAuthorized = YES;
 //    }
 //    else
 //    {
@@ -130,6 +132,7 @@ static CGFloat optionUnavailableAlpha = 0.2;
 //                // Do setup early if possible.
 //                NSLog(@"<viewDidLoad>...相机已授权...~!@");
 //                [self setupForCapture];
+//                self.cameraAuthorized = YES;
 //                break;
 //            default:
 //                break;
@@ -137,14 +140,14 @@ static CGFloat optionUnavailableAlpha = 0.2;
 //    }
     
     // 判断相机是否已被用户授权
-    self.cameraAuthorized = YES;
+    self.cameraAuthorized = NO;
     
     if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_7_1)
     {
         // Pre iOS 8 -- No camera auth required.
         self.cameraAuthorized = YES;
-        [self animateIntoView];
         [self setupForCapture];     // setup
+        [self animateIntoView];
     }
     else
     {
@@ -161,8 +164,8 @@ static CGFloat optionUnavailableAlpha = 0.2;
             case AVAuthorizationStatusAuthorized:
                 NSLog(@"相机已授权...~!@");
                 self.cameraAuthorized = YES;
-                [self animateIntoView];
                 [self setupForCapture];
+                [self animateIntoView];
                 break;
             case AVAuthorizationStatusNotDetermined: {
                 NSLog(@"相机第一次启动,需用户授权");
@@ -178,8 +181,9 @@ static CGFloat optionUnavailableAlpha = 0.2;
                         
                         dispatch_async(dispatch_get_main_queue(), ^(){
                             
-                            [self animateIntoView];
                             [self setupForCapture];
+                            [self animateIntoView];
+                            
                             //[self initViewForCustom];
                             
                             [self.view bringSubviewToFront:self.navView];
@@ -223,10 +227,14 @@ static CGFloat optionUnavailableAlpha = 0.2;
     
     [super viewDidAppear:animated];
     
+//    // 判断相机是否已被用户授权
+//    self.cameraAuthorized = NO;
+//    
 //    if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_7_1)
 //    {
 //        // Pre iOS 8 -- No camera auth required.
 //        [self animateIntoView];
+//        self.cameraAuthorized = YES;
 //    }
 //    else
 //    {
@@ -235,24 +243,43 @@ static CGFloat optionUnavailableAlpha = 0.2;
 //        switch (status) {
 //            case AVAuthorizationStatusDenied:
 //            case AVAuthorizationStatusRestricted:
-//                NSLog(@"SC: Not authorized, or restricted");
+//                NSLog(@"相机未授权...<SC: Not authorized, or restricted>");
 //                [self.delegate simpleCamNotAuthorizedForCameraUse:self];
 //                break;
 //            case AVAuthorizationStatusAuthorized:
+//                NSLog(@"相机已授权...~!@");
 //                [self animateIntoView];
+//                self.cameraAuthorized = YES;
 //                break;
 //            case AVAuthorizationStatusNotDetermined: {
+//                NSLog(@"相机第一次启动,需用户授权");
+//                
 //                // not determined
 //                [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
 //                    if (granted)
 //                    {
 //                        // 已授权
-//                        [self setupForCapture];
-//                        [self animateIntoView];
+//                        NSLog(@"用户对相机已授权");
+//                        self.cameraAuthorized = YES;
+//                        
+//                        //[self setupForCapture];
+//                        //[self animateIntoView];
+//                        
+//                        dispatch_async(dispatch_get_main_queue(), ^(){
+//
+//                            [self setupForCapture];
+//                            [self animateIntoView];
+//                            
+//                            [self.view bringSubviewToFront:self.navView];
+//                            [self.view bringSubviewToFront:self.btnCancel];
+//                            [self.view bringSubviewToFront:self.btnSave];
+//                            [self.view bringSubviewToFront:self.btnCapture];
+//                        });
 //                    }
 //                    else
 //                    {
 //                        // 未授权
+//                        NSLog(@"用户对相机未授权");
 //                        [self.delegate simpleCam:self didFinishWithImage:nil];
 //                    }
 //                }];
@@ -565,7 +592,11 @@ static CGFloat optionUnavailableAlpha = 0.2;
          imageData = nil;
          
          // If we have disabled the photo preview directly fire the delegate callback, otherwise, show user a preview
-         _disablePhotoPreview ? [self photoCapturedOver] : [self drawCustomButton];
+         //_disablePhotoPreview ? [self photoCapturedOver] : [self drawCustomButton];
+         
+         // Add By Xia Zhiyong
+         //_disablePhotoPreview ? [self photoCapturedOver] : [self jumpToResultView];
+         _disablePhotoPreview ? [self photoCapturedOver] : [self saveAction];
      }];
 }
 
@@ -667,6 +698,24 @@ static CGFloat optionUnavailableAlpha = 0.2;
         isSaveWaitingForResizedImage = YES;
         [self resizeImage];
     }
+}
+
+// 跳转到文字识别结果界面
+- (void)jumpToResultView
+{
+    CameraViewController *cameraVC = [[CameraViewController alloc] initWithNibName:@"CameraViewController" bundle:nil];
+    cameraVC.imgCapture = _capturedImageV.image;
+    [self presentViewController:cameraVC animated:YES completion:^{
+        //
+    }];
+    
+//    dispatch_async(dispatch_get_main_queue(), ^(){
+//        
+//        CameraViewController *cameraVC = [[CameraViewController alloc] initWithNibName:@"CameraViewController" bundle:nil];
+//        cameraVC.imgCapture = _capturedImageV.image;
+//        [self.navigationController pushViewController:cameraVC animated:YES];
+//        
+//    });
 }
 
 

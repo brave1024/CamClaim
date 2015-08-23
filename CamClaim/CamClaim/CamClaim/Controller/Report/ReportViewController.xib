@@ -6,13 +6,20 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReportViewController">
             <connections>
+                <outlet property="barbtnCancel" destination="Yfy-D8-aG6" id="xXs-UI-d9R"/>
+                <outlet property="barbtnDone" destination="UlF-Sa-uhW" id="YaU-Pe-z4D"/>
+                <outlet property="datePicker" destination="4Qd-lJ-4OT" id="0ZG-ux-tdr"/>
                 <outlet property="lblBalance" destination="PBA-06-TDM" id="7Ui-YP-pRv"/>
                 <outlet property="lblDate" destination="W1e-gd-oP6" id="MmI-Pb-1fJ"/>
                 <outlet property="lblExpenditure" destination="ucM-7p-LBO" id="OmL-PB-ZbO"/>
                 <outlet property="lblIncome" destination="oaB-Ni-VSz" id="uXa-l6-pl8"/>
+                <outlet property="lblMonth" destination="VlS-Wm-CR6" id="XYb-ef-wIt"/>
+                <outlet property="lblYear" destination="5BA-hc-cPq" id="Vkj-iw-aBO"/>
                 <outlet property="tableview" destination="w4W-oX-zgR" id="UIe-Og-ZbW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewContent" destination="G2h-K0-Mp6" id="wqU-Ab-iPj"/>
+                <outlet property="viewMonth" destination="ewL-hN-gWG" id="SQB-dx-d5E"/>
+                <outlet property="viewPicker" destination="avP-LD-kz2" id="6WB-wj-CRa"/>
                 <outlet property="viewSectionHead" destination="1EN-BI-abc" id="bIC-JO-6Bo"/>
                 <outlet property="viewTableFoot" destination="uXG-yd-HQf" id="36a-aV-MmZ"/>
                 <outlet property="viewTableHead" destination="NUa-iY-UjC" id="KOj-F9-s4u"/>
@@ -167,54 +174,83 @@
                 <constraint firstAttribute="trailing" secondItem="G2h-K0-Mp6" secondAttribute="trailing" id="t3S-H2-B04"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-            <point key="canvasLocation" x="210" y="369"/>
+            <point key="canvasLocation" x="77" y="112"/>
         </view>
         <view contentMode="scaleToFill" id="NUa-iY-UjC">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Now" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TzB-Gd-KV2">
-                    <rect key="frame" x="7" y="5" width="58" height="18"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TzB-Gd-KV2">
+                    <rect key="frame" x="10" y="7" width="58" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="58" id="2KN-UB-sCA"/>
+                        <constraint firstAttribute="height" constant="18" id="9IR-Uu-NYk"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2015.07" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1e-gd-oP6">
-                    <rect key="frame" x="7" y="23" width="88" height="18"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015.07" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1e-gd-oP6">
+                    <rect key="frame" x="10" y="25" width="78" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="6P4-Kl-gPS"/>
+                        <constraint firstAttribute="width" constant="78" id="GNE-XT-UOb"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ewL-hN-gWG">
-                    <rect key="frame" x="110" y="0.0" width="210" height="46"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ewL-hN-gWG">
+                    <rect key="frame" x="100" y="9" width="210" height="32"/>
                     <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="feK-kK-Xug">
+                            <rect key="frame" x="0.0" y="0.0" width="210" height="32"/>
+                        </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Month" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVm-9L-CoL">
-                            <rect key="frame" x="60" y="14" width="42" height="18"/>
+                            <rect key="frame" x="55" y="5" width="42" height="22"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Year" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mA0-Aq-nyg">
-                            <rect key="frame" x="166" y="14" width="42" height="18"/>
+                            <rect key="frame" x="161" y="5" width="42" height="22"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="07" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VlS-Wm-CR6">
-                            <rect key="frame" x="12" y="14" width="42" height="18"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <rect key="frame" x="7" y="3" width="42" height="26"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2015" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5BA-hc-cPq">
-                            <rect key="frame" x="118" y="14" width="42" height="18"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <rect key="frame" x="113" y="3" width="42" height="26"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="hOc-ug-acX"/>
+                        <constraint firstAttribute="width" constant="210" id="rNy-aG-mUe"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerY" secondItem="ewL-hN-gWG" secondAttribute="centerY" id="8e0-3B-9uo"/>
+                <constraint firstItem="ewL-hN-gWG" firstAttribute="top" secondItem="NUa-iY-UjC" secondAttribute="top" constant="9" id="J2t-nq-5iD"/>
+                <constraint firstItem="TzB-Gd-KV2" firstAttribute="leading" secondItem="NUa-iY-UjC" secondAttribute="leading" constant="10" id="P7z-zU-03K"/>
+                <constraint firstItem="TzB-Gd-KV2" firstAttribute="top" secondItem="NUa-iY-UjC" secondAttribute="top" constant="7" id="Tju-lT-oQg"/>
+                <constraint firstAttribute="bottom" secondItem="W1e-gd-oP6" secondAttribute="bottom" constant="7" id="gbN-jA-lAy"/>
+                <constraint firstAttribute="trailing" secondItem="ewL-hN-gWG" secondAttribute="trailing" constant="10" id="ms2-M6-pw6"/>
+                <constraint firstItem="W1e-gd-oP6" firstAttribute="leading" secondItem="NUa-iY-UjC" secondAttribute="leading" constant="10" id="xZ3-vP-3qn"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="589" y="108"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="J2t-nq-5iD"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="456" y="-149"/>
         </view>
         <view contentMode="scaleToFill" id="1EN-BI-abc">
             <rect key="frame" x="0.0" y="0.0" width="320" height="34"/>
@@ -286,7 +322,7 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="589" y="210"/>
+            <point key="canvasLocation" x="456" y="-47"/>
         </view>
         <view contentMode="scaleToFill" id="Obx-WU-ng2">
             <rect key="frame" x="0.0" y="0.0" width="320" height="34"/>
@@ -331,7 +367,56 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="589" y="309"/>
+            <point key="canvasLocation" x="456" y="52"/>
+        </view>
+        <view contentMode="scaleToFill" id="avP-LD-kz2">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="260"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RLG-rw-SxP">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="jGe-xb-Yzp"/>
+                    </constraints>
+                    <items>
+                        <barButtonItem tag="100" title="取消" id="Yfy-D8-aG6">
+                            <color key="tintColor" red="0.98431372549999996" green="0.0078431372550000003" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="dismissDatePickerView:" destination="-1" id="o8r-A7-IV8"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="yV3-EM-zeg"/>
+                        <barButtonItem tag="101" title="确定" id="UlF-Sa-uhW">
+                            <color key="tintColor" red="0.98431372549999996" green="0.0078431372550000003" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="selectDateForReport:" destination="-1" id="bah-CH-VyB"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Qd-lJ-4OT">
+                    <rect key="frame" x="0.0" y="44" width="320" height="216"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="216" id="z0A-ws-KOM"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="3qp-PR-EQt"/>
+                        <outlet property="delegate" destination="-1" id="XBm-Qb-coQ"/>
+                    </connections>
+                </pickerView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="4Qd-lJ-4OT" secondAttribute="bottom" id="0cK-nl-Pz6"/>
+                <constraint firstItem="RLG-rw-SxP" firstAttribute="top" secondItem="avP-LD-kz2" secondAttribute="top" id="DK6-pA-Wzu"/>
+                <constraint firstItem="RLG-rw-SxP" firstAttribute="leading" secondItem="avP-LD-kz2" secondAttribute="leading" id="Rq8-dw-Phk"/>
+                <constraint firstItem="4Qd-lJ-4OT" firstAttribute="leading" secondItem="avP-LD-kz2" secondAttribute="leading" id="diU-O2-VqF"/>
+                <constraint firstAttribute="trailing" secondItem="RLG-rw-SxP" secondAttribute="trailing" id="gNU-Di-vCF"/>
+                <constraint firstAttribute="trailing" secondItem="4Qd-lJ-4OT" secondAttribute="trailing" id="xp4-Ss-Bd9"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="456" y="255"/>
         </view>
     </objects>
 </document>

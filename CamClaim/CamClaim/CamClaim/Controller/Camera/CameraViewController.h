@@ -10,4 +10,6 @@
 
 @interface CameraViewController : BaseViewController
 
+@property (nonatomic, strong) UIImage *imgCapture;
+
 @end

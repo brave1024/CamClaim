@@ -9,6 +9,7 @@
 #import "MainPageViewController.h"
 #import "RegisterViewController.h"
 #import "LoginViewController.h"
+#import "CameraViewController.h"
 #import "MainCell.h"
 #import "SimpleCam.h"
 #import "AllClaimStatus.h"
@@ -347,9 +348,17 @@
     {
         position = user.userInfo.zhiwei;
     }
-    if (department != nil || position != nil)
+    if (department != nil && position != nil)
     {
         self.lblCompany.text = [NSString stringWithFormat:@"%@ %@", department, position];
+    }
+    else if (department != nil && position == nil)
+    {
+        self.lblCompany.text = department;
+    }
+    else if (department == nil && position != nil)
+    {
+        self.lblCompany.text = position;
     }
     
     // 3. 显示用户图像...
@@ -785,6 +794,16 @@
     // Close simpleCam - use this as opposed to 'dismissViewController' otherwise, the captureSession may not close properly and may result in memory leaks.
     [simpleCam closeWithCompletion:^{
         NSLog(@"SimpleCam is done closing ... ");
+        
+        if (image)
+        {
+            CameraViewController *cameraVC = [[CameraViewController alloc] initWithNibName:@"CameraViewController" bundle:nil];
+            cameraVC.imgCapture = image;
+            [self presentViewController:cameraVC animated:YES completion:^{
+                //
+            }];
+        }
+        
     }];
 }
 
