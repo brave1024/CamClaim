@@ -137,6 +137,20 @@
         // 用户未登录过
         self.textfieldAccount.text = nil;
         self.textfieldPassword.text = nil;
+        
+        NSUserDefaults *userDef = [NSUserDefaults standardUserDefaults];
+        NSNumber *numberRem = [userDef valueForKey:kRememberPsw];
+        if (numberRem != nil)
+        {
+            BOOL rememberFlag = [numberRem boolValue];
+            if (rememberFlag == YES)
+            {
+                if (userName != nil && userName.length > 0)
+                {
+                    self.textfieldAccount.text = userName;
+                }
+            }
+        }
     }
     
     UIImage *img = [UIImage imageNamed:@"img_input"];

@@ -276,6 +276,8 @@
 // 自动登录操作结束后的通知
 #define kAutoLoginOver              @"autoLoginOver"
 
+#define kLogout                     @"Logout"
+
 // shake摇晃手机所触发的通知
 #define kShakeAction                @"shakeSelection"
 

@@ -12,6 +12,7 @@
 #import "ReportViewController.h"
 #import "CloudViewController.h"
 #import "RecordViewController.h"
+#import "LoginViewController.h"
 #import "UIImageView+WebCache.h"
 
 
@@ -24,6 +25,8 @@
 @property (nonatomic, strong) IBOutlet UIImageView *imgviewAvatar;
 @property (nonatomic, strong) IBOutlet UILabel *lblName;
 @property (nonatomic, strong) IBOutlet UILabel *lblCompany;
+
+@property (nonatomic, strong) IBOutlet UIView *viewFooter;
 
 @end
 
@@ -47,6 +50,7 @@
     [self.viewHeader addSubview:viewLine];
     
     //self.tableview.tableHeaderView = self.viewHeader;
+    self.tableview.tableFooterView = nil;
     
     self.lblName.text = @"--";
     self.lblCompany.text = @"--";
@@ -89,6 +93,90 @@
 }
 
 
+#pragma mark - 
+
+- (UIView *)viewFooter
+{
+    if (_viewFooter == nil)
+    {
+        CGFloat viewWidth = 240;
+        if (kScreenWidth == kWidthFor5)
+        {
+            viewWidth = 320 - 80;
+        }
+        else if (kScreenWidth == kWidthFor6)
+        {
+            viewWidth = 375 - 120;
+        }
+        else if (kScreenWidth == kWidthFor6plus)
+        {
+            viewWidth = 414 - 120;
+        }
+        
+        _viewFooter = [[UIView alloc] initWithFrame:CGRectMake(0, 0, viewWidth, 80)];
+        _viewFooter.backgroundColor = [UIColor clearColor];
+        
+        UIImage *imgBtn = [UIImage imageNamed:@"btn_register"];
+        imgBtn = [imgBtn resizableImageWithCapInsets:UIEdgeInsetsMake(18, 48, 18, 48)];
+        
+        UIImage *imgBtn_ = [UIImage imageNamed:@"btn_register_press"];
+        imgBtn_ = [imgBtn_ resizableImageWithCapInsets:UIEdgeInsetsMake(18, 48, 18, 48)];
+        
+        UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(20, 24, viewWidth-40, 36)];
+        [btn setTitle:@"Log out" forState:UIControlStateNormal];
+        [btn.titleLabel setFont:[UIFont systemFontOfSize:16]];
+        [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [btn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
+        [btn setBackgroundImage:imgBtn forState:UIControlStateNormal];
+        [btn setBackgroundImage:imgBtn_ forState:UIControlStateHighlighted];
+        [btn addTarget:self action:@selector(logoutAction) forControlEvents:UIControlEventTouchUpInside];
+        [_viewFooter addSubview:btn];
+    }
+    
+    return _viewFooter;
+}
+
+
+#pragma mark - logout
+
+- (void)logoutAction
+{
+    // 用户注销
+    NSLog(@"用户注销...");
+    
+    [kAppDelegate.navVC popToRootViewControllerAnimated:NO];
+    [self.viewDeckController closeLeftViewAnimated:YES completion:^(IIViewDeckController *controller, BOOL success) {
+        //
+        
+        UserManager *user = [UserManager sharedInstance];
+        user.userInfo = nil;
+        user.allClaimStatus = nil;
+        user.hasLogin = NO;
+        
+        self.imgviewAvatar.image = [UIImage imageNamed:@"avatar_default"];
+        self.lblName.text = @"--";
+        self.lblCompany.text = @"--";
+        
+        //
+        NSUserDefaults *userDef = [NSUserDefaults standardUserDefaults];
+        [userDef removeObjectForKey:kPassword];
+        [userDef removeObjectForKey:kLoginType];
+        [userDef synchronize];
+        
+        LoginViewController *loginVC = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
+        UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:loginVC];
+        
+        [kAppDelegate.navVC presentViewController:navVC animated:YES completion:^{
+            //
+        }];
+        
+        // 注销通知
+        [[NSNotificationCenter defaultCenter] postNotificationName:kLogout object:nil];
+        
+    }];
+}
+
+
 #pragma mark - Notification
 
 // 1. app启动时的自动登录...<不一定登录成功>
@@ -100,10 +188,14 @@
     {
         // 登录成功
         [self showUserInfo];
+        
+        self.tableview.tableFooterView = self.viewFooter;
     }
     else
     {
         // 登录失败
+        
+        self.tableview.tableFooterView = nil;
     }
 }
 

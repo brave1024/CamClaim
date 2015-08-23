@@ -115,6 +115,9 @@
     
     // 自动登录完成通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginOver) name:kAutoLoginOver object:nil];
+    
+    // 注销通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(logoutStatus) name:kLogout object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -363,6 +366,13 @@
             }
         }];
     }
+}
+
+- (void)logoutStatus
+{
+    
+    
+    
 }
 
 
