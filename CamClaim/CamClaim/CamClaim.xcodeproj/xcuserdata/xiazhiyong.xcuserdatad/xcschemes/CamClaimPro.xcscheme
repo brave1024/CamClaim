@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "411FAFEE1B750EDD000060FF"
-               BuildableName = "CamClaimPro.app"
+               BlueprintIdentifier = "419C9FD31B8972480036174D"
+               BuildableName = "CamClaimTest copy.app"
                BlueprintName = "CamClaimPro"
                ReferencedContainer = "container:CamClaim.xcodeproj">
             </BuildableReference>
@@ -32,8 +32,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "411FAFEE1B750EDD000060FF"
-            BuildableName = "CamClaimPro.app"
+            BlueprintIdentifier = "419C9FD31B8972480036174D"
+            BuildableName = "CamClaimTest copy.app"
             BlueprintName = "CamClaimPro"
             ReferencedContainer = "container:CamClaim.xcodeproj">
          </BuildableReference>
@@ -52,8 +52,8 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "411FAFEE1B750EDD000060FF"
-            BuildableName = "CamClaimPro.app"
+            BlueprintIdentifier = "419C9FD31B8972480036174D"
+            BuildableName = "CamClaimTest copy.app"
             BlueprintName = "CamClaimPro"
             ReferencedContainer = "container:CamClaim.xcodeproj">
          </BuildableReference>
@@ -71,8 +71,8 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "411FAFEE1B750EDD000060FF"
-            BuildableName = "CamClaimPro.app"
+            BlueprintIdentifier = "419C9FD31B8972480036174D"
+            BuildableName = "CamClaimTest copy.app"
             BlueprintName = "CamClaimPro"
             ReferencedContainer = "container:CamClaim.xcodeproj">
          </BuildableReference>

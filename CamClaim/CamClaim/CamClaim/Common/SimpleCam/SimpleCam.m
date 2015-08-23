@@ -92,6 +92,8 @@ static CGFloat optionUnavailableAlpha = 0.2;
 @property (strong, nonatomic) UIButton *btnCancel;
 @property (strong, nonatomic) UIButton *btnSave;
 
+@property BOOL cameraAuthorized;
+
 @end
 
 
@@ -112,42 +114,37 @@ static CGFloat optionUnavailableAlpha = 0.2;
     
     [super viewDidLoad];
     
-    if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_7_1)
-    {
-        // Pre iOS 8 -- No camera auth required.
-        [self setupForCapture];     // setup
-    }
-    else
-    {
-        // iOS 8
-        
-        // Thanks: http://stackoverflow.com/a/24684021/2611971
-        AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
-        switch (status) {
-            case AVAuthorizationStatusAuthorized:
-                // Do setup early if possible.
-                [self setupForCapture];
-                break;
-            default:
-                break;
-        }
-    }
+//    if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_7_1)
+//    {
+//        // Pre iOS 8 -- No camera auth required.
+//        [self setupForCapture];     // setup
+//    }
+//    else
+//    {
+//        // iOS 8
+//        
+//        // Thanks: http://stackoverflow.com/a/24684021/2611971
+//        AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+//        switch (status) {
+//            case AVAuthorizationStatusAuthorized:
+//                // Do setup early if possible.
+//                NSLog(@"<viewDidLoad>...相机已授权...~!@");
+//                [self setupForCapture];
+//                break;
+//            default:
+//                break;
+//        }
+//    }
     
-    // 增加自定义导航栏
-    [self addCustomNavView];
-    
-    // 增加自定义拍照按钮
-    [self addCustomCaptureButton];
-}
-
-- (void) viewDidAppear:(BOOL)animated {
-    
-    [super viewDidAppear:animated];
+    // 判断相机是否已被用户授权
+    self.cameraAuthorized = YES;
     
     if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_7_1)
     {
         // Pre iOS 8 -- No camera auth required.
+        self.cameraAuthorized = YES;
         [self animateIntoView];
+        [self setupForCapture];     // setup
     }
     else
     {
@@ -156,25 +153,54 @@ static CGFloat optionUnavailableAlpha = 0.2;
         switch (status) {
             case AVAuthorizationStatusDenied:
             case AVAuthorizationStatusRestricted:
-                NSLog(@"SC: Not authorized, or restricted");
+                NSLog(@"相机未授权...<SC: Not authorized, or restricted>");
+                self.cameraAuthorized = NO;
+                //[self initViewForCustom];
                 [self.delegate simpleCamNotAuthorizedForCameraUse:self];
                 break;
             case AVAuthorizationStatusAuthorized:
+                NSLog(@"相机已授权...~!@");
+                self.cameraAuthorized = YES;
                 [self animateIntoView];
+                [self setupForCapture];
                 break;
             case AVAuthorizationStatusNotDetermined: {
+                NSLog(@"相机第一次启动,需用户授权");
+                self.cameraAuthorized = NO;
+                
                 // not determined
                 [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
                     if (granted)
                     {
                         // 已授权
-                        [self setupForCapture];
-                        [self animateIntoView];
+                        NSLog(@"用户对相机已授权");
+                        self.cameraAuthorized = YES;
+                        
+                        dispatch_async(dispatch_get_main_queue(), ^(){
+                            
+                            [self animateIntoView];
+                            [self setupForCapture];
+                            //[self initViewForCustom];
+                            
+                            [self.view bringSubviewToFront:self.navView];
+                            [self.view bringSubviewToFront:self.btnCancel];
+                            [self.view bringSubviewToFront:self.btnSave];
+                            [self.view bringSubviewToFront:self.btnCapture];
+                            
+                        });
                     }
                     else
                     {
                         // 未授权
+                        NSLog(@"用户对相机未授权");
+                        self.cameraAuthorized = NO;
                         [self.delegate simpleCam:self didFinishWithImage:nil];
+                        
+//                        dispatch_async(dispatch_get_main_queue(), ^(){
+//                            
+//                            [self initViewForCustom];
+//                            
+//                        });
                     }
                 }];
             }
@@ -182,9 +208,62 @@ static CGFloat optionUnavailableAlpha = 0.2;
                 break;
         }
     }
+    
+    // 显示自定义控件
+    [self initViewForCustom];
+    
+//    if (self.cameraAuthorized == YES)
+//    {
+//        // 只有相机授权后再会绘制自定义控件
+//        [self initViewForCustom];
+//    }
 }
 
-- (void) animateIntoView
+- (void)viewDidAppear:(BOOL)animated {
+    
+    [super viewDidAppear:animated];
+    
+//    if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_7_1)
+//    {
+//        // Pre iOS 8 -- No camera auth required.
+//        [self animateIntoView];
+//    }
+//    else
+//    {
+//        // iOS 8
+//        AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+//        switch (status) {
+//            case AVAuthorizationStatusDenied:
+//            case AVAuthorizationStatusRestricted:
+//                NSLog(@"SC: Not authorized, or restricted");
+//                [self.delegate simpleCamNotAuthorizedForCameraUse:self];
+//                break;
+//            case AVAuthorizationStatusAuthorized:
+//                [self animateIntoView];
+//                break;
+//            case AVAuthorizationStatusNotDetermined: {
+//                // not determined
+//                [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
+//                    if (granted)
+//                    {
+//                        // 已授权
+//                        [self setupForCapture];
+//                        [self animateIntoView];
+//                    }
+//                    else
+//                    {
+//                        // 未授权
+//                        [self.delegate simpleCam:self didFinishWithImage:nil];
+//                    }
+//                }];
+//            }
+//            default:
+//                break;
+//        }
+//    }
+}
+
+- (void)animateIntoView
 {
     [UIView animateWithDuration:.25 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
         _imageStreamV.alpha = 1;
@@ -211,6 +290,15 @@ static CGFloat optionUnavailableAlpha = 0.2;
 
 
 #pragma mark - NavView & NavViewDelegate
+
+- (void)initViewForCustom
+{
+    // 增加自定义导航栏
+    [self addCustomNavView];
+    
+    // 增加自定义拍照按钮
+    [self addCustomCaptureButton];
+}
 
 - (void)addCustomNavView
 {
@@ -397,6 +485,11 @@ static CGFloat optionUnavailableAlpha = 0.2;
 // 拍照
 - (void)capturePhotoAction
 {
+    if (self.cameraAuthorized == NO)
+    {
+        return;
+    }
+    
     if (isCapturingImage)
     {
         return;
@@ -1278,5 +1371,6 @@ static CGFloat optionUnavailableAlpha = 0.2;
 - (BOOL) hideCaptureButton {
     return _hideCaptureButton;
 }
+
 
 @end
