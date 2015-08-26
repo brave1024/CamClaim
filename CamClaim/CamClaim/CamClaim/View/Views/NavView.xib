@@ -55,7 +55,7 @@
                     </constraints>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" red="0.066666666666666666" green="0.29803921568627451" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.97254901960784312" green="0.49803921568627452" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="Tha-lX-7Zy" secondAttribute="bottom" constant="7" id="LiE-Mn-eaJ"/>
                 <constraint firstItem="Tha-lX-7Zy" firstAttribute="leading" secondItem="Sd7-g7-95c" secondAttribute="trailing" constant="4" id="YZL-l5-yyV"/>
@@ -75,7 +75,7 @@
                 <outlet property="imgLogo" destination="36k-Ec-wbf" id="hsM-b6-PKj"/>
                 <outlet property="lblTitle" destination="Sd7-g7-95c" id="1Rx-JI-PhG"/>
             </connections>
-            <point key="canvasLocation" x="160" y="505"/>
+            <point key="canvasLocation" x="217" y="317"/>
         </view>
     </objects>
     <resources>

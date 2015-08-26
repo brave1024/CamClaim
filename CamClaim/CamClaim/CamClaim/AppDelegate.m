@@ -752,7 +752,8 @@ static int outstandingRequests;
 - (void)setPinCodeViewColor
 {
     // 界面背景色
-    [[ABPadLockScreenView appearance] setBackgroundColor:[UIColor colorWithRed:(CGFloat)9/255 green:(CGFloat)82/255 blue:(CGFloat)168/255 alpha:1]];
+    //[[ABPadLockScreenView appearance] setBackgroundColor:[UIColor colorWithRed:(CGFloat)9/255 green:(CGFloat)82/255 blue:(CGFloat)168/255 alpha:1]];
+    [[ABPadLockScreenView appearance] setBackgroundColor:[UIColor colorWithRed:(CGFloat)248/255 green:(CGFloat)127/255 blue:(CGFloat)31/255 alpha:1]];
     // 界面文字色
     [[ABPadLockScreenView appearance] setLabelColor:[UIColor whiteColor]];
     

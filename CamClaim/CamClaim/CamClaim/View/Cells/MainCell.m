@@ -24,8 +24,8 @@
 
 - (void)configWithData:(id)data
 {
-    self.backgroundColor = [UIColor clearColor];
-    self.contentView.backgroundColor = [UIColor clearColor];
+    self.backgroundColor = [UIColor whiteColor];
+    self.contentView.backgroundColor = [UIColor whiteColor];
     self.viewBg.backgroundColor = [UIColor colorWithRed:(CGFloat)245/255 green:(CGFloat)247/255 blue:(CGFloat)249/255 alpha:1];
     
     //self.imgview.image = [UIImage imageNamed:@"avatar_default"];

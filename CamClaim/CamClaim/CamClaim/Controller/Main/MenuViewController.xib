@@ -37,7 +37,7 @@
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-            <point key="canvasLocation" x="255" y="316"/>
+            <point key="canvasLocation" x="229" y="302"/>
         </view>
         <view contentMode="scaleToFill" id="hSF-Jy-Qjc">
             <rect key="frame" x="0.0" y="0.0" width="320" height="98"/>
@@ -68,7 +68,7 @@
             <color key="backgroundColor" red="0.14117647058823529" green="0.396078431372549" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="255" y="-82"/>
+            <point key="canvasLocation" x="229" y="-87"/>
         </view>
     </objects>
     <resources>

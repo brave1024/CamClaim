@@ -45,42 +45,45 @@
     // 当前导航栏左侧图标替换
     [self.navView.btnBack setImage:[UIImage imageNamed:@"icon_menu"] forState:UIControlStateNormal];
     
-    UIImage *imgBtn = [UIImage imageNamed:@"btn_cloud"];
-    imgBtn = [imgBtn resizableImageWithCapInsets:UIEdgeInsetsMake(18, 48, 18, 48)];
+//    UIImage *imgBtn = [UIImage imageNamed:@"btn_cloud"];
+//    imgBtn = [imgBtn resizableImageWithCapInsets:UIEdgeInsetsMake(18, 48, 18, 48)];
+//    
+//    UIImage *imgBtn_ = [UIImage imageNamed:@"btn_cloud_press"];
+//    imgBtn_ = [imgBtn_ resizableImageWithCapInsets:UIEdgeInsetsMake(18, 48, 18, 48)];
     
-    UIImage *imgBtn_ = [UIImage imageNamed:@"btn_cloud_press"];
-    imgBtn_ = [imgBtn_ resizableImageWithCapInsets:UIEdgeInsetsMake(18, 48, 18, 48)];
+    UIImage *imgBtn = [UIImage imageNamed:@"new_btn_capture"];
+    imgBtn = [imgBtn resizableImageWithCapInsets:UIEdgeInsetsMake(7, 7, 7, 7)];
     
     [self.btnBaidu setBackgroundImage:imgBtn forState:UIControlStateNormal];
-    [self.btnBaidu setBackgroundImage:imgBtn_ forState:UIControlStateHighlighted];
+//    [self.btnBaidu setBackgroundImage:imgBtn_ forState:UIControlStateHighlighted];
     [self.btnBaidu setImage:[UIImage imageNamed:@"icon_Baidu"] forState:UIControlStateNormal];
     [self.btnBaidu setImage:[UIImage imageNamed:@"icon_Baidu"] forState:UIControlStateHighlighted];
 //    [self.btnBaidu setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 //    [self.btnBaidu setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
     
     [self.btnOnedrive setBackgroundImage:imgBtn forState:UIControlStateNormal];
-    [self.btnOnedrive setBackgroundImage:imgBtn_ forState:UIControlStateHighlighted];
+//    [self.btnOnedrive setBackgroundImage:imgBtn_ forState:UIControlStateHighlighted];
     [self.btnOnedrive setImage:[UIImage imageNamed:@"icon_Onedrive"] forState:UIControlStateNormal];
     [self.btnOnedrive setImage:[UIImage imageNamed:@"icon_Onedrive"] forState:UIControlStateHighlighted];
 //    [self.btnOnedrive setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 //    [self.btnOnedrive setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
     
     [self.btnDropbox setBackgroundImage:imgBtn forState:UIControlStateNormal];
-    [self.btnDropbox setBackgroundImage:imgBtn_ forState:UIControlStateHighlighted];
+//    [self.btnDropbox setBackgroundImage:imgBtn_ forState:UIControlStateHighlighted];
     [self.btnDropbox setImage:[UIImage imageNamed:@"icon_Dropbox"] forState:UIControlStateNormal];
     [self.btnDropbox setImage:[UIImage imageNamed:@"icon_Dropbox"] forState:UIControlStateHighlighted];
 //    [self.btnDropbox setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 //    [self.btnDropbox setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
     
-    UIImage *img = [UIImage imageNamed:@"btn_cloud_setting"];
-    img = [img resizableImageWithCapInsets:UIEdgeInsetsMake(18, 48, 18, 48)];
+    UIImage *img = [UIImage imageNamed:@"new_btn_setting"];
+    img = [img resizableImageWithCapInsets:UIEdgeInsetsMake(7, 7, 7, 7)];
     
-    UIImage *img_ = [UIImage imageNamed:@"btn_cloud_setting_press"];
-    img_ = [img_ resizableImageWithCapInsets:UIEdgeInsetsMake(18, 48, 18, 48)];
+//    UIImage *img_ = [UIImage imageNamed:@"btn_cloud_setting_press"];
+//    img_ = [img_ resizableImageWithCapInsets:UIEdgeInsetsMake(18, 48, 18, 48)];
     
     [self.btnSetting setBackgroundImage:img forState:UIControlStateNormal];
-    [self.btnSetting setBackgroundImage:img_ forState:UIControlStateHighlighted];
-    [self.btnSetting setTitleColor:[UIColor colorWithRed:(CGFloat)10/255 green:(CGFloat)47/255 blue:(CGFloat)158/255 alpha:1] forState:UIControlStateNormal];
+//    [self.btnSetting setBackgroundImage:img_ forState:UIControlStateHighlighted];
+    [self.btnSetting setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.btnSetting setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
 }
 

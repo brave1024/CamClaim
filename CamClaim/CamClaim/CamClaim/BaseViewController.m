@@ -32,8 +32,10 @@
     LogTrace(@"   >>>>>>{ %@ } did load", NSStringFromClass([self class]));
     
     // 设置View背景
-    self.view.backgroundColor = [UIColor colorWithRed:(CGFloat)18/255 green:(CGFloat)82/255 blue:(CGFloat)168/255 alpha:1];
-    self.viewTop.backgroundColor = [UIColor colorWithRed:(CGFloat)17/255 green:(CGFloat)76/255 blue:(CGFloat)155/255 alpha:1];
+    //self.view.backgroundColor = [UIColor colorWithRed:(CGFloat)18/255 green:(CGFloat)82/255 blue:(CGFloat)168/255 alpha:1];
+    //self.viewTop.backgroundColor = [UIColor colorWithRed:(CGFloat)17/255 green:(CGFloat)76/255 blue:(CGFloat)155/255 alpha:1];
+    self.view.backgroundColor = [UIColor colorWithRed:(CGFloat)236/255 green:(CGFloat)236/255 blue:(CGFloat)236/255 alpha:1];
+    self.viewTop.backgroundColor = [UIColor colorWithRed:(CGFloat)248/255 green:(CGFloat)127/255 blue:(CGFloat)31/255 alpha:1];
     self.viewContent.backgroundColor = [UIColor clearColor];
     
     //

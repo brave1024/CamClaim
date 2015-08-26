@@ -36,12 +36,12 @@
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Select Cloud Disk Service" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7w-2v-cXR">
                                     <rect key="frame" x="5" y="3" width="290" height="24"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="textColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AoH-hA-54O">
                                     <rect key="frame" x="20" y="29" width="260" height="1"/>
-                                    <color key="backgroundColor" red="0.32549019607843138" green="0.87450980392156863" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.96862745098039216" green="0.46274509803921571" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="KGQ-3L-dGk"/>
                                         <constraint firstAttribute="width" constant="260" id="n7g-Av-hJ7"/>
@@ -60,9 +60,9 @@
                             </constraints>
                         </view>
                         <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0s9-pf-OUo">
-                            <rect key="frame" x="20" y="93" width="280" height="46"/>
+                            <rect key="frame" x="20" y="93" width="280" height="50"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="46" id="pGm-Uo-aXP"/>
+                                <constraint firstAttribute="height" constant="50" id="pGm-Uo-aXP"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <inset key="titleEdgeInsets" minX="18" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -74,9 +74,9 @@
                             </connections>
                         </button>
                         <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URx-aJ-czY">
-                            <rect key="frame" x="20" y="163" width="280" height="46"/>
+                            <rect key="frame" x="20" y="167" width="280" height="50"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="46" id="g77-Fq-og2"/>
+                                <constraint firstAttribute="height" constant="50" id="g77-Fq-og2"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <inset key="titleEdgeInsets" minX="18" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -88,9 +88,9 @@
                             </connections>
                         </button>
                         <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K3M-3n-VjL">
-                            <rect key="frame" x="20" y="233" width="280" height="46"/>
+                            <rect key="frame" x="20" y="241" width="280" height="50"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="46" id="VRu-kl-CEJ"/>
+                                <constraint firstAttribute="height" constant="50" id="VRu-kl-CEJ"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <inset key="titleEdgeInsets" minX="18" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -102,9 +102,9 @@
                             </connections>
                         </button>
                         <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhS-8P-UI3">
-                            <rect key="frame" x="20" y="325" width="280" height="46"/>
+                            <rect key="frame" x="20" y="315" width="280" height="50"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="46" id="arY-Yt-TDa"/>
+                                <constraint firstAttribute="height" constant="50" id="arY-Yt-TDa"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <state key="normal" title="Setting Cloud Disk" backgroundImage="img_input_full.png">
@@ -125,7 +125,7 @@
                         <constraint firstItem="URx-aJ-czY" firstAttribute="top" secondItem="0s9-pf-OUo" secondAttribute="bottom" constant="24" id="E6q-wv-u8k"/>
                         <constraint firstItem="URx-aJ-czY" firstAttribute="leading" secondItem="S2x-Rt-PSi" secondAttribute="leading" constant="20" id="GfI-CR-Bme"/>
                         <constraint firstItem="K3M-3n-VjL" firstAttribute="top" secondItem="URx-aJ-czY" secondAttribute="bottom" constant="24" id="J75-sa-Lhh"/>
-                        <constraint firstItem="MhS-8P-UI3" firstAttribute="top" secondItem="K3M-3n-VjL" secondAttribute="bottom" constant="46" id="ULB-a8-KJu"/>
+                        <constraint firstItem="MhS-8P-UI3" firstAttribute="top" secondItem="K3M-3n-VjL" secondAttribute="bottom" constant="24" id="ULB-a8-KJu"/>
                         <constraint firstItem="K3M-3n-VjL" firstAttribute="leading" secondItem="S2x-Rt-PSi" secondAttribute="leading" constant="20" id="VL7-JU-KGm"/>
                         <constraint firstItem="0s9-pf-OUo" firstAttribute="leading" secondItem="S2x-Rt-PSi" secondAttribute="leading" constant="20" id="bA8-TW-UC4"/>
                         <constraint firstAttribute="trailing" secondItem="MhS-8P-UI3" secondAttribute="trailing" constant="20" id="cVM-zu-Z2n"/>

@@ -26,7 +26,7 @@
 @property (nonatomic, strong) IBOutlet UILabel *lblName;
 @property (nonatomic, strong) IBOutlet UILabel *lblCompany;
 
-@property (nonatomic, strong) IBOutlet UIView *viewFooter;
+//@property (nonatomic, strong) IBOutlet UIView *viewFooter;
 
 @end
 
@@ -37,23 +37,33 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.view.backgroundColor = [UIColor colorWithRed:(CGFloat)36/255 green:(CGFloat)101/255 blue:(CGFloat)194/255 alpha:1];
+    //self.view.backgroundColor = [UIColor colorWithRed:(CGFloat)36/255 green:(CGFloat)101/255 blue:(CGFloat)194/255 alpha:1];
+    self.view.backgroundColor = [UIColor colorWithRed:(CGFloat)27/255 green:(CGFloat)31/255 blue:(CGFloat)37/255 alpha:1];
         
     self.tableview.backgroundColor = [UIColor clearColor];
     self.tableview.backgroundView = nil;
     
-    self.viewHeader.backgroundColor = [UIColor colorWithRed:(CGFloat)36/255 green:(CGFloat)101/255 blue:(CGFloat)194/255 alpha:1];
+    //self.viewHeader.backgroundColor = [UIColor colorWithRed:(CGFloat)36/255 green:(CGFloat)101/255 blue:(CGFloat)194/255 alpha:1];
+    self.viewHeader.backgroundColor = [UIColor colorWithRed:(CGFloat)27/255 green:(CGFloat)31/255 blue:(CGFloat)37/255 alpha:1];
     
     UIView *viewLine = [[UIView alloc] initWithFrame:CGRectMake(0, 98-0.5, kScreenWidth, 0.5)];
-    viewLine.backgroundColor = [UIColor whiteColor];
+    viewLine.backgroundColor = [UIColor colorWithRed:(CGFloat)99/255 green:(CGFloat)102/255 blue:(CGFloat)106/255 alpha:1];
     viewLine.alpha = 0.8;
     [self.viewHeader addSubview:viewLine];
     
     //self.tableview.tableHeaderView = self.viewHeader;
     self.tableview.tableFooterView = nil;
     
+    self.imgviewAvatar.layer.masksToBounds = YES;
+    self.imgviewAvatar.layer.cornerRadius = 25;
+    self.imgviewAvatar.layer.borderColor = [[UIColor whiteColor] CGColor];
+    self.imgviewAvatar.layer.borderWidth = 2;
+    
     self.lblName.text = @"--";
     self.lblCompany.text = @"--";
+    
+    self.lblName.textColor = [UIColor colorWithRed:(CGFloat)114/255 green:(CGFloat)114/255 blue:(CGFloat)114/255 alpha:1];
+    self.lblCompany.textColor = [UIColor colorWithRed:(CGFloat)114/255 green:(CGFloat)114/255 blue:(CGFloat)114/255 alpha:1];
     
     // 手动登录成功通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginOver) name:kLoginSuccess object:nil];
@@ -84,7 +94,7 @@
 {
     if (_arrayList == nil)
     {
-        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"MenuList" ofType:@"plist"];
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"MenuList_New" ofType:@"plist"];
         //NSString *filePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"MenuList.plist"];
         _arrayList = [[NSMutableArray alloc] initWithContentsOfFile:filePath];
     }
@@ -93,48 +103,48 @@
 }
 
 
-#pragma mark - 
-
-- (UIView *)viewFooter
-{
-    if (_viewFooter == nil)
-    {
-        CGFloat viewWidth = 240;
-        if (kScreenWidth == kWidthFor5)
-        {
-            viewWidth = 320 - 80;
-        }
-        else if (kScreenWidth == kWidthFor6)
-        {
-            viewWidth = 375 - 120;
-        }
-        else if (kScreenWidth == kWidthFor6plus)
-        {
-            viewWidth = 414 - 120;
-        }
-        
-        _viewFooter = [[UIView alloc] initWithFrame:CGRectMake(0, 0, viewWidth, 80)];
-        _viewFooter.backgroundColor = [UIColor clearColor];
-        
-        UIImage *imgBtn = [UIImage imageNamed:@"btn_register"];
-        imgBtn = [imgBtn resizableImageWithCapInsets:UIEdgeInsetsMake(18, 48, 18, 48)];
-        
-        UIImage *imgBtn_ = [UIImage imageNamed:@"btn_register_press"];
-        imgBtn_ = [imgBtn_ resizableImageWithCapInsets:UIEdgeInsetsMake(18, 48, 18, 48)];
-        
-        UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(20, 24, viewWidth-40, 36)];
-        [btn setTitle:@"Log out" forState:UIControlStateNormal];
-        [btn.titleLabel setFont:[UIFont systemFontOfSize:16]];
-        [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [btn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
-        [btn setBackgroundImage:imgBtn forState:UIControlStateNormal];
-        [btn setBackgroundImage:imgBtn_ forState:UIControlStateHighlighted];
-        [btn addTarget:self action:@selector(logoutAction) forControlEvents:UIControlEventTouchUpInside];
-        [_viewFooter addSubview:btn];
-    }
-    
-    return _viewFooter;
-}
+//#pragma mark - 
+//
+//- (UIView *)viewFooter
+//{
+//    if (_viewFooter == nil)
+//    {
+//        CGFloat viewWidth = 240;
+//        if (kScreenWidth == kWidthFor5)
+//        {
+//            viewWidth = 320 - 80;
+//        }
+//        else if (kScreenWidth == kWidthFor6)
+//        {
+//            viewWidth = 375 - 120;
+//        }
+//        else if (kScreenWidth == kWidthFor6plus)
+//        {
+//            viewWidth = 414 - 120;
+//        }
+//        
+//        _viewFooter = [[UIView alloc] initWithFrame:CGRectMake(0, 0, viewWidth, 80)];
+//        _viewFooter.backgroundColor = [UIColor clearColor];
+//        
+//        UIImage *imgBtn = [UIImage imageNamed:@"btn_register"];
+//        imgBtn = [imgBtn resizableImageWithCapInsets:UIEdgeInsetsMake(18, 48, 18, 48)];
+//        
+//        UIImage *imgBtn_ = [UIImage imageNamed:@"btn_register_press"];
+//        imgBtn_ = [imgBtn_ resizableImageWithCapInsets:UIEdgeInsetsMake(18, 48, 18, 48)];
+//        
+//        UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(20, 24, viewWidth-40, 36)];
+//        [btn setTitle:@"Log out" forState:UIControlStateNormal];
+//        [btn.titleLabel setFont:[UIFont systemFontOfSize:16]];
+//        [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//        [btn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
+//        [btn setBackgroundImage:imgBtn forState:UIControlStateNormal];
+//        [btn setBackgroundImage:imgBtn_ forState:UIControlStateHighlighted];
+//        [btn addTarget:self action:@selector(logoutAction) forControlEvents:UIControlEventTouchUpInside];
+//        [_viewFooter addSubview:btn];
+//    }
+//    
+//    return _viewFooter;
+//}
 
 
 #pragma mark - logout
@@ -189,13 +199,13 @@
         // 登录成功
         [self showUserInfo];
         
-        self.tableview.tableFooterView = self.viewFooter;
+        //self.tableview.tableFooterView = self.viewFooter;
     }
     else
     {
         // 登录失败
         
-        self.tableview.tableFooterView = nil;
+        //self.tableview.tableFooterView = nil;
     }
 }
 
@@ -305,6 +315,27 @@
     if (cell == nil)
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        
+        CGRect rect = CGRectMake(320 - 80, 38, 9, 14);
+        if (kScreenWidth == kWidthFor5)
+        {
+            rect.origin.x = 320 - 80 - 20;
+            rect.origin.y = 12;
+        }
+        else if (kScreenWidth == kWidthFor6)
+        {
+            rect.origin.x = 375 - 120 - 20;
+            rect.origin.y = 14;
+        }
+        else if (kScreenWidth == kWidthFor6plus)
+        {
+            rect.origin.x = 414 - 120 - 20;
+            rect.origin.y = 14;
+        }
+        
+        UIImageView *imgviewArrow = [[UIImageView alloc] initWithFrame:rect];
+        imgviewArrow.image = [UIImage imageNamed:@"icon_arrow_right"];
+        [cell.contentView addSubview:imgviewArrow];
     }
     
     NSDictionary *dic = self.arrayList[indexPath.row];
@@ -312,7 +343,8 @@
     cell.imageView.image = [UIImage imageNamed:dic[@"imageName"]];
     
     cell.textLabel.font = [UIFont systemFontOfSize:14];
-    cell.textLabel.textColor = [UIColor whiteColor];
+    //cell.textLabel.textColor = [UIColor whiteColor];
+    cell.textLabel.textColor = [UIColor colorWithRed:(CGFloat)111/255 green:(CGFloat)111/255 blue:(CGFloat)111/255 alpha:1];
     cell.textLabel.textAlignment = NSTextAlignmentLeft;
     
     cell.backgroundColor = [UIColor clearColor];
@@ -406,7 +438,11 @@
     }];
 }
 
-
+// 注销
+- (void)jumpToLogout
+{
+    [self logoutAction];
+}
 
 
 

@@ -47,6 +47,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    self.view.backgroundColor = [UIColor colorWithRed:(CGFloat)248/255 green:(CGFloat)127/255 blue:(CGFloat)31/255 alpha:1];
+    self.viewContent.backgroundColor = [UIColor clearColor];
+    
     [self initView];
     
     [self initViewWithAutoLayout];
@@ -153,20 +156,20 @@
         }
     }
     
-    UIImage *img = [UIImage imageNamed:@"img_input"];
-    img = [img resizableImageWithCapInsets:UIEdgeInsetsMake(18, 48, 18, 48)];
+    UIImage *img = [UIImage imageNamed:@"new_img_input"];
+    img = [img resizableImageWithCapInsets:UIEdgeInsetsMake(7, 7, 7, 7)];
     
     self.imgviewAccount.image = img;
     self.imgviewPassword.image = img;
     
-    UIImage *imgBtn = [UIImage imageNamed:@"btn_register"];
-    imgBtn = [imgBtn resizableImageWithCapInsets:UIEdgeInsetsMake(18, 48, 18, 48)];
+    UIImage *imgBtn = [UIImage imageNamed:@"new_btn_login"];
+    imgBtn = [imgBtn resizableImageWithCapInsets:UIEdgeInsetsMake(7, 7, 7, 7)];
     
-    UIImage *imgBtn_ = [UIImage imageNamed:@"btn_register_press"];
-    imgBtn_ = [imgBtn_ resizableImageWithCapInsets:UIEdgeInsetsMake(18, 48, 18, 48)];
+//    UIImage *imgBtn_ = [UIImage imageNamed:@"btn_register_press"];
+//    imgBtn_ = [imgBtn_ resizableImageWithCapInsets:UIEdgeInsetsMake(7, 7, 7, 7)];
     
     [self.btnLogin setBackgroundImage:imgBtn forState:UIControlStateNormal];
-    [self.btnLogin setBackgroundImage:imgBtn_ forState:UIControlStateHighlighted];
+//    [self.btnLogin setBackgroundImage:imgBtn_ forState:UIControlStateHighlighted];
     
     [self.btnLogin setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.btnLogin setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];

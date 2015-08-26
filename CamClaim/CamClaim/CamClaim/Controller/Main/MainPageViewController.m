@@ -73,17 +73,26 @@
     
     self.tableview.backgroundColor = [UIColor clearColor];
     self.tableview.backgroundView = nil;
-    self.tableview.separatorStyle = UITableViewCellSeparatorStyleNone;
+    //self.tableview.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     self.tableview.tableHeaderView = self.viewTableHead;
+    self.viewTableHead.backgroundColor = [UIColor colorWithRed:(CGFloat)247/255 green:(CGFloat)97/255 blue:(CGFloat)29/255 alpha:1];
+    
     //self.tableview.tableFooterView = self.viewTableFoot;
     
-    //self.viewSectionHead.backgroundColor = [UIColor clearColor];
+    self.viewSectionHead.backgroundColor = [UIColor clearColor];
+    
+    self.viewBottom.backgroundColor = [UIColor clearColor];
     
     // 增加下拉刷新
     [self.tableview addHeaderWithTarget:self action:@selector(refeshingForMainPage) dateKey:@"tableMain"];
     // 自动刷新(一进入程序就下拉刷新)
     //[self.tableview headerBeginRefreshing];
+    
+    self.imgviewAvatar.layer.masksToBounds = YES;
+    self.imgviewAvatar.layer.cornerRadius = 25;
+    self.imgviewAvatar.layer.borderColor = [[UIColor whiteColor] CGColor];
+    self.imgviewAvatar.layer.borderWidth = 2;
     
 //    UIImage *img = [UIImage imageNamed:@"img_input"];
 //    img = [img resizableImageWithCapInsets:UIEdgeInsetsMake(18, 48, 18, 48)];
@@ -91,14 +100,14 @@
 //    UIImage *img_ = [UIImage imageNamed:@"img_input_press"];
 //    img_ = [img_ resizableImageWithCapInsets:UIEdgeInsetsMake(18, 48, 18, 48)];
     
-    UIImage *imgBtn = [UIImage imageNamed:@"btn_bg_submit"];
-    imgBtn = [imgBtn resizableImageWithCapInsets:UIEdgeInsetsMake(18, 48, 18, 48)];
+    UIImage *imgBtn = [UIImage imageNamed:@"new_btn_capture"];
+    imgBtn = [imgBtn resizableImageWithCapInsets:UIEdgeInsetsMake(7, 7, 7, 7)];
     
-    UIImage *imgBtn_ = [UIImage imageNamed:@"btn_bg_submit_press"];
-    imgBtn_ = [imgBtn_ resizableImageWithCapInsets:UIEdgeInsetsMake(18, 48, 18, 48)];
+//    UIImage *imgBtn_ = [UIImage imageNamed:@"btn_bg_submit_press"];
+//    imgBtn_ = [imgBtn_ resizableImageWithCapInsets:UIEdgeInsetsMake(18, 48, 18, 48)];
     
     [self.btnCapture setBackgroundImage:imgBtn forState:UIControlStateNormal];
-    [self.btnCapture setBackgroundImage:imgBtn_ forState:UIControlStateHighlighted];
+//    [self.btnCapture setBackgroundImage:imgBtn_ forState:UIControlStateHighlighted];
     
     [self.btnCapture setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.btnCapture setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
@@ -702,7 +711,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 60.0f;
+    return 68.0f;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

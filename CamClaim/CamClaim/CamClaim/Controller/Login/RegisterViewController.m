@@ -24,6 +24,8 @@
 @property (nonatomic, weak) IBOutlet UIImageView *imgviewPhone;
 @property (nonatomic, weak) IBOutlet UIImageView *imgviewPassword;
 
+@property (nonatomic, weak) IBOutlet UILabel *lblVersion;
+
 - (IBAction)registerAction;
 
 @end
@@ -34,27 +36,28 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.navView.lblTitle.text = @"Register";
+    self.view.backgroundColor = [UIColor colorWithRed:(CGFloat)248/255 green:(CGFloat)127/255 blue:(CGFloat)31/255 alpha:1];
+    self.viewContent.backgroundColor = [UIColor clearColor];
     
-    UIImage *img = [UIImage imageNamed:@"img_input"];
-    img = [img resizableImageWithCapInsets:UIEdgeInsetsMake(18, 48, 18, 48)];
+    self.navView.lblTitle.text = @"Register";
+    self.navView.backgroundColor = [UIColor colorWithRed:(CGFloat)247/255 green:(CGFloat)97/255 blue:(CGFloat)29/255 alpha:1];
+    
+    UIImage *img = [UIImage imageNamed:@"new_img_input"];
+    img = [img resizableImageWithCapInsets:UIEdgeInsetsMake(7, 7, 7, 7)];
     
     self.imgviewEmail.image = img;
     self.imgviewName.image = img;
     self.imgviewPhone.image = img;
     self.imgviewPassword.image = img;
     
-//    UIImage *img_ = [UIImage imageNamed:@"img_input_press"];
-//    img_ = [img_ resizableImageWithCapInsets:UIEdgeInsetsMake(18, 48, 18, 48)];
+    UIImage *imgBtn = [UIImage imageNamed:@"new_btn_register"];
+    imgBtn = [imgBtn resizableImageWithCapInsets:UIEdgeInsetsMake(7, 7, 7, 7)];
     
-    UIImage *imgBtn = [UIImage imageNamed:@"btn_register"];
-    imgBtn = [imgBtn resizableImageWithCapInsets:UIEdgeInsetsMake(18, 48, 18, 48)];
-    
-    UIImage *imgBtn_ = [UIImage imageNamed:@"btn_register_press"];
-    imgBtn_ = [imgBtn_ resizableImageWithCapInsets:UIEdgeInsetsMake(18, 48, 18, 48)];
+//    UIImage *imgBtn_ = [UIImage imageNamed:@"btn_register_press"];
+//    imgBtn_ = [imgBtn_ resizableImageWithCapInsets:UIEdgeInsetsMake(7, 7, 7, 7)];
     
     [self.btnRegister setBackgroundImage:imgBtn forState:UIControlStateNormal];
-    [self.btnRegister setBackgroundImage:imgBtn_ forState:UIControlStateHighlighted];
+//    [self.btnRegister setBackgroundImage:imgBtn_ forState:UIControlStateHighlighted];
     
     [self.btnRegister setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.btnRegister setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
@@ -122,6 +125,8 @@
     self.viewBarWidth_3.constant = kScreenWidth - 10*2;
     self.btnRegisterWidth.constant = kScreenWidth - 20*2;
     
+    self.scrollview.contentSize = CGSizeMake(kScreenWidth, 428);
+    
     if (kScreenWidth == kWidthFor5)
     {
         self.txtfieldWidth.constant = 190;
@@ -142,6 +147,21 @@
         self.txtfieldWidth_1.constant = 414-70*2 + 4;
         self.txtfieldWidth_2.constant = 414-70*2 + 4;
         self.txtfieldWidth_3.constant = 414-70*2 + 4;
+    }
+    
+    if (kScreenHeight == kHeightFor4)
+    {
+        self.imgLogoTopMargin.constant = 15;
+        self.scrollviewHight.constant = 428;
+        
+        self.lblVersion.hidden = YES;
+    }
+    else
+    {
+        self.imgLogoTopMargin.constant = 30;
+        self.scrollviewHight.constant = 428 + 15;
+        
+        self.lblVersion.hidden = NO;
     }
 }
 

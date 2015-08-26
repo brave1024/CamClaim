@@ -24,5 +24,8 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *txtfieldWidth_1;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *txtfieldWidth_2;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *txtfieldWidth_3;
+//
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *imgLogoTopMargin;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *scrollviewHight;
 
 @end
