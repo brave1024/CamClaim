@@ -13,6 +13,7 @@
 #import "CloudViewController.h"
 #import "RecordViewController.h"
 #import "LoginViewController.h"
+#import "UserInfoViewController.h"
 #import "UIImageView+WebCache.h"
 
 
@@ -334,7 +335,7 @@
         }
         
         UIImageView *imgviewArrow = [[UIImageView alloc] initWithFrame:rect];
-        imgviewArrow.image = [UIImage imageNamed:@"icon_arrow_right"];
+        imgviewArrow.image = [UIImage imageNamed:@"icon_arrow_right_new"];
         [cell.contentView addSubview:imgviewArrow];
     }
     
@@ -432,6 +433,17 @@
     RecordViewController *recordVC = [[RecordViewController alloc] initWithNibName:@"RecordViewController" bundle:nil];
     [kAppDelegate.navVC popToRootViewControllerAnimated:NO];
     [kAppDelegate.navVC pushViewController:recordVC animated:NO];
+    
+    [self.viewDeckController closeLeftViewAnimated:YES completion:^(IIViewDeckController *controller, BOOL success) {
+        //
+    }];
+}
+
+- (void)jumpToUserInfoVC
+{
+    UserInfoViewController *userInfoVC = [[UserInfoViewController alloc] initWithNibName:@"UserInfoViewController" bundle:nil];
+    [kAppDelegate.navVC popToRootViewControllerAnimated:NO];
+    [kAppDelegate.navVC pushViewController:userInfoVC animated:NO];
     
     [self.viewDeckController closeLeftViewAnimated:YES completion:^(IIViewDeckController *controller, BOOL success) {
         //

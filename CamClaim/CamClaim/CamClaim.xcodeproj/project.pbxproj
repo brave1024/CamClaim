@@ -95,16 +95,19 @@
 		411FAFE81B739A36000060FF /* img_input_press@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 411FAFE71B739A36000060FF /* img_input_press@2x.png */; };
 		411FAFEC1B739EAC000060FF /* MainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 411FAFEA1B739EAC000060FF /* MainCell.m */; };
 		411FAFED1B739EAC000060FF /* MainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 411FAFEB1B739EAC000060FF /* MainCell.xib */; };
+		4138A3A41B909AD60050FD99 /* UserInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4138A3A31B909AD60050FD99 /* UserInfo.plist */; };
+		4138A3A51B909AD60050FD99 /* UserInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4138A3A31B909AD60050FD99 /* UserInfo.plist */; };
+		4138A3A61B909AD60050FD99 /* UserInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4138A3A31B909AD60050FD99 /* UserInfo.plist */; };
 		414DD3321B86CAFB0092D451 /* btn_bg_submit_press@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 414DD3301B86CAFB0092D451 /* btn_bg_submit_press@2x.png */; };
 		414DD3331B86CAFB0092D451 /* btn_bg_submit_press@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 414DD3301B86CAFB0092D451 /* btn_bg_submit_press@2x.png */; };
 		414DD3351B86CAFB0092D451 /* btn_bg_submit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 414DD3311B86CAFB0092D451 /* btn_bg_submit@2x.png */; };
 		414DD3361B86CAFB0092D451 /* btn_bg_submit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 414DD3311B86CAFB0092D451 /* btn_bg_submit@2x.png */; };
-		41804D8C1B8E027900E8CBE0 /* icon_arrow_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41804D8A1B8E027900E8CBE0 /* icon_arrow_right@2x.png */; };
-		41804D8D1B8E027900E8CBE0 /* icon_arrow_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41804D8A1B8E027900E8CBE0 /* icon_arrow_right@2x.png */; };
-		41804D8E1B8E027900E8CBE0 /* icon_arrow_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41804D8A1B8E027900E8CBE0 /* icon_arrow_right@2x.png */; };
-		41804D8F1B8E027900E8CBE0 /* icon_arrow_right@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41804D8B1B8E027900E8CBE0 /* icon_arrow_right@3x.png */; };
-		41804D901B8E027900E8CBE0 /* icon_arrow_right@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41804D8B1B8E027900E8CBE0 /* icon_arrow_right@3x.png */; };
-		41804D911B8E027900E8CBE0 /* icon_arrow_right@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41804D8B1B8E027900E8CBE0 /* icon_arrow_right@3x.png */; };
+		41804D8C1B8E027900E8CBE0 /* icon_arrow_right_new@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41804D8A1B8E027900E8CBE0 /* icon_arrow_right_new@2x.png */; };
+		41804D8D1B8E027900E8CBE0 /* icon_arrow_right_new@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41804D8A1B8E027900E8CBE0 /* icon_arrow_right_new@2x.png */; };
+		41804D8E1B8E027900E8CBE0 /* icon_arrow_right_new@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41804D8A1B8E027900E8CBE0 /* icon_arrow_right_new@2x.png */; };
+		41804D8F1B8E027900E8CBE0 /* icon_arrow_right_new@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41804D8B1B8E027900E8CBE0 /* icon_arrow_right_new@3x.png */; };
+		41804D901B8E027900E8CBE0 /* icon_arrow_right_new@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41804D8B1B8E027900E8CBE0 /* icon_arrow_right_new@3x.png */; };
+		41804D911B8E027900E8CBE0 /* icon_arrow_right_new@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41804D8B1B8E027900E8CBE0 /* icon_arrow_right_new@3x.png */; };
 		41804DB71B8E032800E8CBE0 /* new_btn_login@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41804DB01B8E032800E8CBE0 /* new_btn_login@2x.png */; };
 		41804DB81B8E032800E8CBE0 /* new_btn_login@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41804DB01B8E032800E8CBE0 /* new_btn_login@2x.png */; };
 		41804DB91B8E032800E8CBE0 /* new_btn_login@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41804DB01B8E032800E8CBE0 /* new_btn_login@2x.png */; };
@@ -129,6 +132,45 @@
 		41804DCD1B8E087D00E8CBE0 /* new_icon_camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41804DCC1B8E087D00E8CBE0 /* new_icon_camera@2x.png */; };
 		41804DCE1B8E087D00E8CBE0 /* new_icon_camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41804DCC1B8E087D00E8CBE0 /* new_icon_camera@2x.png */; };
 		41804DCF1B8E087D00E8CBE0 /* new_icon_camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41804DCC1B8E087D00E8CBE0 /* new_icon_camera@2x.png */; };
+		41804DD31B908C5C00E8CBE0 /* UserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41804DD11B908C5C00E8CBE0 /* UserInfoViewController.m */; };
+		41804DD41B908C5C00E8CBE0 /* UserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41804DD11B908C5C00E8CBE0 /* UserInfoViewController.m */; };
+		41804DD51B908C5C00E8CBE0 /* UserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41804DD11B908C5C00E8CBE0 /* UserInfoViewController.m */; };
+		41804DD61B908C5C00E8CBE0 /* UserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41804DD21B908C5C00E8CBE0 /* UserInfoViewController.xib */; };
+		41804DD71B908C5C00E8CBE0 /* UserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41804DD21B908C5C00E8CBE0 /* UserInfoViewController.xib */; };
+		41804DD81B908C5C00E8CBE0 /* UserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41804DD21B908C5C00E8CBE0 /* UserInfoViewController.xib */; };
+		41804DDD1B908D4800E8CBE0 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41804DDB1B908D4800E8CBE0 /* SettingViewController.m */; };
+		41804DDE1B908D4800E8CBE0 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41804DDB1B908D4800E8CBE0 /* SettingViewController.m */; };
+		41804DDF1B908D4800E8CBE0 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41804DDB1B908D4800E8CBE0 /* SettingViewController.m */; };
+		41804DE01B908D4800E8CBE0 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41804DDC1B908D4800E8CBE0 /* SettingViewController.xib */; };
+		41804DE11B908D4800E8CBE0 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41804DDC1B908D4800E8CBE0 /* SettingViewController.xib */; };
+		41804DE21B908D4800E8CBE0 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41804DDC1B908D4800E8CBE0 /* SettingViewController.xib */; };
+		41804DE41B908DD000E8CBE0 /* Setting.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41804DE31B908DD000E8CBE0 /* Setting.plist */; };
+		41804DE51B908DD000E8CBE0 /* Setting.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41804DE31B908DD000E8CBE0 /* Setting.plist */; };
+		41804DE61B908DD000E8CBE0 /* Setting.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41804DE31B908DD000E8CBE0 /* Setting.plist */; };
+		41804DEA1B90910400E8CBE0 /* SettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41804DE81B90910400E8CBE0 /* SettingCell.m */; };
+		41804DEB1B90910400E8CBE0 /* SettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41804DE81B90910400E8CBE0 /* SettingCell.m */; };
+		41804DEC1B90910400E8CBE0 /* SettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41804DE81B90910400E8CBE0 /* SettingCell.m */; };
+		41804DED1B90910400E8CBE0 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41804DE91B90910400E8CBE0 /* SettingCell.xib */; };
+		41804DEE1B90910400E8CBE0 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41804DE91B90910400E8CBE0 /* SettingCell.xib */; };
+		41804DEF1B90910400E8CBE0 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41804DE91B90910400E8CBE0 /* SettingCell.xib */; };
+		41804DF31B9096C500E8CBE0 /* UserInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41804DF11B9096C500E8CBE0 /* UserInfoCell.m */; };
+		41804DF41B9096C500E8CBE0 /* UserInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41804DF11B9096C500E8CBE0 /* UserInfoCell.m */; };
+		41804DF51B9096C500E8CBE0 /* UserInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41804DF11B9096C500E8CBE0 /* UserInfoCell.m */; };
+		41804DF61B9096C500E8CBE0 /* UserInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41804DF21B9096C500E8CBE0 /* UserInfoCell.xib */; };
+		41804DF71B9096C500E8CBE0 /* UserInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41804DF21B9096C500E8CBE0 /* UserInfoCell.xib */; };
+		41804DF81B9096C500E8CBE0 /* UserInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41804DF21B9096C500E8CBE0 /* UserInfoCell.xib */; };
+		41804DFC1B90977A00E8CBE0 /* UserAvatarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41804DFA1B90977A00E8CBE0 /* UserAvatarCell.m */; };
+		41804DFD1B90977A00E8CBE0 /* UserAvatarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41804DFA1B90977A00E8CBE0 /* UserAvatarCell.m */; };
+		41804DFE1B90977A00E8CBE0 /* UserAvatarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41804DFA1B90977A00E8CBE0 /* UserAvatarCell.m */; };
+		41804DFF1B90977A00E8CBE0 /* UserAvatarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41804DFB1B90977A00E8CBE0 /* UserAvatarCell.xib */; };
+		41804E001B90977A00E8CBE0 /* UserAvatarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41804DFB1B90977A00E8CBE0 /* UserAvatarCell.xib */; };
+		41804E011B90977A00E8CBE0 /* UserAvatarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41804DFB1B90977A00E8CBE0 /* UserAvatarCell.xib */; };
+		418BBD9B1B90B4F40068A672 /* UserModifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 418BBD991B90B4F40068A672 /* UserModifyViewController.m */; };
+		418BBD9C1B90B4F40068A672 /* UserModifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 418BBD991B90B4F40068A672 /* UserModifyViewController.m */; };
+		418BBD9D1B90B4F40068A672 /* UserModifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 418BBD991B90B4F40068A672 /* UserModifyViewController.m */; };
+		418BBD9E1B90B4F40068A672 /* UserModifyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 418BBD9A1B90B4F40068A672 /* UserModifyViewController.xib */; };
+		418BBD9F1B90B4F40068A672 /* UserModifyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 418BBD9A1B90B4F40068A672 /* UserModifyViewController.xib */; };
+		418BBDA01B90B4F40068A672 /* UserModifyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 418BBD9A1B90B4F40068A672 /* UserModifyViewController.xib */; };
 		418F85C91B86174800F9DD95 /* icon_share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 418F85C81B86174800F9DD95 /* icon_share@2x.png */; };
 		418F85CA1B86174800F9DD95 /* icon_share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 418F85C81B86174800F9DD95 /* icon_share@2x.png */; };
 		419A9EA21B735865009C82A9 /* IISideController.m in Sources */ = {isa = PBXBuildFile; fileRef = 419A9E9D1B735865009C82A9 /* IISideController.m */; };
@@ -1233,10 +1275,11 @@
 		411FAFE91B739EAC000060FF /* MainCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCell.h; sourceTree = "<group>"; };
 		411FAFEA1B739EAC000060FF /* MainCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCell.m; sourceTree = "<group>"; };
 		411FAFEB1B739EAC000060FF /* MainCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainCell.xib; sourceTree = "<group>"; };
+		4138A3A31B909AD60050FD99 /* UserInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UserInfo.plist; sourceTree = "<group>"; };
 		414DD3301B86CAFB0092D451 /* btn_bg_submit_press@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_bg_submit_press@2x.png"; sourceTree = "<group>"; };
 		414DD3311B86CAFB0092D451 /* btn_bg_submit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_bg_submit@2x.png"; sourceTree = "<group>"; };
-		41804D8A1B8E027900E8CBE0 /* icon_arrow_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_arrow_right@2x.png"; sourceTree = "<group>"; };
-		41804D8B1B8E027900E8CBE0 /* icon_arrow_right@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_arrow_right@3x.png"; sourceTree = "<group>"; };
+		41804D8A1B8E027900E8CBE0 /* icon_arrow_right_new@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_arrow_right_new@2x.png"; sourceTree = "<group>"; };
+		41804D8B1B8E027900E8CBE0 /* icon_arrow_right_new@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_arrow_right_new@3x.png"; sourceTree = "<group>"; };
 		41804DB01B8E032800E8CBE0 /* new_btn_login@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "new_btn_login@2x.png"; sourceTree = "<group>"; };
 		41804DB11B8E032800E8CBE0 /* new_img_input@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "new_img_input@2x.png"; sourceTree = "<group>"; };
 		41804DB21B8E032800E8CBE0 /* new_btn_register@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "new_btn_register@2x.png"; sourceTree = "<group>"; };
@@ -1245,6 +1288,25 @@
 		41804DB51B8E032800E8CBE0 /* 橙色边框文本框.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "橙色边框文本框.png"; sourceTree = "<group>"; };
 		41804DB61B8E032800E8CBE0 /* 灰色边框文本框.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "灰色边框文本框.png"; sourceTree = "<group>"; };
 		41804DCC1B8E087D00E8CBE0 /* new_icon_camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "new_icon_camera@2x.png"; sourceTree = "<group>"; };
+		41804DD01B908C5C00E8CBE0 /* UserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoViewController.h; sourceTree = "<group>"; };
+		41804DD11B908C5C00E8CBE0 /* UserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoViewController.m; sourceTree = "<group>"; };
+		41804DD21B908C5C00E8CBE0 /* UserInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfoViewController.xib; sourceTree = "<group>"; };
+		41804DDA1B908D4800E8CBE0 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		41804DDB1B908D4800E8CBE0 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		41804DDC1B908D4800E8CBE0 /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
+		41804DE31B908DD000E8CBE0 /* Setting.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Setting.plist; sourceTree = "<group>"; };
+		41804DE71B90910400E8CBE0 /* SettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingCell.h; sourceTree = "<group>"; };
+		41804DE81B90910400E8CBE0 /* SettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingCell.m; sourceTree = "<group>"; };
+		41804DE91B90910400E8CBE0 /* SettingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingCell.xib; sourceTree = "<group>"; };
+		41804DF01B9096C500E8CBE0 /* UserInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoCell.h; sourceTree = "<group>"; };
+		41804DF11B9096C500E8CBE0 /* UserInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoCell.m; sourceTree = "<group>"; };
+		41804DF21B9096C500E8CBE0 /* UserInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfoCell.xib; sourceTree = "<group>"; };
+		41804DF91B90977A00E8CBE0 /* UserAvatarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAvatarCell.h; sourceTree = "<group>"; };
+		41804DFA1B90977A00E8CBE0 /* UserAvatarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAvatarCell.m; sourceTree = "<group>"; };
+		41804DFB1B90977A00E8CBE0 /* UserAvatarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserAvatarCell.xib; sourceTree = "<group>"; };
+		418BBD981B90B4F40068A672 /* UserModifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModifyViewController.h; sourceTree = "<group>"; };
+		418BBD991B90B4F40068A672 /* UserModifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModifyViewController.m; sourceTree = "<group>"; };
+		418BBD9A1B90B4F40068A672 /* UserModifyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserModifyViewController.xib; sourceTree = "<group>"; };
 		418F85C81B86174800F9DD95 /* icon_share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_share@2x.png"; sourceTree = "<group>"; };
 		419A9E9C1B735865009C82A9 /* IISideController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IISideController.h; sourceTree = "<group>"; };
 		419A9E9D1B735865009C82A9 /* IISideController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IISideController.m; sourceTree = "<group>"; };
@@ -1848,6 +1910,7 @@
 		410651B01B70A2E000BBA41C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				41804DD91B908D2E00E8CBE0 /* Setting */,
 				41A564511B7451B50086B850 /* Camera */,
 				41A564541B7451B50086B850 /* Report */,
 				41A564521B7451B50086B850 /* Cloud */,
@@ -2172,6 +2235,16 @@
 			path = Bg;
 			sourceTree = "<group>";
 		};
+		41804DD91B908D2E00E8CBE0 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				41804DDA1B908D4800E8CBE0 /* SettingViewController.h */,
+				41804DDB1B908D4800E8CBE0 /* SettingViewController.m */,
+				41804DDC1B908D4800E8CBE0 /* SettingViewController.xib */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
 		419A9E9B1B735865009C82A9 /* ViewDeck */ = {
 			isa = PBXGroup;
 			children = (
@@ -2222,8 +2295,8 @@
 			children = (
 				41804DAF1B8E032800E8CBE0 /* Bg */,
 				419CA1991B8DFB940036174D /* Login */,
-				41804D8A1B8E027900E8CBE0 /* icon_arrow_right@2x.png */,
-				41804D8B1B8E027900E8CBE0 /* icon_arrow_right@3x.png */,
+				41804D8A1B8E027900E8CBE0 /* icon_arrow_right_new@2x.png */,
+				41804D8B1B8E027900E8CBE0 /* icon_arrow_right_new@3x.png */,
 				419CA1191B8DED090036174D /* icon_camera_@2x.png */,
 				419CA11A1B8DED090036174D /* icon_camera_press_@2x.png */,
 				419CA11B1B8DED090036174D /* icon_cloud@2x.png */,
@@ -2366,6 +2439,12 @@
 		41A564571B7451B50086B850 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				41804DD01B908C5C00E8CBE0 /* UserInfoViewController.h */,
+				41804DD11B908C5C00E8CBE0 /* UserInfoViewController.m */,
+				41804DD21B908C5C00E8CBE0 /* UserInfoViewController.xib */,
+				418BBD981B90B4F40068A672 /* UserModifyViewController.h */,
+				418BBD991B90B4F40068A672 /* UserModifyViewController.m */,
+				418BBD9A1B90B4F40068A672 /* UserModifyViewController.xib */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -2609,6 +2688,15 @@
 				41D82A931B82E88C0035801B /* RecordCell.h */,
 				41D82A941B82E88C0035801B /* RecordCell.m */,
 				41D82A951B82E88C0035801B /* RecordCell.xib */,
+				41804DE71B90910400E8CBE0 /* SettingCell.h */,
+				41804DE81B90910400E8CBE0 /* SettingCell.m */,
+				41804DE91B90910400E8CBE0 /* SettingCell.xib */,
+				41804DF01B9096C500E8CBE0 /* UserInfoCell.h */,
+				41804DF11B9096C500E8CBE0 /* UserInfoCell.m */,
+				41804DF21B9096C500E8CBE0 /* UserInfoCell.xib */,
+				41804DF91B90977A00E8CBE0 /* UserAvatarCell.h */,
+				41804DFA1B90977A00E8CBE0 /* UserAvatarCell.m */,
+				41804DFB1B90977A00E8CBE0 /* UserAvatarCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -2743,6 +2831,8 @@
 			children = (
 				419CA1141B8DE9410036174D /* MenuList_New.plist */,
 				419A9EAA1B735DE1009C82A9 /* MenuList.plist */,
+				41804DE31B908DD000E8CBE0 /* Setting.plist */,
+				4138A3A31B909AD60050FD99 /* UserInfo.plist */,
 			);
 			path = Plist;
 			sourceTree = "<group>";
@@ -3180,17 +3270,21 @@
 				41A564711B748EA80086B850 /* LICENSE.txt in Resources */,
 				410C59E71B79FD6E00EB9C7E /* icon_Baidu@2x.png in Resources */,
 				4102232B1B78FC54002B299A /* img_input_02@2x.png in Resources */,
+				4138A3A41B909AD60050FD99 /* UserInfo.plist in Resources */,
 				41A564611B7451F90086B850 /* ReportViewController.xib in Resources */,
 				419CA17E1B8DED090036174D /* icon_lock_press.png in Resources */,
+				41804DD61B908C5C00E8CBE0 /* UserInfoViewController.xib in Resources */,
 				419A9EB71B736098009C82A9 /* icon_menu04@2x.png in Resources */,
 				41A49E681B7CEAC10022274E /* btn_upload@2x.png in Resources */,
 				41804DCD1B8E087D00E8CBE0 /* new_icon_camera@2x.png in Resources */,
+				41804DE41B908DD000E8CBE0 /* Setting.plist in Resources */,
 				41804DC31B8E032800E8CBE0 /* new_btn_capture@2x.png in Resources */,
 				41CFD3C61B70E98B009FAD45 /* img_circle_small@2x.png in Resources */,
 				410223201B76F4F5002B299A /* icon_menu08@2x.png in Resources */,
 				419A9EB91B736098009C82A9 /* icon_menu06@2x.png in Resources */,
 				41CFD3CA1B70E98B009FAD45 /* logo@2x.png in Resources */,
 				41CFD3FE1B710477009FAD45 /* NavView.xib in Resources */,
+				41804DF61B9096C500E8CBE0 /* UserInfoCell.xib in Resources */,
 				419A9EB61B736098009C82A9 /* icon_menu03@2x.png in Resources */,
 				419CA17B1B8DED090036174D /* icon_schedule_press@2x.png in Resources */,
 				41A5646E1B748EA80086B850 /* Download.png in Resources */,
@@ -3239,6 +3333,7 @@
 				41A564701B748EA80086B850 /* Previous.png in Resources */,
 				41CC11941B7D8D44008904F2 /* CloudContentDetailViewController.xib in Resources */,
 				41D82AA41B8321680035801B /* btn_submit@2x.png in Resources */,
+				41804DE01B908D4800E8CBE0 /* SettingViewController.xib in Resources */,
 				41D82A981B82E88C0035801B /* RecordCell.xib in Resources */,
 				4102232F1B7A1903002B299A /* btn_cloud_01@2x.png in Resources */,
 				41804DC61B8E032800E8CBE0 /* 橙色边框文本框.png in Resources */,
@@ -3249,13 +3344,14 @@
 				41A49E471B7CC6020022274E /* icon_default@2x.png in Resources */,
 				414DD3321B86CAFB0092D451 /* btn_bg_submit_press@2x.png in Resources */,
 				410223381B7A1B0B002B299A /* btn_cloud_setting_press@2x.png in Resources */,
-				41804D8C1B8E027900E8CBE0 /* icon_arrow_right@2x.png in Resources */,
+				41804D8C1B8E027900E8CBE0 /* icon_arrow_right_new@2x.png in Resources */,
 				41D97C2B1B7845DA00F8EA94 /* WeiboSDK.bundle in Resources */,
 				4106525B1B70B96200BBA41C /* MJRefresh.bundle in Resources */,
 				41CC11981B7D8D44008904F2 /* CloudContentViewController.xib in Resources */,
 				419CA1691B8DED090036174D /* icon_onedrive_1@2x.png in Resources */,
 				41D82AA01B8321680035801B /* btn_fill@2x.png in Resources */,
 				410650C31B70502900BBA41C /* Main.storyboard in Resources */,
+				41804DED1B90910400E8CBE0 /* SettingCell.xib in Resources */,
 				41A49E621B7CE34E0022274E /* icon_arrow_right@2x.png in Resources */,
 				419CA1BB1B8DFB940036174D /* new_icon_remember_selected@2x.png in Resources */,
 				419A9EB51B736098009C82A9 /* icon_menu02@2x.png in Resources */,
@@ -3345,9 +3441,11 @@
 				41A564501B7450BD0086B850 /* avatar_default@2x.png in Resources */,
 				4102234E1B7B8CC6002B299A /* btn_cloud_login@2x.png in Resources */,
 				41D82AB81B83275A0035801B /* SubmitClaimViewController.xib in Resources */,
+				41804DFF1B90977A00E8CBE0 /* UserAvatarCell.xib in Resources */,
 				419CA1AF1B8DFB940036174D /* new_btn_wechat@2x.png in Resources */,
 				41CFD3C91B70E98B009FAD45 /* btn_in_press@2x.png in Resources */,
-				41804D8F1B8E027900E8CBE0 /* icon_arrow_right@3x.png in Resources */,
+				418BBD9E1B90B4F40068A672 /* UserModifyViewController.xib in Resources */,
+				41804D8F1B8E027900E8CBE0 /* icon_arrow_right_new@3x.png in Resources */,
 				419CA1961B8DED090036174D /* icon_user@2x.png in Resources */,
 				419CA1A61B8DFB940036174D /* new_btn_facebook_press@2x.png in Resources */,
 				419CA1A31B8DFB940036174D /* new_btn_facebook@2x.png in Resources */,
@@ -3375,17 +3473,21 @@
 				419CA08C1B8972480036174D /* LICENSE.txt in Resources */,
 				419CA08D1B8972480036174D /* icon_Baidu@2x.png in Resources */,
 				419CA08E1B8972480036174D /* img_input_02@2x.png in Resources */,
+				4138A3A61B909AD60050FD99 /* UserInfo.plist in Resources */,
 				419CA08F1B8972480036174D /* ReportViewController.xib in Resources */,
 				419CA1801B8DED090036174D /* icon_lock_press.png in Resources */,
+				41804DD81B908C5C00E8CBE0 /* UserInfoViewController.xib in Resources */,
 				419CA0901B8972480036174D /* icon_menu04@2x.png in Resources */,
 				419CA0911B8972480036174D /* btn_upload@2x.png in Resources */,
 				41804DCF1B8E087D00E8CBE0 /* new_icon_camera@2x.png in Resources */,
+				41804DE61B908DD000E8CBE0 /* Setting.plist in Resources */,
 				41804DC51B8E032800E8CBE0 /* new_btn_capture@2x.png in Resources */,
 				419CA0921B8972480036174D /* img_circle_small@2x.png in Resources */,
 				419CA0931B8972480036174D /* icon_menu08@2x.png in Resources */,
 				419CA0941B8972480036174D /* icon_menu06@2x.png in Resources */,
 				419CA0951B8972480036174D /* logo@2x.png in Resources */,
 				419CA0961B8972480036174D /* NavView.xib in Resources */,
+				41804DF81B9096C500E8CBE0 /* UserInfoCell.xib in Resources */,
 				419CA0971B8972480036174D /* icon_menu03@2x.png in Resources */,
 				419CA17D1B8DED090036174D /* icon_schedule_press@2x.png in Resources */,
 				419CA0981B8972480036174D /* Download.png in Resources */,
@@ -3434,6 +3536,7 @@
 				419CA0B61B8972480036174D /* Previous.png in Resources */,
 				419CA0B71B8972480036174D /* CloudContentDetailViewController.xib in Resources */,
 				419CA0B81B8972480036174D /* btn_submit@2x.png in Resources */,
+				41804DE21B908D4800E8CBE0 /* SettingViewController.xib in Resources */,
 				419CA0B91B8972480036174D /* RecordCell.xib in Resources */,
 				419CA0BA1B8972480036174D /* btn_cloud_01@2x.png in Resources */,
 				41804DC81B8E032800E8CBE0 /* 橙色边框文本框.png in Resources */,
@@ -3444,13 +3547,14 @@
 				419CA0BF1B8972480036174D /* icon_default@2x.png in Resources */,
 				419CA0C01B8972480036174D /* btn_bg_submit_press@2x.png in Resources */,
 				419CA0C11B8972480036174D /* btn_cloud_setting_press@2x.png in Resources */,
-				41804D8E1B8E027900E8CBE0 /* icon_arrow_right@2x.png in Resources */,
+				41804D8E1B8E027900E8CBE0 /* icon_arrow_right_new@2x.png in Resources */,
 				419CA0C21B8972480036174D /* WeiboSDK.bundle in Resources */,
 				419CA0C31B8972480036174D /* MJRefresh.bundle in Resources */,
 				419CA0C41B8972480036174D /* CloudContentViewController.xib in Resources */,
 				419CA16B1B8DED090036174D /* icon_onedrive_1@2x.png in Resources */,
 				419CA0C51B8972480036174D /* btn_fill@2x.png in Resources */,
 				419CA0C61B8972480036174D /* Main.storyboard in Resources */,
+				41804DEF1B90910400E8CBE0 /* SettingCell.xib in Resources */,
 				419CA0C71B8972480036174D /* icon_arrow_right@2x.png in Resources */,
 				419CA1BD1B8DFB940036174D /* new_icon_remember_selected@2x.png in Resources */,
 				419CA0C81B8972480036174D /* icon_menu02@2x.png in Resources */,
@@ -3540,9 +3644,11 @@
 				419CA1041B8972480036174D /* avatar_default@2x.png in Resources */,
 				419CA1051B8972480036174D /* btn_cloud_login@2x.png in Resources */,
 				419CA1061B8972480036174D /* SubmitClaimViewController.xib in Resources */,
+				41804E011B90977A00E8CBE0 /* UserAvatarCell.xib in Resources */,
 				419CA1B11B8DFB940036174D /* new_btn_wechat@2x.png in Resources */,
 				419CA1071B8972480036174D /* btn_in_press@2x.png in Resources */,
-				41804D911B8E027900E8CBE0 /* icon_arrow_right@3x.png in Resources */,
+				418BBDA01B90B4F40068A672 /* UserModifyViewController.xib in Resources */,
+				41804D911B8E027900E8CBE0 /* icon_arrow_right_new@3x.png in Resources */,
 				419CA1981B8DED090036174D /* icon_user@2x.png in Resources */,
 				419CA1A81B8DFB940036174D /* new_btn_facebook_press@2x.png in Resources */,
 				419CA1A51B8DFB940036174D /* new_btn_facebook@2x.png in Resources */,
@@ -3563,17 +3669,21 @@
 				41D82B751B833AC00035801B /* LICENSE.txt in Resources */,
 				41D82B761B833AC00035801B /* icon_Baidu@2x.png in Resources */,
 				41D82B771B833AC00035801B /* img_input_02@2x.png in Resources */,
+				4138A3A51B909AD60050FD99 /* UserInfo.plist in Resources */,
 				41D82B781B833AC00035801B /* ReportViewController.xib in Resources */,
 				419CA17F1B8DED090036174D /* icon_lock_press.png in Resources */,
+				41804DD71B908C5C00E8CBE0 /* UserInfoViewController.xib in Resources */,
 				41D82B791B833AC00035801B /* icon_menu04@2x.png in Resources */,
 				41D82B7A1B833AC00035801B /* btn_upload@2x.png in Resources */,
 				41804DCE1B8E087D00E8CBE0 /* new_icon_camera@2x.png in Resources */,
+				41804DE51B908DD000E8CBE0 /* Setting.plist in Resources */,
 				41804DC41B8E032800E8CBE0 /* new_btn_capture@2x.png in Resources */,
 				41D82B7B1B833AC00035801B /* img_circle_small@2x.png in Resources */,
 				41D82B7C1B833AC00035801B /* icon_menu08@2x.png in Resources */,
 				41D82B7D1B833AC00035801B /* icon_menu06@2x.png in Resources */,
 				41D82B7E1B833AC00035801B /* logo@2x.png in Resources */,
 				41D82B7F1B833AC00035801B /* NavView.xib in Resources */,
+				41804DF71B9096C500E8CBE0 /* UserInfoCell.xib in Resources */,
 				41D82B801B833AC00035801B /* icon_menu03@2x.png in Resources */,
 				419CA17C1B8DED090036174D /* icon_schedule_press@2x.png in Resources */,
 				41D82B811B833AC00035801B /* Download.png in Resources */,
@@ -3622,6 +3732,7 @@
 				41D82B9D1B833AC00035801B /* Previous.png in Resources */,
 				41D82B9E1B833AC00035801B /* CloudContentDetailViewController.xib in Resources */,
 				41D82B9F1B833AC00035801B /* btn_submit@2x.png in Resources */,
+				41804DE11B908D4800E8CBE0 /* SettingViewController.xib in Resources */,
 				41D82BA01B833AC00035801B /* RecordCell.xib in Resources */,
 				41D82BA11B833AC00035801B /* btn_cloud_01@2x.png in Resources */,
 				41804DC71B8E032800E8CBE0 /* 橙色边框文本框.png in Resources */,
@@ -3632,13 +3743,14 @@
 				41D82BA61B833AC00035801B /* icon_default@2x.png in Resources */,
 				414DD3331B86CAFB0092D451 /* btn_bg_submit_press@2x.png in Resources */,
 				41D82BA71B833AC00035801B /* btn_cloud_setting_press@2x.png in Resources */,
-				41804D8D1B8E027900E8CBE0 /* icon_arrow_right@2x.png in Resources */,
+				41804D8D1B8E027900E8CBE0 /* icon_arrow_right_new@2x.png in Resources */,
 				41D82BA81B833AC00035801B /* WeiboSDK.bundle in Resources */,
 				41D82BA91B833AC00035801B /* MJRefresh.bundle in Resources */,
 				41D82BAA1B833AC00035801B /* CloudContentViewController.xib in Resources */,
 				419CA16A1B8DED090036174D /* icon_onedrive_1@2x.png in Resources */,
 				41D82BAB1B833AC00035801B /* btn_fill@2x.png in Resources */,
 				41D82BAC1B833AC00035801B /* Main.storyboard in Resources */,
+				41804DEE1B90910400E8CBE0 /* SettingCell.xib in Resources */,
 				41D82BAD1B833AC00035801B /* icon_arrow_right@2x.png in Resources */,
 				419CA1BC1B8DFB940036174D /* new_icon_remember_selected@2x.png in Resources */,
 				41D82BAE1B833AC00035801B /* icon_menu02@2x.png in Resources */,
@@ -3728,9 +3840,11 @@
 				41D82BEA1B833AC00035801B /* avatar_default@2x.png in Resources */,
 				41D82BEB1B833AC00035801B /* btn_cloud_login@2x.png in Resources */,
 				41D82BEC1B833AC00035801B /* SubmitClaimViewController.xib in Resources */,
+				41804E001B90977A00E8CBE0 /* UserAvatarCell.xib in Resources */,
 				419CA1B01B8DFB940036174D /* new_btn_wechat@2x.png in Resources */,
 				41D82BED1B833AC00035801B /* btn_in_press@2x.png in Resources */,
-				41804D901B8E027900E8CBE0 /* icon_arrow_right@3x.png in Resources */,
+				418BBD9F1B90B4F40068A672 /* UserModifyViewController.xib in Resources */,
+				41804D901B8E027900E8CBE0 /* icon_arrow_right_new@3x.png in Resources */,
 				419CA1971B8DED090036174D /* icon_user@2x.png in Resources */,
 				419CA1A71B8DFB940036174D /* new_btn_facebook_press@2x.png in Resources */,
 				419CA1A41B8DFB940036174D /* new_btn_facebook@2x.png in Resources */,
@@ -3845,6 +3959,7 @@
 				419A9EA41B735865009C82A9 /* IIWrapController.m in Sources */,
 				41F02E5E1B71BBF400783716 /* IQKeyboardManager.m in Sources */,
 				41F02ED71B71E69800783716 /* JSONModel+networking.m in Sources */,
+				41804DD31B908C5C00E8CBE0 /* UserInfoViewController.m in Sources */,
 				41F02E611B71BBF400783716 /* IQTextView.m in Sources */,
 				410650BD1B70502900BBA41C /* CamClaim.xcdatamodeld in Sources */,
 				410652671B70B96D00BBA41C /* BaseViewController.m in Sources */,
@@ -3856,6 +3971,7 @@
 				41F02E991B71DABB00783716 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				41F02E5F1B71BBF400783716 /* IQKeyboardReturnKeyHandler.m in Sources */,
 				41CFD3EE1B70EAF1009FAD45 /* UIColor+Utils.m in Sources */,
+				41804DF31B9096C500E8CBE0 /* UserInfoCell.m in Sources */,
 				41F02E901B71DABB00783716 /* AFHTTPRequestOperationManager.m in Sources */,
 				41F02E9B1B71DABB00783716 /* UIButton+AFNetworking.m in Sources */,
 				41F02EFB1B71F7BA00783716 /* MRMessageInterceptor.m in Sources */,
@@ -3879,6 +3995,7 @@
 				4106525F1B70B96200BBA41C /* MJRefreshHeaderView.m in Sources */,
 				410C59C41B79EB8500EB9C7E /* UIImage+GIF.m in Sources */,
 				41D82A961B82E88C0035801B /* RecordCell.m in Sources */,
+				418BBD9B1B90B4F40068A672 /* UserModifyViewController.m in Sources */,
 				41F02E631B71BBF400783716 /* IQTitleBarButtonItem.m in Sources */,
 				41CFD3E71B70EAF1009FAD45 /* NSArray+Utils.m in Sources */,
 				41F02E601B71BBF400783716 /* IQSegmentedNextPrevious.m in Sources */,
@@ -3898,6 +4015,7 @@
 				4106521D1B70A3B200BBA41C /* ABPadLockScreenView.m in Sources */,
 				4106525E1B70B96200BBA41C /* MJRefreshFooterView.m in Sources */,
 				41F02ED41B71E69800783716 /* NSArray+JSONModel.m in Sources */,
+				41804DDD1B908D4800E8CBE0 /* SettingViewController.m in Sources */,
 				41F02ED31B71E69800783716 /* JSONModelError.m in Sources */,
 				41CFD3EF1B70EAF1009FAD45 /* UIImage+Utils.m in Sources */,
 				41D82A8F1B82E0CB0035801B /* RecordViewController.m in Sources */,
@@ -3950,6 +4068,7 @@
 				41CC119A1B7D8D44008904F2 /* CloudSubPathViewController.m in Sources */,
 				41CFD3F21B70EAF1009FAD45 /* UIView+Utils.m in Sources */,
 				41F02EB21B71E04000783716 /* ResponseModel.m in Sources */,
+				41804DEA1B90910400E8CBE0 /* SettingCell.m in Sources */,
 				411FAFEC1B739EAC000060FF /* MainCell.m in Sources */,
 				41F02E9E1B71DABB00783716 /* UIRefreshControl+AFNetworking.m in Sources */,
 				410C59B61B79EB8500EB9C7E /* SDWebImageCompat.m in Sources */,
@@ -3973,6 +4092,7 @@
 				41CFD3E91B70EAF1009FAD45 /* NSDictionary+Utils.m in Sources */,
 				410C59C61B79EB8500EB9C7E /* UIImage+MultiFormat.m in Sources */,
 				41F02EA81B71DBF300783716 /* InterfaceManager.m in Sources */,
+				41804DFC1B90977A00E8CBE0 /* UserAvatarCell.m in Sources */,
 				41A564721B748EA80086B850 /* SimpleCam.m in Sources */,
 				4106525A1B70B96200BBA41C /* MBProgressHUD.m in Sources */,
 				41E4877E1B7879A60054C17E /* UserManager.m in Sources */,
@@ -3999,6 +4119,7 @@
 				419C9FD81B8972480036174D /* IIWrapController.m in Sources */,
 				419C9FD91B8972480036174D /* IQKeyboardManager.m in Sources */,
 				419C9FDA1B8972480036174D /* JSONModel+networking.m in Sources */,
+				41804DD51B908C5C00E8CBE0 /* UserInfoViewController.m in Sources */,
 				419C9FDB1B8972480036174D /* IQTextView.m in Sources */,
 				419C9FDC1B8972480036174D /* CamClaim.xcdatamodeld in Sources */,
 				419C9FDD1B8972480036174D /* BaseViewController.m in Sources */,
@@ -4010,6 +4131,7 @@
 				419C9FE31B8972480036174D /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				419C9FE41B8972480036174D /* IQKeyboardReturnKeyHandler.m in Sources */,
 				419C9FE51B8972480036174D /* UIColor+Utils.m in Sources */,
+				41804DF51B9096C500E8CBE0 /* UserInfoCell.m in Sources */,
 				419C9FE61B8972480036174D /* AFHTTPRequestOperationManager.m in Sources */,
 				419C9FE71B8972480036174D /* UIButton+AFNetworking.m in Sources */,
 				419C9FE81B8972480036174D /* MRMessageInterceptor.m in Sources */,
@@ -4033,6 +4155,7 @@
 				419C9FFA1B8972480036174D /* MJRefreshHeaderView.m in Sources */,
 				419C9FFB1B8972480036174D /* UIImage+GIF.m in Sources */,
 				419C9FFC1B8972480036174D /* RecordCell.m in Sources */,
+				418BBD9D1B90B4F40068A672 /* UserModifyViewController.m in Sources */,
 				419C9FFD1B8972480036174D /* IQTitleBarButtonItem.m in Sources */,
 				419C9FFE1B8972480036174D /* NSArray+Utils.m in Sources */,
 				419C9FFF1B8972480036174D /* IQSegmentedNextPrevious.m in Sources */,
@@ -4052,6 +4175,7 @@
 				419CA00D1B8972480036174D /* ABPadLockScreenView.m in Sources */,
 				419CA00E1B8972480036174D /* MJRefreshFooterView.m in Sources */,
 				419CA00F1B8972480036174D /* NSArray+JSONModel.m in Sources */,
+				41804DDF1B908D4800E8CBE0 /* SettingViewController.m in Sources */,
 				419CA0101B8972480036174D /* JSONModelError.m in Sources */,
 				419CA0111B8972480036174D /* UIImage+Utils.m in Sources */,
 				419CA0121B8972480036174D /* RecordViewController.m in Sources */,
@@ -4104,6 +4228,7 @@
 				419CA0411B8972480036174D /* CloudSubPathViewController.m in Sources */,
 				419CA0421B8972480036174D /* UIView+Utils.m in Sources */,
 				419CA0431B8972480036174D /* ResponseModel.m in Sources */,
+				41804DEC1B90910400E8CBE0 /* SettingCell.m in Sources */,
 				419CA0441B8972480036174D /* MainCell.m in Sources */,
 				419CA0451B8972480036174D /* UIRefreshControl+AFNetworking.m in Sources */,
 				419CA0461B8972480036174D /* SDWebImageCompat.m in Sources */,
@@ -4127,6 +4252,7 @@
 				419CA0581B8972480036174D /* NSDictionary+Utils.m in Sources */,
 				419CA0591B8972480036174D /* UIImage+MultiFormat.m in Sources */,
 				419CA05A1B8972480036174D /* InterfaceManager.m in Sources */,
+				41804DFE1B90977A00E8CBE0 /* UserAvatarCell.m in Sources */,
 				419CA05B1B8972480036174D /* SimpleCam.m in Sources */,
 				419CA05C1B8972480036174D /* MBProgressHUD.m in Sources */,
 				419CA05D1B8972480036174D /* UserManager.m in Sources */,
@@ -4145,6 +4271,7 @@
 				41D82AC11B833AC00035801B /* IIWrapController.m in Sources */,
 				41D82AC21B833AC00035801B /* IQKeyboardManager.m in Sources */,
 				41D82AC31B833AC00035801B /* JSONModel+networking.m in Sources */,
+				41804DD41B908C5C00E8CBE0 /* UserInfoViewController.m in Sources */,
 				41D82AC41B833AC00035801B /* IQTextView.m in Sources */,
 				41D82AC51B833AC00035801B /* CamClaim.xcdatamodeld in Sources */,
 				41D82AC61B833AC00035801B /* BaseViewController.m in Sources */,
@@ -4156,6 +4283,7 @@
 				41D82ACC1B833AC00035801B /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				41D82ACD1B833AC00035801B /* IQKeyboardReturnKeyHandler.m in Sources */,
 				41D82ACE1B833AC00035801B /* UIColor+Utils.m in Sources */,
+				41804DF41B9096C500E8CBE0 /* UserInfoCell.m in Sources */,
 				41D82ACF1B833AC00035801B /* AFHTTPRequestOperationManager.m in Sources */,
 				41D82AD01B833AC00035801B /* UIButton+AFNetworking.m in Sources */,
 				41D82AD11B833AC00035801B /* MRMessageInterceptor.m in Sources */,
@@ -4179,6 +4307,7 @@
 				41D82AE31B833AC00035801B /* MJRefreshHeaderView.m in Sources */,
 				41D82AE41B833AC00035801B /* UIImage+GIF.m in Sources */,
 				41D82AE51B833AC00035801B /* RecordCell.m in Sources */,
+				418BBD9C1B90B4F40068A672 /* UserModifyViewController.m in Sources */,
 				41D82AE61B833AC00035801B /* IQTitleBarButtonItem.m in Sources */,
 				41D82AE71B833AC00035801B /* NSArray+Utils.m in Sources */,
 				41D82AE81B833AC00035801B /* IQSegmentedNextPrevious.m in Sources */,
@@ -4198,6 +4327,7 @@
 				41D82AF61B833AC00035801B /* ABPadLockScreenView.m in Sources */,
 				41D82AF71B833AC00035801B /* MJRefreshFooterView.m in Sources */,
 				41D82AF81B833AC00035801B /* NSArray+JSONModel.m in Sources */,
+				41804DDE1B908D4800E8CBE0 /* SettingViewController.m in Sources */,
 				41D82AF91B833AC00035801B /* JSONModelError.m in Sources */,
 				41D82AFA1B833AC00035801B /* UIImage+Utils.m in Sources */,
 				41D82AFB1B833AC00035801B /* RecordViewController.m in Sources */,
@@ -4250,6 +4380,7 @@
 				41D82B2A1B833AC00035801B /* CloudSubPathViewController.m in Sources */,
 				41D82B2B1B833AC00035801B /* UIView+Utils.m in Sources */,
 				41D82B2C1B833AC00035801B /* ResponseModel.m in Sources */,
+				41804DEB1B90910400E8CBE0 /* SettingCell.m in Sources */,
 				41D82B2D1B833AC00035801B /* MainCell.m in Sources */,
 				41D82B2E1B833AC00035801B /* UIRefreshControl+AFNetworking.m in Sources */,
 				41D82B2F1B833AC00035801B /* SDWebImageCompat.m in Sources */,
@@ -4273,6 +4404,7 @@
 				41D82B411B833AC00035801B /* NSDictionary+Utils.m in Sources */,
 				41D82B421B833AC00035801B /* UIImage+MultiFormat.m in Sources */,
 				41D82B431B833AC00035801B /* InterfaceManager.m in Sources */,
+				41804DFD1B90977A00E8CBE0 /* UserAvatarCell.m in Sources */,
 				41D82B441B833AC00035801B /* SimpleCam.m in Sources */,
 				41D82B451B833AC00035801B /* MBProgressHUD.m in Sources */,
 				41D82B461B833AC00035801B /* UserManager.m in Sources */,

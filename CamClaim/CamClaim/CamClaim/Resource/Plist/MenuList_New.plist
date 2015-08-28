@@ -152,6 +152,24 @@
 		<key>idForCell</key>
 		<string></string>
 		<key>title</key>
+		<string>Personal Info</string>
+		<key>content</key>
+		<string></string>
+		<key>imageName</key>
+		<string>icon_join</string>
+		<key>cellHeight</key>
+		<integer>46</integer>
+		<key>selectorForJump</key>
+		<string>jumpToUserInfoVC</string>
+		<key>canJump</key>
+		<true/>
+		<key>cellKey</key>
+		<string>kMenuTitle08</string>
+	</dict>
+	<dict>
+		<key>idForCell</key>
+		<string></string>
+		<key>title</key>
 		<string>Logout</string>
 		<key>content</key>
 		<string></string>
@@ -164,7 +182,7 @@
 		<key>canJump</key>
 		<false/>
 		<key>cellKey</key>
-		<string>kMenuTitle08</string>
+		<string>kMenuTitle09</string>
 	</dict>
 </array>
 </plist>
