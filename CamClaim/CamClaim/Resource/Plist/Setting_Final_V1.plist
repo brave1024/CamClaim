@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>Change Password</string>
+		<key>description</key>
+		<string>change_password</string>
+		<key>content</key>
+		<string></string>
+		<key>img</key>
+		<string></string>
+		<key>selectorForJump</key>
+		<string>jumpToChangePassword</string>
+		<key>canJump</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Change Pincode</string>
+		<key>description</key>
+		<string>change_pincode</string>
+		<key>content</key>
+		<string></string>
+		<key>img</key>
+		<string></string>
+		<key>selectorForJump</key>
+		<string>jumpToChangePincode</string>
+		<key>canJump</key>
+		<true/>
+	</dict>
+</array>
+</plist>

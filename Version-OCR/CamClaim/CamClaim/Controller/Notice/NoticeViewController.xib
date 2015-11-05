@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NoticeViewController">
+            <connections>
+                <outlet property="tableview" destination="8Dx-Dz-kFI" id="uS0-dN-25g"/>
+                <outlet property="view" destination="Lpc-ae-aod" id="KQz-c9-Org"/>
+                <outlet property="viewContent" destination="ckP-iu-tw2" id="135-zH-nXV"/>
+                <outlet property="viewTop" destination="J84-qx-hru" id="jyR-ZF-i99"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Lpc-ae-aod">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J84-qx-hru">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                    <color key="backgroundColor" red="0.97647058819999999" green="0.58431372550000005" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="LBj-dS-Mdf"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ckP-iu-tw2">
+                    <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="8Dx-Dz-kFI">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="UBz-QF-kIl"/>
+                                <outlet property="delegate" destination="-1" id="fNE-Al-NUM"/>
+                            </connections>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.47450980390000003" green="0.73333333329999995" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="8Dx-Dz-kFI" firstAttribute="top" secondItem="ckP-iu-tw2" secondAttribute="top" id="AsX-2y-TSe"/>
+                        <constraint firstAttribute="bottom" secondItem="8Dx-Dz-kFI" secondAttribute="bottom" id="FRs-2K-h2W"/>
+                        <constraint firstItem="8Dx-Dz-kFI" firstAttribute="leading" secondItem="ckP-iu-tw2" secondAttribute="leading" id="ZXt-s5-hz5"/>
+                        <constraint firstAttribute="trailing" secondItem="8Dx-Dz-kFI" secondAttribute="trailing" id="xY0-hY-M8q"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ckP-iu-tw2" secondAttribute="trailing" id="Anj-Nl-NNO"/>
+                <constraint firstAttribute="bottom" secondItem="ckP-iu-tw2" secondAttribute="bottom" id="BT4-3P-WOK"/>
+                <constraint firstItem="J84-qx-hru" firstAttribute="top" secondItem="Lpc-ae-aod" secondAttribute="top" id="EA1-lh-Igg"/>
+                <constraint firstItem="J84-qx-hru" firstAttribute="leading" secondItem="Lpc-ae-aod" secondAttribute="leading" id="KvF-0m-mbd"/>
+                <constraint firstAttribute="trailing" secondItem="J84-qx-hru" secondAttribute="trailing" id="P0x-Wz-mfI"/>
+                <constraint firstItem="ckP-iu-tw2" firstAttribute="leading" secondItem="Lpc-ae-aod" secondAttribute="leading" id="RUH-en-xEU"/>
+                <constraint firstItem="ckP-iu-tw2" firstAttribute="top" secondItem="J84-qx-hru" secondAttribute="bottom" id="aGh-sH-ssa"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="297" y="408"/>
+        </view>
+    </objects>
+</document>

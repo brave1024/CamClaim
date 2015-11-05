@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JoinCompanyViewController">
+            <connections>
+                <outlet property="searchBar" destination="NkD-IX-TNK" id="Ilc-1y-ojL"/>
+                <outlet property="tableview" destination="l37-It-dmn" id="f94-XQ-B6F"/>
+                <outlet property="view" destination="4go-fD-5GJ" id="sLE-ai-xQ6"/>
+                <outlet property="viewContent" destination="3ig-Ai-8CP" id="pkM-y1-mdQ"/>
+                <outlet property="viewTop" destination="Wci-qM-xUS" id="5r9-8c-rkc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="4go-fD-5GJ">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wci-qM-xUS">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                    <color key="backgroundColor" red="0.97647058819999999" green="0.58431372550000005" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="5up-Uh-4tm"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ig-Ai-8CP">
+                    <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                    <subviews>
+                        <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="NkD-IX-TNK">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="YS5-Ce-Juk"/>
+                            </connections>
+                        </searchBar>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="l37-It-dmn">
+                            <rect key="frame" x="0.0" y="44" width="320" height="460"/>
+                            <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="41c-lQ-blk"/>
+                                <outlet property="delegate" destination="-1" id="p97-G7-DM7"/>
+                            </connections>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.47450980390000003" green="0.73333333329999995" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="l37-It-dmn" firstAttribute="leading" secondItem="3ig-Ai-8CP" secondAttribute="leading" id="1Vu-51-8Ke"/>
+                        <constraint firstItem="l37-It-dmn" firstAttribute="top" secondItem="NkD-IX-TNK" secondAttribute="bottom" id="5yS-9i-v8G"/>
+                        <constraint firstAttribute="trailing" secondItem="NkD-IX-TNK" secondAttribute="trailing" id="EZu-lI-gnc"/>
+                        <constraint firstItem="NkD-IX-TNK" firstAttribute="top" secondItem="3ig-Ai-8CP" secondAttribute="top" id="bX3-8b-A7B"/>
+                        <constraint firstAttribute="trailing" secondItem="l37-It-dmn" secondAttribute="trailing" id="hUi-eE-gDC"/>
+                        <constraint firstItem="NkD-IX-TNK" firstAttribute="leading" secondItem="3ig-Ai-8CP" secondAttribute="leading" id="tJO-Yd-Y36"/>
+                        <constraint firstAttribute="bottom" secondItem="l37-It-dmn" secondAttribute="bottom" id="tl0-Lj-1uo"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="3ig-Ai-8CP" secondAttribute="trailing" id="6rL-6A-aUX"/>
+                <constraint firstAttribute="bottom" secondItem="3ig-Ai-8CP" secondAttribute="bottom" id="F4S-zL-1qJ"/>
+                <constraint firstItem="Wci-qM-xUS" firstAttribute="top" secondItem="4go-fD-5GJ" secondAttribute="top" id="LUd-bK-97a"/>
+                <constraint firstItem="3ig-Ai-8CP" firstAttribute="top" secondItem="Wci-qM-xUS" secondAttribute="bottom" id="Tbf-Kr-aRr"/>
+                <constraint firstItem="3ig-Ai-8CP" firstAttribute="leading" secondItem="4go-fD-5GJ" secondAttribute="leading" id="a1F-qz-vuF"/>
+                <constraint firstAttribute="trailing" secondItem="Wci-qM-xUS" secondAttribute="trailing" id="hwA-BE-C6y"/>
+                <constraint firstItem="Wci-qM-xUS" firstAttribute="leading" secondItem="4go-fD-5GJ" secondAttribute="leading" id="nLE-ya-X1H"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="183" y="419"/>
+        </view>
+    </objects>
+</document>

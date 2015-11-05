@@ -1,0 +1,9 @@
+platform:ios, '8.0'
+
+pod 'OneDriveSDK', '~> 1.0.0'
+
+pod 'TesseractOCRiOS', '~> 4.0.0'
+
+pod 'GPUImage', '~> 0.1.7'
+
+pod 'JTCalendar', '~> 2.1.4'

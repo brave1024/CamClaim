@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="LYS-mN-iXh" customClass="CompanyCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="58"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LYS-mN-iXh" id="W3y-56-HQl">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="57"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_company.png" translatesAutoresizingMaskIntoConstraints="NO" id="eRX-hU-Cwy">
+                        <rect key="frame" x="10" y="9" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="JWN-Ol-g4q"/>
+                            <constraint firstAttribute="height" constant="40" id="zaS-9T-cK6"/>
+                        </constraints>
+                    </imageView>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tYH-VX-U3b">
+                        <rect key="frame" x="10" y="9" width="40" height="40"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_add.png" translatesAutoresizingMaskIntoConstraints="NO" id="RAU-3p-hZB">
+                                <rect key="frame" x="10" y="9" width="21" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="LZC-Pk-DOw"/>
+                                    <constraint firstAttribute="width" constant="21" id="Tcq-9h-fpM"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.81176470588235294" green="0.81176470588235294" blue="0.81176470588235294" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="DWa-sY-JxZ"/>
+                            <constraint firstAttribute="width" constant="40" id="LIk-Cx-uIU"/>
+                            <constraint firstAttribute="centerX" secondItem="RAU-3p-hZB" secondAttribute="centerX" constant="-0.5" id="bvs-hF-L83"/>
+                            <constraint firstAttribute="centerY" secondItem="RAU-3p-hZB" secondAttribute="centerY" constant="0.5" id="mCq-So-5Ic"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hubei Chutian Media Company, ltm,.com" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFv-qV-3W1">
+                        <rect key="frame" x="65" y="9" width="227" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="Lb0-4B-aSj"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_arrow_right_new.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fr5-hs-uyx">
+                        <rect key="frame" x="300" y="21" width="9" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="9" id="gp4-MC-f4R"/>
+                            <constraint firstAttribute="height" constant="16" id="ibH-Xr-rwK"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the company you what to find" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NO5-v3-dCa">
+                        <rect key="frame" x="8" y="15" width="274" height="26"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="26" id="mFo-AW-hQI"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_search.png" translatesAutoresizingMaskIntoConstraints="NO" id="ewd-Lt-6CO">
+                        <rect key="frame" x="290" y="18" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="3Y3-Is-naU"/>
+                            <constraint firstAttribute="width" constant="20" id="Dnd-aH-oBb"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ewd-Lt-6CO" firstAttribute="leading" secondItem="NO5-v3-dCa" secondAttribute="trailing" constant="8" id="4Ti-Oq-cfi"/>
+                    <constraint firstAttribute="centerY" secondItem="Fr5-hs-uyx" secondAttribute="centerY" id="9RO-eZ-GkR"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Fr5-hs-uyx" secondAttribute="trailing" constant="3" id="CXv-OM-ukf"/>
+                    <constraint firstAttribute="centerY" secondItem="eRX-hU-Cwy" secondAttribute="centerY" constant="-0.5" id="EU5-gc-jsy"/>
+                    <constraint firstItem="fFv-qV-3W1" firstAttribute="leading" secondItem="tYH-VX-U3b" secondAttribute="trailing" constant="15" id="Hh7-pP-K4h"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="ewd-Lt-6CO" secondAttribute="trailing" constant="2" id="KAe-MG-F5b"/>
+                    <constraint firstItem="tYH-VX-U3b" firstAttribute="leading" secondItem="W3y-56-HQl" secondAttribute="leadingMargin" constant="2" id="QoZ-xv-lOE"/>
+                    <constraint firstAttribute="centerY" secondItem="fFv-qV-3W1" secondAttribute="centerY" constant="-0.5" id="eyJ-OJ-Mfi"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="NO5-v3-dCa" secondAttribute="leading" id="h7I-eJ-3HW"/>
+                    <constraint firstItem="ewd-Lt-6CO" firstAttribute="centerY" secondItem="W3y-56-HQl" secondAttribute="centerY" id="o8f-Ju-8zz"/>
+                    <constraint firstItem="NO5-v3-dCa" firstAttribute="centerY" secondItem="W3y-56-HQl" secondAttribute="centerY" id="rpz-LK-hZx"/>
+                    <constraint firstItem="eRX-hU-Cwy" firstAttribute="leading" secondItem="W3y-56-HQl" secondAttribute="leadingMargin" constant="2" id="z9M-rQ-tpi"/>
+                    <constraint firstItem="Fr5-hs-uyx" firstAttribute="leading" secondItem="fFv-qV-3W1" secondAttribute="trailing" constant="8" id="zCP-8h-EPF"/>
+                    <constraint firstAttribute="centerY" secondItem="tYH-VX-U3b" secondAttribute="centerY" constant="-0.5" id="zW4-JF-4Qt"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imgviewArrow" destination="Fr5-hs-uyx" id="nfh-Bu-CiF"/>
+                <outlet property="imgviewPic" destination="eRX-hU-Cwy" id="clN-0k-97h"/>
+                <outlet property="imgviewSearch" destination="ewd-Lt-6CO" id="C5Z-JP-TkU"/>
+                <outlet property="lblContent" destination="fFv-qV-3W1" id="8E2-JA-4Cd"/>
+                <outlet property="lblTip" destination="NO5-v3-dCa" id="hFS-Oh-imE"/>
+                <outlet property="viewAdd" destination="tYH-VX-U3b" id="0KL-xz-LHM"/>
+            </connections>
+            <point key="canvasLocation" x="188" y="237"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_add.png" width="21" height="21"/>
+        <image name="icon_arrow_right_new.png" width="8" height="16"/>
+        <image name="icon_search.png" width="20" height="20"/>
+        <image name="img_company.png" width="375" height="100"/>
+    </resources>
+</document>

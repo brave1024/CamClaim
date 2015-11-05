@@ -1,0 +1,1 @@
+../../../OneDriveSDK/OneDriveSDK/OneDriveCoreSDK/Extensions/ODThumbnailSet+CustomThumbnail.h

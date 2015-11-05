@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BindingViewController">
+            <connections>
+                <outlet property="tableview" destination="jxM-06-ZqP" id="MHZ-dg-FhM"/>
+                <outlet property="view" destination="dbx-Mj-s0Q" id="mSX-Nx-ds4"/>
+                <outlet property="viewContent" destination="ZBO-ok-pxL" id="Sok-ZK-e4A"/>
+                <outlet property="viewTop" destination="d17-xU-IpT" id="dhz-Ff-xXO"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="dbx-Mj-s0Q">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d17-xU-IpT">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                    <color key="backgroundColor" red="0.97647058819999999" green="0.58431372550000005" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="FGU-EY-014"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZBO-ok-pxL">
+                    <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="jxM-06-ZqP">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="UMw-eI-qCz"/>
+                                <outlet property="delegate" destination="-1" id="BY8-fV-cBu"/>
+                            </connections>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.47450980390000003" green="0.73333333329999995" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="jxM-06-ZqP" secondAttribute="bottom" id="81q-OY-x5b"/>
+                        <constraint firstItem="jxM-06-ZqP" firstAttribute="leading" secondItem="ZBO-ok-pxL" secondAttribute="leading" id="9YH-3L-q8e"/>
+                        <constraint firstItem="jxM-06-ZqP" firstAttribute="top" secondItem="ZBO-ok-pxL" secondAttribute="top" id="jb5-Ix-uA9"/>
+                        <constraint firstAttribute="trailing" secondItem="jxM-06-ZqP" secondAttribute="trailing" id="lub-dE-nFl"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ZBO-ok-pxL" secondAttribute="trailing" id="37W-xP-gLX"/>
+                <constraint firstAttribute="trailing" secondItem="d17-xU-IpT" secondAttribute="trailing" id="EUG-PS-ymo"/>
+                <constraint firstAttribute="bottom" secondItem="ZBO-ok-pxL" secondAttribute="bottom" id="MzR-CG-GVi"/>
+                <constraint firstItem="d17-xU-IpT" firstAttribute="leading" secondItem="dbx-Mj-s0Q" secondAttribute="leading" id="aCB-iY-heV"/>
+                <constraint firstItem="ZBO-ok-pxL" firstAttribute="top" secondItem="d17-xU-IpT" secondAttribute="bottom" id="aHg-89-jE9"/>
+                <constraint firstItem="d17-xU-IpT" firstAttribute="top" secondItem="dbx-Mj-s0Q" secondAttribute="top" id="bg8-y3-bR9"/>
+                <constraint firstItem="ZBO-ok-pxL" firstAttribute="leading" secondItem="dbx-Mj-s0Q" secondAttribute="leading" id="zk0-WU-DAq"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="264" y="387"/>
+        </view>
+    </objects>
+</document>

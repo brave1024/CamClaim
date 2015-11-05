@@ -1,0 +1,85 @@
+Printing description of ((__NSDictionaryM *)0x000000017045cc50):
+{
+    "@content.downloadUrl" = "https://public.bn1302.livefilestore.com/y3m4_wttVGhLbGT8HtRuuvgA45g5FH7cOuJZwiZzHqnJo-fD2cUP_0JXok1kcLCoOUvkKQ6A5_HL18eIKDoKL9qwEQGEEp1UABOyvT4PBdLd4eXnbvEoRcbjqncWId2ulngCDGYT6IxBGvW13d1s1xwXZenQYvfadE_2GQ3Zfz_xZrbfB2E3xFKJhRFV9zLPKfn";
+    cTag = aYzpFMzA1RkY4NEEzRUVGRDkxITExNC4yNTc;
+    createdBy =     {
+        application =         {
+            displayName = SkyDrive;
+            id = 480f7c59;
+        };
+        mobileMediaBackupKey =         {
+            "@odata.type" = "#oneDrive.identity";
+            id = "1,iPhone,1438727717000,0";
+        };
+        user =         {
+            displayName = "Zhiyong Xia";
+            id = e305ff84a3eefd91;
+        };
+    };
+    createdDateTime = "2015-08-14T03:31:10.453Z";
+    eTag = aRTMwNUZGODRBM0VFRkQ5MSExMTQuMw;
+    file =     {
+        hashes =         {
+            crc32Hash = 9B096C05;
+            sha1Hash = 39C4DEF38B00E3B189E94F64490527C6FB5CC150;
+        };
+        mimeType = "image/jpeg";
+    };
+    fileSystemInfo =     {
+        createdDateTime = "2015-08-04T22:35:17Z";
+        lastModifiedDateTime = "2015-08-04T22:35:17Z";
+    };
+    id = "E305FF84A3EEFD91!114";
+    image =     {
+        height = 1280;
+        width = 1280;
+    };
+    lastModifiedBy =     {
+        application =         {
+            displayName = SkyDrive;
+            id = 480f7c59;
+        };
+        mobileMediaBackupKey =         {
+            "@odata.type" = "#oneDrive.identity";
+            id = "1,iPhone,1438727717000,0";
+        };
+        user =         {
+            displayName = "Zhiyong Xia";
+            id = e305ff84a3eefd91;
+        };
+    };
+    lastModifiedDateTime = "2015-08-14T03:32:11.903Z";
+    name = "20150804_223517000_iOS.jpg";
+    parentReference =     {
+        driveId = e305ff84a3eefd91;
+        id = "E305FF84A3EEFD91!105";
+        path = "/drive/root:";
+    };
+    photo =     {
+        takenDateTime = "2015-08-04T22:35:17Z";
+    };
+    size = 271351;
+    thumbnails =     (
+                {
+            id = 0;
+            large =             {
+                height = 800;
+                url = "https://57xbha.bn1302.livefilestore.com/y3mQPM9JE5M4SsJxvH3IitrPUUdEXfFJ7coXkmqcT-ZuIsA3jJJ001V-l1cE38hSh2YLlAlTalBnY_nORCXxpsj1HiuKA1hLmeXJFxcGWIxE-pT0GX3_6i_Yxt5S7KAXuHOpa0tLwlrqQ4WYLJde-iwM9qXgnUIsp3Jsdy6DHfsJ2A";
+                width = 800;
+            };
+            medium =             {
+                height = 176;
+                url = "https://57xbha.bn1302.livefilestore.com/y3mMb8BtuwUBFddOoUH2_2TnVMHttTDx8yhBL1112lKlOugTX9uVB-I7_T7Cdsmx1EJYpDUGplpWC2yiRYPJ2EqlVmcNKq_dkl-xE1l2hgrN-cskCUa0CbQnPLVTCJ8NCt54W8b50KDqPTH_jVIFjn1eG30mGiDgyUj1jcpUJOR__o";
+                width = 176;
+            };
+            small =             {
+                height = 96;
+                url = "https://57xbha.bn1302.livefilestore.com/y3m39vt0T5tmB4j4H2wM9SGlAT8cK5GQvROiGaFq9MuYfuaq6VEmKQHAKdsFzgTV6OBL_aqja7xLez0BbIV9JslwbksOL2noygPk2Ry6dRLwJJdfCDcDfKA8TdLo3DMDAzL2kclfIT6NCb_jgBIUQvwBhZdfNLMXkfykAmaRxwgtdhR1iLe7Io5CMOtgZJ-x68M";
+                width = 96;
+            };
+        }
+    );
+    "thumbnails@odata.context" = "https://api.onedrive.com/v1.0/$metadata#drives('me')/items('root')/children('E305FF84A3EEFD91%21114')/thumbnails";
+    webUrl = "https://onedrive.live.com/redir?resid=E305FF84A3EEFD91!114";
+}
+(lldb) 

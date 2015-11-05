@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CompanyViewController">
+            <connections>
+                <outlet property="btnJoin" destination="5DA-Uf-MLN" id="cuc-Yk-zfv"/>
+                <outlet property="tableview" destination="vkO-yW-Q8C" id="CuT-iw-4rs"/>
+                <outlet property="view" destination="Wvx-Fx-lgK" id="4Wa-Vz-5T5"/>
+                <outlet property="viewContent" destination="kCX-LC-Rqb" id="Cmm-2G-XjA"/>
+                <outlet property="viewTop" destination="Pnp-vC-gXM" id="wNQ-T2-7Pn"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Wvx-Fx-lgK">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pnp-vC-gXM">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                    <color key="backgroundColor" red="0.97647058819999999" green="0.58431372550000005" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="WQE-u1-MCR"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kCX-LC-Rqb">
+                    <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="vkO-yW-Q8C">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="454"/>
+                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="uJV-oQ-hep"/>
+                                <outlet property="delegate" destination="-1" id="yVl-3K-cBV"/>
+                            </connections>
+                        </tableView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5DA-Uf-MLN">
+                            <rect key="frame" x="20" y="461" width="280" height="36"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="36" id="muX-dI-uml"/>
+                            </constraints>
+                            <state key="normal" title="Join Company">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="joinCompanyAction" destination="-1" eventType="touchUpInside" id="W9k-LD-UFy"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.47450980390000003" green="0.73333333329999995" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="5DA-Uf-MLN" secondAttribute="bottom" constant="7" id="0hH-JT-Ml4"/>
+                        <constraint firstItem="5DA-Uf-MLN" firstAttribute="leading" secondItem="kCX-LC-Rqb" secondAttribute="leading" constant="20" id="IAa-Dy-ORv"/>
+                        <constraint firstItem="vkO-yW-Q8C" firstAttribute="top" secondItem="kCX-LC-Rqb" secondAttribute="top" id="O03-El-67T"/>
+                        <constraint firstItem="vkO-yW-Q8C" firstAttribute="leading" secondItem="kCX-LC-Rqb" secondAttribute="leading" id="Qfp-pN-3cg"/>
+                        <constraint firstItem="5DA-Uf-MLN" firstAttribute="top" secondItem="vkO-yW-Q8C" secondAttribute="bottom" constant="7" id="XMt-qi-0E3"/>
+                        <constraint firstAttribute="trailing" secondItem="vkO-yW-Q8C" secondAttribute="trailing" id="jtK-ff-u1i"/>
+                        <constraint firstAttribute="trailing" secondItem="5DA-Uf-MLN" secondAttribute="trailing" constant="20" id="paz-Cc-abj"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Pnp-vC-gXM" firstAttribute="leading" secondItem="Wvx-Fx-lgK" secondAttribute="leading" id="3EY-yB-zH1"/>
+                <constraint firstAttribute="trailing" secondItem="kCX-LC-Rqb" secondAttribute="trailing" id="TqC-wU-8Yf"/>
+                <constraint firstAttribute="trailing" secondItem="Pnp-vC-gXM" secondAttribute="trailing" id="VwW-vE-3Yv"/>
+                <constraint firstItem="kCX-LC-Rqb" firstAttribute="top" secondItem="Pnp-vC-gXM" secondAttribute="bottom" id="bWz-Mf-aXQ"/>
+                <constraint firstItem="kCX-LC-Rqb" firstAttribute="leading" secondItem="Wvx-Fx-lgK" secondAttribute="leading" id="ciO-hG-jif"/>
+                <constraint firstAttribute="bottom" secondItem="kCX-LC-Rqb" secondAttribute="bottom" id="ne8-4h-OH3"/>
+                <constraint firstItem="Pnp-vC-gXM" firstAttribute="top" secondItem="Wvx-Fx-lgK" secondAttribute="top" id="qBU-24-s0b"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="213" y="387"/>
+        </view>
+    </objects>
+</document>

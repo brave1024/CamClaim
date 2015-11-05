@@ -1,0 +1,140 @@
+/* 
+  Localizable.strings
+  CamClaim
+
+  Created by Xia Zhiyong on 15/8/12.
+  Copyright (c) 2015年 kufa88. All rights reserved.
+*/
+
+
+// 全局提示语
+"loading" = "Loading...";
+"loadOver" = "Load Over";
+"noData" = "No Data";
+"networkFail" = "No Network";
+"loadSuccess" = "Load Successfully";
+"loadFail" = "Load Failed";
+
+"change" = "Change";
+"upload" = "Upload";
+"download" = "Download";
+"sumbit" = "Submit";
+"update" = "Update";
+"save" = "Save";
+"edit" = "Edit";
+"cancel" = "Cancel";
+"done" = "Done";
+"new" = "New";
+
+// pin code
+"delete" = "Delete";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+
+// Menu
+"home" = "Dashboard";
+"join" = "Join";
+"report" = "Report";
+"new record" = "New Record";
+"cloud" = "Save Option";
+"notice" = "Notice Board";
+"setting" = "Setting";
+"share" = "Invitation";
+"version" = "Version";
+"logout" = "Logout";
+
+// Login
+"account" = "ACCOUNT";
+"password" = "PASSWORD";
+"remember" = "Remember";    // 自动登录
+"newUser" = "New User";
+"login" = "Log In";
+"forget password" = "Forget Password?";
+
+// Register
+"email" = "MAILBOX";
+"realName" = "REAL NAME";
+"phone" = "PHONE";
+"register" = "Register";
+"title_register" = "New User Register";
+
+// Forget Password
+"forget password for title" = "Forget Password";
+"input email" = "Please Input Email";
+
+// UserInfo
+"realname_" = "Real Name";
+"nickname_" = "Nickname";
+"email_" = "E-mail";
+"phone_" = "Phone";
+"company_" = "Company";
+"department_" = "Department";
+"position_" = "Position";
+"city_" = "City";
+"country/region" = "Country/Region";
+
+// Company
+"join company" = "Join Company";
+"input company name" = "Please Input Company Name";
+"user number" = "UserNumber";
+"" = "";
+"" = "";
+
+// Claim
+"time" = "Date";
+"claim type" = "Claim Type";
+"reimbursement" = "";
+"income" = "Income";
+"balance" = "Balance";
+"total expenditure" = "Total Expenditure";
+"total income" = "Total Income";
+"" = "";
+"" = "";
+
+"name" = "Name";
+"purpose" = "Purpose";
+"amount of money" = "Amount Of Money";
+"bill category" = "Billing Category";
+"Place" = "Place";
+"" = "";
+"" = "";
+"" = "";
+
+// Setting
+"login info" = "Binding";
+"change password" = "Change Password";
+"help" = "Help";
+"about" = "About CamClaim";
+
+"old password" = "Old Password：";
+"new password" = "New Password：";
+"password again" = "Password Again:";
+
+// New Input
+"type_traffic" = "Traffic";
+"type_meal" = "Meal";
+"type_hotel" = "Hotel/House";
+"type_gift" = "Gift";
+"type_tool" = "Tools/Accessories";
+"type_office" = "Office Stationery";
+"type_other" = "Other";
+
+// Traffic
+"traffic_car" = "Car";
+"traffic_train" = "Train";
+"traffic_flight" = "Flight";
+"traffic_ship" = "Ship";
+"traffic_metro" = "Metro";
+"traffic_Title" = "Please Select";
+
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+
+
+
+
+

@@ -1,0 +1,82 @@
+Printing description of ((ODItem *)0x0000000170363a80):
+{
+    cTag = adDpFMzA1RkY4NEEzRUVGRDkxITEwOC42MzU3NTExOTkzNTYwMDAwMDA;
+    createdBy =     {
+        application =         {
+            displayName = "OneDrive Explorer for iOS (sample app)";
+            id = 48160af8;
+        };
+        user =         {
+            displayName = "Zhiyong Xia";
+            id = e305ff84a3eefd91;
+        };
+    };
+    createdDateTime = "2015-08-14T03:05:12.76Z";
+    eTag = aRTMwNUZGODRBM0VFRkQ5MSExMDguMQ;
+    fileSystemInfo =     {
+        createdDateTime = "2015-08-14T03:05:12.76Z";
+        lastModifiedDateTime = "2015-08-14T03:31:12.11Z";
+    };
+    folder =     {
+        childCount = 2;
+    };
+    id = "E305FF84A3EEFD91!108";
+    lastModifiedBy =     {
+        application =         {
+            displayName = "OneDrive iPhone";
+            id = 4c051d0d;
+        };
+        user =         {
+            displayName = "Zhiyong Xia";
+            id = e305ff84a3eefd91;
+        };
+    };
+    lastModifiedDateTime = "2015-08-14T03:32:15.6Z";
+    name = xia;
+    parentReference =     {
+        driveId = e305ff84a3eefd91;
+        id = "E305FF84A3EEFD91!105";
+        path = "/drive/root:";
+    };
+    size = 638890;
+    thumbnails =     (
+                {
+            id = 0;
+            large =             {
+                height = 800;
+                url = "https://57w6ca.bn1302.livefilestore.com/y3mo8QZ7e-EszzcLgvjgl7iBbmOdB7W9WR3n2vDrJ6VxZbgZR4xaS65aw-yo1B6rBu8ZBw_JtPNkzUc9HIAKoewf6Zgm-4kTGkbg1rEAsfalWqCjBrDXmfScn3filSxgjb8_EcDjjBkCcr8ezwCEGN3Dj0qCedPkUNXMJkyuoEvHG0";
+                width = 552;
+            };
+            medium =             {
+                height = 176;
+                url = "https://57w6ca.bn1302.livefilestore.com/y3mrFwqxALQY5y7kZTGBEaQzu_G5m08mFPor_Z4YeyZ6PVGrzsNZOfphFFzAU06ClZguuxa1HISkHOfJWl1tHImezW5T-D2UqAisC8nRMjt_DgGyNm6KtypovbXcLtVMQ7vYuE2mQGx2j0Vd-dZasbeZzE6KElNN2RwbgGlO-wiVDw";
+                width = 121;
+            };
+            small =             {
+                height = 96;
+                url = "https://57w6ca.bn1302.livefilestore.com/y3mrXdX2ga_EmAW2VM6RTDW8oTzeIsMb28ur4p2FzYhRpOtTUPiFlvGaFyWDZ5nzwybDv0s96XXROcSe4DhQ7JM_aPRz5uqI5CmTPkOsiSwturmYb_hSzggnfvKl7dkYxKUYNI16ZKzpjrLdXzluX1I_vWB_lHj9OrJ_LAGOr3-7vGbwYy0sqnKnQ4RmWN_6eZF";
+                width = 66;
+            };
+        },
+                {
+            id = 1;
+            large =             {
+                height = 800;
+                url = "https://57w6ca.bn1302.livefilestore.com/y3mKp7zfRJBdFxEzEdr6AJM4T0EOWGUflBK4QfKPpKNDMk9n4TZJ14E2e2dXgBlIKQn1qJIeo_82elSmv3XfX6udjPAw1ITgBwrKI7qPvP1xkOvK6QZ07brWJuIHicqE6bTG62sg6DxsVHkCeGuPBro9j1uzgxmJM_c-8h1lm2q3ek";
+                width = 544;
+            };
+            medium =             {
+                height = 176;
+                url = "https://57w6ca.bn1302.livefilestore.com/y3m11rSWgASR_Lya0j8HzLSBZiUSwpXnhiAv36VGUFXxmacuyZ3JdhCgKWK3I2YX7epT0mpwxGXEUgl0JKsMZkNFD9d9azWpcs6_VtTZGvsZJeMO6h43QJXEK8U7Ghts0kVK82eSyNPWekSlAHNgZNDlfGAGDAyOdHnVAbmE6wxYsU";
+                width = 120;
+            };
+            small =             {
+                height = 96;
+                url = "https://57w6ca.bn1302.livefilestore.com/y3mut9gD_JWqbOGKg4XPPF3mKFXrpFf-dsxXImn2qNx1mYoJuPMLA7sWuOlixhKRrmm5UJXbSUe5rXMX2S_yPLfthdzj1Wo4Hz_vjvU_UyRnXOsqxeZPijGIqabpKNj3tYsmC2btpl9ixv4VRCmyav_-xEMYwHcllTPseADKWNECDw";
+                width = 65;
+            };
+        }
+    );
+    "thumbnails@odata.context" = "https://api.onedrive.com/v1.0/$metadata#drives('me')/items('root')/children('E305FF84A3EEFD91%21108')/thumbnails";
+    webUrl = "https://onedrive.live.com/redir?resid=E305FF84A3EEFD91!108";
+}

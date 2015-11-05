@@ -1,0 +1,332 @@
+/*
+ Localizable.strings
+ CamClaim
+ 
+ Created by Xia Zhiyong on 15/8/12.
+ Copyright (c) 2015年 kufa88. All rights reserved.
+ */
+
+
+// 提示语
+"loading" = "加載中...";
+"loadOver" = "數據加載完畢";
+"noData" = "暫無數據";
+"networkFail" = "暫無網路";
+"loadSuccess" = "加載成功";
+"loadFail" = "加載失败";
+"sumbitSuccess" = "提交成功";
+"submitFail" = "提交失敗";
+"uploading" = "上傳中...";
+"downloading" = "下載中...";
+
+"change" = "修改";
+"upload" = "上傳";
+"download" = "下載";
+"sumbit" = "提交";
+"update" = "更新";
+"save" = "保存";
+"edit" = "编輯";
+"cancel" = "取消";
+"done" = "確定";
+"new" = "新建";
+"delete" = "删除";
+"search" = "搜索";
+
+// pin code
+"pincode_enter" = "請輸入PinCode";
+"pincode_cancel" = "取消";
+"pincode_delete" = "删除";
+"pincode_ok" = "OK";
+"pincode_lock" = "你已被鎖定.";
+"pincode_attempt_lefts" = "剩餘次數";
+"pincode_attempt_left" = "剩餘次數";
+"pincode_not_match" = "PinCode輸入錯誤";
+"pincode_enter_again" = "請再次輸入PinCode";
+"" = "";
+"" = "";
+
+// Menu
+"home" = "主頁";
+"join" = "加入公司";
+"report" = "報表";
+"new record" = "新記錄";
+"cloud" = "儲存選項";
+"notice" = "資訊中心";
+"setting" = "設定";
+"share" = "邀請";
+"version" = "版本資訊";
+"logout" = "登出";
+
+// Login
+"account" = "賬 號";
+"password" = "密 碼";
+"remember" = "記住密碼的";    // 自动登录
+"newUser" = "新 用 户";
+"login" = "登    錄";
+"forget password" = "忘记密碼?";
+
+// Register
+"email" = "郵箱";
+"realName" = "姓名";
+"phone" = "電話";
+"register" = "注    册";
+"title_register" = "新用户注册";
+
+// Forget Password
+"forget_password_for_title" = "忘记密碼";
+"input_email_register" = "請輸入注册郵箱";
+
+// Change Password
+"change_password" = "修改密碼";
+"psw_old" = "舊密碼：";
+"psw_new" = "新密碼：";
+"psw_repeat" = "重複密碼：";
+"input_old_psw" = "請輸入舊密碼";
+"input_new_psw" = "請輸入新密碼";
+"input_repeat_new_psw" = "請重複输入新密碼";
+"psw_old_nil" = "舊密碼不能空白";
+"psw_new_nil" = "新密碼不能空白";
+"psw_repeat_nil" = "重複密碼不能空白";
+"psw_old_length_invalild" = "舊密碼長度無效";
+"psw_new_length_invalild" = "新密碼長度無效";
+"psw_repeat_length_invalild" = "重複密碼長度無效";
+"psw_notsame" = "新密碼不一致";
+"psw_old_error" = "舊密碼輸入錯誤";
+
+// UserInfo
+"realname_" = "姓名";
+"nickname_" = "睰稱";
+"email_" = "郵箱";
+"phone_" = "手提電話";
+"company_" = "公司";
+"department_" = "部門";
+"position_" = "職位";
+"city_" = "城市";
+"country/region" = "國家/地區";
+"upload_avatar" = "上傳圖像";
+"photo_camera" = "拍照";
+"photo_album" = "相册";
+"base_info" = "基本資料";
+"input_name" = "請輸入真實姓名";
+"input_nickname" = "請輸入睰稱";
+"input_email" = "請輸入郵箱";
+"input_region" = "請選擇國家或地區";
+"input_phone" = "請輸入手提電話";
+"input_company" = "請輸入公司名稱";
+"input_department" = "請輸入部门名稱";
+"input_position" = "請輸入職位";
+"input_city" = "請輸入城市";
+"user_info_complete" = "請完善個人資料";
+
+// Company
+"join company" = "加入公司";
+"input company name" = "請輸入公司名";
+"user number" = "員工號碼";
+"no_company" = "暫無公司，請申請加入";
+"compmay_reward" = "獎賞 $1000";
+"company_invite" = "邀請公司加入CamClaim";
+"company_add_new" = "加入新公司";
+"company_my" = "已加入的公司";
+"company_search" = "輸入公司名稱進行搜索";
+"company_search_title" = "搜索公司";
+"company_userinfo" = "請填寫個人信息";
+"company_user_join" = "您申請加入的公司";
+"company_no_result" = "無搜索結果";
+"company_no_result_title" = "沒有找到您的公司";
+"company_join_title" = "立即邀請您的公司入駐CamClaim，將得到$1000傭金";
+"company_search_fail" = "搜索公司失敗";
+"company_request_success" = "發送申請成功";
+"company_request_fail" = "發送申請失敗";
+"camclaim_join" = "加入CamClaim";
+"company_invite_title" = "邀請公司加入CamClaim，賺取傭金";
+"company_invite_fill" = "填寫邀請信息";
+"company_invite_rule" = "條款：";
+"company_invite_code_tip" = "我們會以電郵連用以下你的代碼邀請你的公司主管經理，你的主管經理使用你的邀請代碼成功登記服務，我們即刻賞你$1000。";
+"company_invite_code" = "邀請碼：";
+"company_invite_submit" = "確認條款並發出邀請";
+"company_invite_activity_time" = "該活動已過期";
+"company_invite_get_fail" = "獲取活動信息失敗";
+"company_tip_invite_company" = "請輸入邀請公司名稱";
+"company_tip_invite_name" = "請輸入主管經理名稱";
+"company_tip_invite_email" = "請輸入主管經理電子郵箱";
+
+// Claim
+"time" = "日期";
+"claim type" = "類型";
+"reimbursement" = "";
+"income" = "Income";
+"balance" = "Balance";
+"total expenditure" = "Total Expenditure";
+"total income" = "Total Income";
+"name" = "姓名";
+"purpose" = "用途";
+"amount of money" = "金額";
+"bill category" = "類型";
+"Place" = "地點";
+"" = "";
+"" = "";
+"" = "";
+
+"claim_date_nil" = "日期不能為空";
+"claim_traffic_type_nil" = "交通工具類型不能為空";
+"claim_start_nil" = "起始點不能為空";
+"claim_end_nil" = "終點不能為空";
+"claim_money_nil" = "金額不能為空";
+"claim_company_nil" = "公司不能為空";
+"claim_food_nil" = "餐廳名稱不能為空";
+"claim_food_type_nil" = "用餐類型不能為空";
+"claim_client_company_nil" = "客戶公司不能為空";
+"claim_user_company_nil" = "用戶公司不能為空";
+"claim_hotel_nil" = "酒店名稱不能為空";
+"claim_purpose_nil" = "用途不能為空";
+"claim_days_nil" = "住宿天數不能為空";
+"claim_shop_nil" = "商店名稱不能為空";
+"claim_project_nil" = "項目名稱不能為空";
+
+"claim_tip_start" = "請選擇起點位置";
+"claim_tip_end" = "請選擇終點位置";
+"claim_pic" = "發票圖片";
+"claim_title_money" = "金額";
+"claim_title_company" = "公司";
+"claim_tip_money" = "請輸入金額";
+"claim_tip_company" = "請選擇所在公司";
+
+"claim_title_restaurant" = "餐廳";
+"claim_title_client_company" = "客戶公司";
+"claim_tip_restaurant" = "請輸入餐廳名";
+"claim_tip_client_company" = "請輸入客戶公司名稱";
+
+"claim_title_hotel" = "酒店";
+"claim_title_purpose" = "用途";
+"claim_title_days" = "住宿天數";
+"claim_tip_hotel" = "請輸入酒店名";
+"claim_tip_purpose" = "請輸入用途";
+"claim_tip_days" = "請輸入住宿天數";
+
+"claim_title_shop" = "商店";
+"claim_title_project" = "項目";
+"claim_tip_shop" = "請輸入商店名";
+"claim_tip_project" = "請輸入項目名";
+
+// MainPage
+"ocr_capture" = "拍照";
+"claim_rejected" = "被拒";
+"claim_approved" = "通過";
+"claim_approving" = "審核中";
+"claim_pending" = "等待中";
+"claim_number" = "發票數";
+"clai_total_money" = "總金額";
+
+// Setting
+"login info" = "綁定";
+"change password" = "修改密碼";
+"help" = "幫助";
+"about" = "關於CamClaim";
+"change_pincode" = "修改Pincode";
+"old password" = "舊密碼：";
+"new password" = "新密碼：";
+"password again" = "重複新密碼:";
+"bind_ok" = "綁定成功";
+"bink_fail" = "綁定失敗";
+
+// New Input
+"type_traffic" = "交通";
+"type_meal" = "膳食";
+"type_hotel" = "住宿";
+"type_gift" = "禮物";
+"type_tool" = "工具";
+"type_office" = "文儀用品";
+"type_other" = "雜項開支";
+"upload_claim" = "上傳發票";
+"select_please" = "請選擇";
+"breakfast" = "早餐";
+"lunch" = "午餐";
+"supper" = "晚餐";
+"type_select" = "選擇類型";
+
+// Traffic
+"traffic_car" = "的士";
+"traffic_train" = "火車";
+"traffic_flight" = "飛機";
+"traffic_ship" = "輪船";
+"traffic_metro" = "地鐵";
+"traffic_Title" = "請選擇交通方式";
+"position_start" = "起點";
+"position_end" = "終點";
+"map_position" = "地圖選點";    // 你我位置 地圖選點
+"position_selected" = "已選位置";
+"long_press_select" = "請長按選擇位置";
+"map_location_fail" = "無法獲取當前位置";
+
+// Version
+"version_content" = "工作生活新體驗\n移動報銷 無縫對接\n\nEmail: support@camclaim.com";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+
+// logout
+"logout_tip" = "是否確定登出?";
+
+// toast
+"login_fail" = "登錄失敗";
+"register_fail" = "註冊失敗";
+"load_fail" = "加載數據失敗";
+"register_success_login" = "註冊成功,請登錄";
+"submit_success" = "提交成功";
+"submit_fail" = "提交失敗";
+"account_nil" = "賬號不能空白";
+"password_nil" = "密碼不能空白";
+"account_length_invalid" = "賬號長度無效";
+"password_length_invalid" = "密碼長度無效";
+"account_must_email" = "賬號必須為郵箱";
+"email_invalid" = "郵箱格式無效";
+"login_success_set_pincode" = "登錄成功, 請設置pin code";
+"account_format_invalid" = "賬號格式無效";
+"password_format_invalid" = "密碼格式無效";
+"name_nil" = "姓名不能空白";
+"phone_nil" = "手機號不能空白";
+"name_length_invalid" = "姓名長度無效";
+"phone_length_invalid" = "手機號長度無效";
+"email_nil" = "郵箱不能空白";
+"nickname_nil" = "昵稱不能空白";
+"company_nil" = "公司不能空白";
+"department_nil" = "部門不能空白";
+"position_nil" = "職位不能空白";
+"nickname_length_invalid" = "昵稱長度無效";
+"company_length_invalid" = "公司名稱長度無效";
+"department_length_invalid" = "部門名稱長度無效";
+"position_length_invalid" = "職位名稱長度無效";
+"city_length_invalid" = "城市名稱長度無效";
+"country_nil" = "國家/區域不能空白";
+"" = "";
+"" = "";
+"" = "";
+
+// Message
+"message" = "消息中心";
+"msg_invite_user" = "邀請用戶";
+"msg_invite_company" = "邀請公司";
+"msg_code" = "邀請碼";
+
+// Refresh
+"mjrefresh_footer_pull" = "上拉加載更多...";
+"mjrefresh_footer_release" = "釋放立即加載更多...";
+"mjrefresh_footer" = "加載中...";
+
+"mjrefresh_header_pull" = "下拉刷新...";
+"mjrefresh_header_release" = "釋放立即刷新...";
+"mjrefresh_header" = "刷新中...";
+
+"mjrefresh_today" = "今天";
+"mjrefresh_update_time" = "最後更新";
+
+// Cloud
+"onedrive_fail_cancel" = "Onedrive授權失敗或取消";
+"cloud_image_only" = "僅支持圖片查看";
+"cloud_save_ok" = "保存到相冊成功";
+"cloud_save_fail" = "保存圖片失敗";
+"" = "";
+"" = "";
+
+

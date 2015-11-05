@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CaptureResutlViewController">
+            <connections>
+                <outlet property="btnFood" destination="b0T-yv-FHW" id="85a-Km-Maz"/>
+                <outlet property="btnGift" destination="x1O-tu-6iJ" id="dxq-nJ-buv"/>
+                <outlet property="btnHotel" destination="qqp-L0-PXz" id="eOf-AW-c6w"/>
+                <outlet property="btnOffice" destination="TKG-HZ-vOJ" id="Epi-Uz-efh"/>
+                <outlet property="btnOther" destination="9Ug-We-RUK" id="IBg-06-1fH"/>
+                <outlet property="btnTool" destination="LnL-pJ-AuV" id="SVh-ME-IT4"/>
+                <outlet property="btnTraffic" destination="YFR-6P-1V8" id="Yst-gI-HxU"/>
+                <outlet property="imgview" destination="wll-lK-wEK" id="HGO-le-0h6"/>
+                <outlet property="lblFood" destination="ofb-Zz-eWl" id="O3A-vL-2mG"/>
+                <outlet property="lblGift" destination="QQK-uZ-PRc" id="uvi-TQ-7Wk"/>
+                <outlet property="lblOffice" destination="P0S-xz-BFe" id="FtV-qH-b24"/>
+                <outlet property="lblOther" destination="KKL-fl-GAA" id="saZ-5b-GJ3"/>
+                <outlet property="lblTool" destination="xPY-ki-Ksc" id="uuu-wP-kBp"/>
+                <outlet property="lblTraffic" destination="qu6-lJ-d4N" id="hEX-2i-Wd8"/>
+                <outlet property="lbltHotel" destination="t1v-lZ-tN4" id="21R-se-2eG"/>
+                <outlet property="view" destination="S4L-AD-kiy" id="Csc-Xx-qvb"/>
+                <outlet property="viewBottom" destination="mbZ-b7-le1" id="vao-fi-wQg"/>
+                <outlet property="viewContent" destination="I9s-wy-cls" id="HDY-yc-QWV"/>
+                <outlet property="viewTop" destination="Cgq-MZ-Fmx" id="D0Z-zI-mHq"/>
+                <outlet property="viewType" destination="wQe-xj-0a5" id="XPv-uw-cGY"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" id="S4L-AD-kiy">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cgq-MZ-Fmx">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                    <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="3LD-Vb-9ug"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I9s-wy-cls">
+                    <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wll-lK-wEK">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="402"/>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mbZ-b7-le1">
+                            <rect key="frame" x="0.0" y="402" width="320" height="102"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="102" id="jE6-wU-DQu"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.77647058820000003" green="0.85098039219999999" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="wll-lK-wEK" firstAttribute="leading" secondItem="I9s-wy-cls" secondAttribute="leading" id="0wA-AG-lqm"/>
+                        <constraint firstItem="wll-lK-wEK" firstAttribute="top" secondItem="I9s-wy-cls" secondAttribute="top" id="5Uq-mc-zSI"/>
+                        <constraint firstAttribute="bottom" secondItem="mbZ-b7-le1" secondAttribute="bottom" id="JFp-He-A7i"/>
+                        <constraint firstItem="mbZ-b7-le1" firstAttribute="top" secondItem="wll-lK-wEK" secondAttribute="bottom" id="pl3-Z2-KFd"/>
+                        <constraint firstAttribute="trailing" secondItem="wll-lK-wEK" secondAttribute="trailing" id="vdx-ty-ezC"/>
+                        <constraint firstAttribute="trailing" secondItem="mbZ-b7-le1" secondAttribute="trailing" id="vhi-0e-SAL"/>
+                        <constraint firstItem="mbZ-b7-le1" firstAttribute="leading" secondItem="I9s-wy-cls" secondAttribute="leading" id="zOV-uE-AzQ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Cgq-MZ-Fmx" secondAttribute="trailing" id="3SN-4T-VZe"/>
+                <constraint firstAttribute="bottom" secondItem="I9s-wy-cls" secondAttribute="bottom" id="58b-Lj-shU"/>
+                <constraint firstItem="Cgq-MZ-Fmx" firstAttribute="top" secondItem="S4L-AD-kiy" secondAttribute="top" id="P6u-9O-BkC"/>
+                <constraint firstAttribute="trailing" secondItem="I9s-wy-cls" secondAttribute="trailing" id="YYK-XT-Mdt"/>
+                <constraint firstItem="Cgq-MZ-Fmx" firstAttribute="leading" secondItem="S4L-AD-kiy" secondAttribute="leading" id="eKa-IS-uq2"/>
+                <constraint firstItem="I9s-wy-cls" firstAttribute="leading" secondItem="S4L-AD-kiy" secondAttribute="leading" id="fh9-c9-xDK"/>
+                <constraint firstItem="I9s-wy-cls" firstAttribute="top" secondItem="Cgq-MZ-Fmx" secondAttribute="bottom" id="trZ-Kh-wm7"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="257" y="265"/>
+        </view>
+        <view contentMode="scaleToFill" id="8CO-B1-Hz7">
+            <rect key="frame" x="0.0" y="0.0" width="470" height="66"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" tag="101" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7S-5S-sot">
+                    <rect key="frame" x="74" y="0.0" width="58" height="66"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <inset key="titleEdgeInsets" minX="-38" minY="44" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="9" minY="-16" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Meal" image="icon_claim_food.png">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnTouchAction:" destination="-1" eventType="touchUpInside" id="bM5-kb-bac"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="102" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Kv-Er-1HC">
+                    <rect key="frame" x="140" y="0.0" width="58" height="66"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <inset key="titleEdgeInsets" minX="-38" minY="44" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="9" minY="-16" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Hotel" image="icon_claim_hotel.png">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnTouchAction:" destination="-1" eventType="touchUpInside" id="Yoy-fa-uNg"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="103" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L86-LN-F1T">
+                    <rect key="frame" x="206" y="0.0" width="58" height="66"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <inset key="titleEdgeInsets" minX="-38" minY="44" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="9" minY="-16" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Gift" image="icon_claim_gift.png">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnTouchAction:" destination="-1" eventType="touchUpInside" id="BhG-4g-7q3"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="104" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LnL-pJ-AuV">
+                    <rect key="frame" x="272" y="0.0" width="58" height="66"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <inset key="titleEdgeInsets" minX="-38" minY="44" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="9" minY="-16" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Tools" image="icon_claim_tool.png">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnTouchAction:" destination="-1" eventType="touchUpInside" id="cHO-bE-jYH"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="105" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VfS-zS-fy5">
+                    <rect key="frame" x="338" y="0.0" width="58" height="66"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <inset key="titleEdgeInsets" minX="-38" minY="44" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="9" minY="-16" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Office" image="icon_claim_show.png">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnTouchAction:" destination="-1" eventType="touchUpInside" id="hiq-wr-fga"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="106" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9v-pG-jFc">
+                    <rect key="frame" x="404" y="0.0" width="58" height="66"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <inset key="titleEdgeInsets" minX="-38" minY="44" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="9" minY="-16" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Other" image="icon_claim_other.png">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnTouchAction:" destination="-1" eventType="touchUpInside" id="Q07-y4-aoN"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="100" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDh-aH-9Cn">
+                    <rect key="frame" x="8" y="0.0" width="58" height="66"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <inset key="titleEdgeInsets" minX="-38" minY="44" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="9" minY="-16" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Traffic" image="icon_claim_car.png">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnTouchAction:" destination="-1" eventType="touchUpInside" id="H88-pm-SXf"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="274" y="649"/>
+        </view>
+        <view contentMode="scaleToFill" id="wQe-xj-0a5">
+            <rect key="frame" x="0.0" y="0.0" width="525" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UAk-VX-bJL">
+                    <rect key="frame" x="0.0" y="0.0" width="75" height="80"/>
+                    <subviews>
+                        <button opaque="NO" tag="100" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YFR-6P-1V8">
+                            <rect key="frame" x="0.0" y="0.0" width="75" height="80"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <inset key="titleEdgeInsets" minX="-38" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="-28" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" image="icon_claim_car.png">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="btnTouchAction:" destination="-1" eventType="touchUpInside" id="QZG-HY-rpM"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Traffic" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qu6-lJ-d4N">
+                            <rect key="frame" x="0.0" y="47" width="75" height="32"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SGO-wc-VhH">
+                    <rect key="frame" x="75" y="0.0" width="75" height="80"/>
+                    <subviews>
+                        <button opaque="NO" tag="101" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0T-yv-FHW">
+                            <rect key="frame" x="0.0" y="0.0" width="75" height="80"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <inset key="titleEdgeInsets" minX="-38" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="-28" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" image="icon_claim_food.png">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="btnTouchAction:" destination="-1" eventType="touchUpInside" id="Pfq-tO-0o4"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Meal" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofb-Zz-eWl">
+                            <rect key="frame" x="0.0" y="47" width="75" height="32"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ltq-zm-yPh">
+                    <rect key="frame" x="150" y="0.0" width="75" height="80"/>
+                    <subviews>
+                        <button opaque="NO" tag="102" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqp-L0-PXz">
+                            <rect key="frame" x="0.0" y="0.0" width="75" height="80"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <inset key="titleEdgeInsets" minX="-38" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="-28" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" image="icon_claim_hotel.png">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="btnTouchAction:" destination="-1" eventType="touchUpInside" id="82V-DQ-Rrj"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hotel/House" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1v-lZ-tN4">
+                            <rect key="frame" x="0.0" y="47" width="75" height="32"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HfU-oh-J2e">
+                    <rect key="frame" x="225" y="0.0" width="75" height="80"/>
+                    <subviews>
+                        <button opaque="NO" tag="103" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKC-Ls-BBg">
+                            <rect key="frame" x="0.0" y="0.0" width="75" height="80"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <inset key="titleEdgeInsets" minX="-38" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="-28" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" image="icon_claim_gift.png">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="btnTouchAction:" destination="-1" eventType="touchUpInside" id="LQT-lw-XZ3"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gift" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQK-uZ-PRc">
+                            <rect key="frame" x="0.0" y="47" width="75" height="32"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hNP-gC-8jc">
+                    <rect key="frame" x="300" y="0.0" width="75" height="80"/>
+                    <subviews>
+                        <button opaque="NO" tag="104" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x1O-tu-6iJ">
+                            <rect key="frame" x="0.0" y="0.0" width="75" height="80"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <inset key="titleEdgeInsets" minX="-38" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="-28" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" image="icon_claim_tool.png">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="btnTouchAction:" destination="-1" eventType="touchUpInside" id="PHm-YI-ebM"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tools/Accessories" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPY-ki-Ksc">
+                            <rect key="frame" x="0.0" y="47" width="75" height="32"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2nL-RG-G9i">
+                    <rect key="frame" x="375" y="0.0" width="75" height="80"/>
+                    <subviews>
+                        <button opaque="NO" tag="105" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TKG-HZ-vOJ">
+                            <rect key="frame" x="0.0" y="0.0" width="75" height="80"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <inset key="titleEdgeInsets" minX="-38" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="-28" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" image="icon_claim_show.png">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="btnTouchAction:" destination="-1" eventType="touchUpInside" id="zsq-PG-wrw"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Office Stationery" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P0S-xz-BFe">
+                            <rect key="frame" x="0.0" y="47" width="75" height="32"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wCl-Vt-8My">
+                    <rect key="frame" x="450" y="0.0" width="75" height="80"/>
+                    <subviews>
+                        <button opaque="NO" tag="106" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ug-We-RUK">
+                            <rect key="frame" x="0.0" y="0.0" width="75" height="80"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <inset key="titleEdgeInsets" minX="-38" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="-28" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" image="icon_claim_other.png">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="btnTouchAction:" destination="-1" eventType="touchUpInside" id="wzM-WK-nqk"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Other" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKL-fl-GAA">
+                            <rect key="frame" x="0.0" y="47" width="75" height="32"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="274.5" y="796"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_claim_car.png" width="40" height="40"/>
+        <image name="icon_claim_food.png" width="41" height="40"/>
+        <image name="icon_claim_gift.png" width="40" height="40"/>
+        <image name="icon_claim_hotel.png" width="41" height="40"/>
+        <image name="icon_claim_other.png" width="40" height="40"/>
+        <image name="icon_claim_show.png" width="40" height="40"/>
+        <image name="icon_claim_tool.png" width="41" height="40"/>
+    </resources>
+</document>

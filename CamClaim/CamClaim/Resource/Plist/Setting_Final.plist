@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>Login Info</string>
+		<key>description</key>
+		<string></string>
+		<key>content</key>
+		<string></string>
+		<key>img</key>
+		<string></string>
+		<key>selectorForJump</key>
+		<string>jumpToBinding</string>
+		<key>canJump</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Change Password</string>
+		<key>description</key>
+		<string></string>
+		<key>content</key>
+		<string></string>
+		<key>img</key>
+		<string></string>
+		<key>selectorForJump</key>
+		<string>jumpToChangePassword</string>
+		<key>canJump</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Help</string>
+		<key>description</key>
+		<string></string>
+		<key>content</key>
+		<string></string>
+		<key>img</key>
+		<string></string>
+		<key>selectorForJump</key>
+		<string>jumpToHelp</string>
+		<key>canJump</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>About CamClaim</string>
+		<key>description</key>
+		<string></string>
+		<key>content</key>
+		<string></string>
+		<key>img</key>
+		<string></string>
+		<key>selectorForJump</key>
+		<string>jumpToAboutUs</string>
+		<key>canJump</key>
+		<true/>
+	</dict>
+</array>
+</plist>

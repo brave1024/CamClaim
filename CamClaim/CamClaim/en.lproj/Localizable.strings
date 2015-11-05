@@ -1,0 +1,332 @@
+/*
+ Localizable.strings
+ CamClaim
+ 
+ Created by Xia Zhiyong on 15/8/12.
+ Copyright (c) 2015年 kufa88. All rights reserved.
+ */
+
+
+// 提示语
+"loading" = "Loading...";
+"loadOver" = "Data download completed";
+"noData" = "No Data";
+"networkFail" = "No Network";
+"loadSuccess" = "Download Success";
+"loadFail" = "Download Fail";
+"sumbitSuccess" = "Submit Success";
+"submitFail" = "Submit Fail";
+"uploading" = "Uploading...";
+"downloading" = "Downloading...";
+
+"change" = "Change";
+"upload" = "Upload";
+"download" = "Download";
+"sumbit" = "Submit";
+"update" = "Update";
+"save" = "Save";
+"edit" = "Edit";
+"cancel" = "Cancel";
+"done" = "Done";
+"new" = "New";
+"delete" = "Delete";
+"search" = "Search";
+
+// pin code
+"pincode_enter" = "Enter PinCode";
+"pincode_cancel" = "Cancel";
+"pincode_delete" = "Delete";
+"pincode_ok" = "OK";
+"pincode_lock" = "You have been locked out.";
+"pincode_attempt_lefts" = "attempts left";
+"pincode_attempt_left" = "attempt left";
+"pincode_not_match" = "PinCode did not match.";
+"pincode_enter_again" = "Re-enter your new PinCode";
+"" = "";
+"" = "";
+
+// Menu
+"home" = "Dashboard";
+"join" = "Join";
+"report" = "Report";
+"new record" = "New Record";
+"cloud" = "Save Option";
+"notice" = "Notice Board";
+"setting" = "Setting";
+"share" = "Invitation";
+"version" = "Version";
+"logout" = "Logout";
+
+// Login
+"account" = "ACCOUNT";
+"password" = "PASSWORD";
+"remember" = "Remember";    // 自动登录
+"newUser" = "New User";
+"login" = "Log In";
+"forget password" = "Forgot Password?";
+
+// Register
+"email" = "MAILBOX";
+"realName" = "REAL NAME";
+"phone" = "PHONE";
+"register" = "Register";
+"title_register" = "New User Register";
+
+// Forget Password
+"forget_password_for_title" = "Forgot Password";
+"input_email_register" = "Please Input Email";
+
+// Change Password
+"change_password" = "Change Password";
+"psw_old" = "Old Password";
+"psw_new" = "New Password";
+"psw_repeat" = "Repeat Password";
+"input_old_psw" = "Input old password";
+"input_new_psw" = "Input new password";
+"input_repeat_new_psw" = "Input new password again";
+"psw_old_nil" = "Old password can not be empty";
+"psw_new_nil" = "New password can not be empty";
+"psw_repeat_nil" = "Repeat password can not be empty";
+"psw_old_length_invalild" = "Please input 6-12 digit password";
+"psw_new_length_invalild" = "Please input 6-12 digit password";
+"psw_repeat_length_invalild" = "Please input 6-12 digit password";
+"psw_notsame" = "Passwords not identical";
+"psw_old_error" = "Old password not identical";
+
+// UserInfo
+"realname_" = "Real Name";
+"nickname_" = "Nickname";
+"email_" = "E-mail";
+"phone_" = "Phone";
+"company_" = "Company";
+"department_" = "Department";
+"position_" = "Position";
+"city_" = "City";
+"country/region" = "Country/Region";
+"upload_avatar" = "Upload Photo";
+"photo_camera" = "Camera";
+"photo_album" = "Album";
+"base_info" = "Basic Information";
+"input_name" = "Input Realname";
+"input_nickname" = "Input Nickname";
+"input_email" = "Input Email";
+"input_region" = "Input County/Region";
+"input_phone" = "Input Phone Number";
+"input_company" = "Input Company";
+"input_department" = "Input Department";
+"input_position" = "Input Position";
+"input_city" = "Input City";
+"user_info_complete" = "Please Complete Your Base Information";
+
+// Company
+"join company" = "Join Company";
+"input company name" = "Please Input Company Name";
+"user number" = "UserNumber";
+"no_company" = "No Joined Companys";
+"compmay_reward" = "REWARD $1000";
+"company_invite" = "Invite the company to join CamClaim";
+"company_add_new" = "Add New";
+"company_my" = "My Company";
+"company_search" = "Please input company name";
+"company_search_title" = "Search Company";
+"company_userinfo" = "Fill in personal information";
+"company_user_join" = "You want to join the company";
+"company_no_result" = "No Results";
+"company_no_result_title" = "No Company You Want To Join";
+"company_join_title" = "Invite you company to join CamClaim, reward $1000";
+"company_search_fail" = "Search fail";
+"company_request_success" = "Send request success";
+"company_request_fail" = "Send request fail";
+"camclaim_join" = "Join CamClaim";
+"company_invite_title" = "Invite company to join CamClaim，earn commission";
+"company_invite_fill" = "Fill the invitation";
+"company_invite_rule" = "Clause:";
+"company_invite_code_tip" = "You can invite your company to Join CamClaim under the invite code, If you invite the company accept your invite code, then you will get $1000 cash.";
+"company_invite_code" = "Code：";
+"company_invite_submit" = "Submit";
+"company_invite_activity_time" = "Activity is time out";
+"company_invite_get_fail" = "Get activity fail";
+"company_tip_invite_company" = "Input comapny";
+"company_tip_invite_name" = "Input manager's name";
+"company_tip_invite_email" = "Input manager's email";
+
+// Claim
+"time" = "Date";
+"claim type" = "Claim Type";
+"reimbursement" = "";
+"income" = "Income";
+"balance" = "Balance";
+"total expenditure" = "Total Expenditure";
+"total income" = "Total Income";
+"name" = "Name";
+"purpose" = "Purpose";
+"amount of money" = "Amount";
+"bill category" = "Billing Category";
+"Place" = "Place";
+"" = "";
+"" = "";
+"" = "";
+
+"claim_date_nil" = "Date can not be empty";
+"claim_traffic_type_nil" = "Type of traffic can not be empty";
+"claim_start_nil" = "Start of position can not be empty";
+"claim_end_nil" = "End of position can not be empty";
+"claim_money_nil" = "Cost can not be empty";
+"claim_company_nil" = "Company can not be empty";
+"claim_food_nil" = "Restaurant can not be empty";
+"claim_food_type_nil" = "Meal time can not be empty";
+"claim_client_company_nil" = "Client company can not be empty";
+"claim_user_company_nil" = "User company can not be empty";
+"claim_hotel_nil" = "Hotel can not be empty";
+"claim_purpose_nil" = "Purpose can not be empty";
+"claim_days_nil" = "Days can not be empty";
+"claim_shop_nil" = "Shop can not be empty";
+"claim_project_nil" = "Project can not be empty";
+
+"claim_tip_start" = "Please select start position";
+"claim_tip_end" = "Please select end position";
+"claim_pic" = "Photo";
+"claim_title_money" = "Cost";
+"claim_title_company" = "Company";
+"claim_tip_money" = "Input amount";
+"claim_tip_company" = "Select your company";
+
+"claim_title_restaurant" = "Restaurant";
+"claim_title_client_company" = "Guest Company";
+"claim_tip_restaurant" = "Input restaurant";
+"claim_tip_client_company" = "Input guest company";
+
+"claim_title_hotel" = "Hotel";
+"claim_title_purpose" = "Use";
+"claim_title_days" = "Date Number";
+"claim_tip_hotel" = "Input hotel";
+"claim_tip_purpose" = "Input use";
+"claim_tip_days" = "Input date number";
+
+"claim_title_shop" = "Shop";
+"claim_title_project" = "Project";
+"claim_tip_shop" = "Input shop";
+"claim_tip_project" = "Input project";
+
+// MainPage
+"ocr_capture" = "Capture";
+"claim_rejected" = "Rejected";
+"claim_approved" = "Approved";
+"claim_approving" = "Approving";
+"claim_pending" = "Pending";
+"claim_number" = "Project";
+"clai_total_money" = "Total Amount";
+
+// Setting
+"login info" = "Binding";
+"change password" = "Change Password";
+"help" = "Help";
+"about" = "About CamClaim";
+"change_pincode" = "Change Pincode";
+"old password" = "Old Password：";
+"new password" = "New Password：";
+"password again" = "Password Again:";
+"bind_ok" = "Bind success";
+"bink_fail" = "Bind fail";
+
+// New Input
+"type_traffic" = "Traffic";
+"type_meal" = "Meal";
+"type_hotel" = "Hotel/House";
+"type_gift" = "Gift";
+"type_tool" = "Tools/Accessories";
+"type_office" = "Office Stationery";
+"type_other" = "Other";
+"upload_claim" = "Upload Claim";
+"select_please" = "Please select";
+"breakfast" = "Breakfast";
+"lunch" = "Lunch";
+"supper" = "Dinner";
+"type_select" = "Select Type";
+
+// Traffic
+"traffic_car" = "Taxi";
+"traffic_train" = "Train";
+"traffic_flight" = "Flight";
+"traffic_ship" = "Ship";
+"traffic_metro" = "Metro";
+"traffic_Title" = "Please Select";
+"position_start" = "Start";
+"position_end" = "End";
+"map_position" = "Select Position";
+"position_selected" = "Position Selected";
+"long_press_select" = "Please long press to select";
+"map_location_fail" = "Can not get current location";
+
+// Version
+"version_content" = "Experience of work life\nReimbursement seamless by mobile\n\nEmail: support@camclaim.com";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+
+// logout
+"logout_tip" = "Sure to logout?";
+
+// toast
+"login_fail" = "Login Failed";
+"register_fail" = "Register Failed";
+"load_fail" = "Load Date Failed";
+"register_success_login" = "Register success, please login";
+"submit_success" = "Submit Success";
+"submit_fail" = "Submit Failed";
+"account_nil" = "Account can not be empty";
+"password_nil" = "Password can not be empty";
+"account_length_invalid" = "Length of account is invalid";
+"password_length_invalid" = "Length of password is invalid";
+"account_must_email" = "Account must be email";
+"email_invalid" = "Email format invalid";
+"login_success_set_pincode" = "Login Success, please set Pincode";
+"account_format_invalid" = "Format of account is invalid";
+"password_format_invalid" = "Format of password in invalid";
+"name_nil" = "Name can not be empty";
+"phone_nil" = "Phone number can not be empty";
+"name_length_invalid" = "Length of name is invalid";
+"phone_length_invalid" = "Length of phone number is invalid";
+"email_nil" = "Email can not be empty";
+"nickname_nil" = "Nickname can not be empty";
+"company_nil" = "Company can not be empty";
+"department_nil" = "Department can not be empty";
+"position_nil" = "Position can not be empty";
+"nickname_length_invalid" = "Length of nickname is invalid";
+"company_length_invalid" = "Length of company is invalid";
+"department_length_invalid" = "Length of department is invalid";
+"position_length_invalid" = "Length of position is invalid";
+"city_length_invalid" = "Length of city is invalid";
+"country_nil" = "Country/Region can not be empty";
+"" = "";
+"" = "";
+"" = "";
+
+// Message
+"message" = "Message";
+"msg_invite_user" = "Invite User";
+"msg_invite_company" = "Invite Company";
+"msg_code" = "Code";
+
+// Refresh
+"mjrefresh_footer_pull" = "Up to load more...";
+"mjrefresh_footer_release" = "Release to load more...";
+"mjrefresh_footer" = "Loading...";
+
+"mjrefresh_header_pull" = "Down to refresh...";
+"mjrefresh_header_release" = "Release to refresh...";
+"mjrefresh_header" = "Refreshing...";
+
+"mjrefresh_today" = "Today";
+"mjrefresh_update_time" = "Last update";
+
+// Cloud
+"onedrive_fail_cancel" = "Onedrive authorization fail or cancel";
+"cloud_image_only" = "Only support picture";
+"cloud_save_ok" = "Save to album success";
+"cloud_save_fail" = "Save picture fail";
+"" = "";
+"" = "";
+
+

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8191"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OtherDetailViewController">
+            <connections>
+                <outlet property="view" destination="1BK-fz-dOB" id="gs6-JF-kIb"/>
+                <outlet property="viewContent" destination="NPX-YK-grf" id="lIF-3c-NGW"/>
+                <outlet property="viewTop" destination="G2g-Hj-jQG" id="fcV-6V-ejR"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="1BK-fz-dOB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G2g-Hj-jQG">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                    <color key="backgroundColor" red="0.97647058819999999" green="0.58431372550000005" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="yf0-nt-BKF"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NPX-YK-grf">
+                    <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                    <color key="backgroundColor" red="0.47450980390000003" green="0.73333333329999995" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="G2g-Hj-jQG" firstAttribute="top" secondItem="1BK-fz-dOB" secondAttribute="top" id="37p-hT-ICD"/>
+                <constraint firstItem="NPX-YK-grf" firstAttribute="top" secondItem="G2g-Hj-jQG" secondAttribute="bottom" id="Zy0-zg-Qkh"/>
+                <constraint firstAttribute="trailing" secondItem="G2g-Hj-jQG" secondAttribute="trailing" id="a96-If-l66"/>
+                <constraint firstItem="G2g-Hj-jQG" firstAttribute="leading" secondItem="1BK-fz-dOB" secondAttribute="leading" id="pee-4c-21p"/>
+                <constraint firstAttribute="bottom" secondItem="NPX-YK-grf" secondAttribute="bottom" id="qRH-Ru-X70"/>
+                <constraint firstAttribute="trailing" secondItem="NPX-YK-grf" secondAttribute="trailing" id="uNW-mp-OJO"/>
+                <constraint firstItem="NPX-YK-grf" firstAttribute="leading" secondItem="1BK-fz-dOB" secondAttribute="leading" id="xzm-9j-jnT"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="224" y="140"/>
+        </view>
+    </objects>
+</document>

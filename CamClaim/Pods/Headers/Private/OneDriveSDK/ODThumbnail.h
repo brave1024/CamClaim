@@ -1,0 +1,1 @@
+../../../OneDriveSDK/OneDriveSDK/OneDriveCoreSDK/model/ODThumbnail.h
