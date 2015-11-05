@@ -1,1 +1,0 @@
-../../../OneDriveSDK/OneDriveSDK/OneDriveCoreSDK/model/ODSearchResult.h
